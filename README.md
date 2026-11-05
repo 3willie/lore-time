@@ -51,7 +51,7 @@ Koda's stories are written in Claude chats and pushed here. Each series is its o
 | --- | --- |
 | `stories/koda-pokemon/` | Koda's Pokémon Journey (main canon, in reading order) |
 | `stories/koda-powers/` | Koda & Wren in the Powers universe (add when stories arrive) |
-| `stories/koda-side-stories/` | Standalone / non-canon stories, e.g. Koda & Rion side stories (add when stories arrive) |
+| `stories/koda-side-stories/` | Standalone / non-canon stories, e.g. Koda & Rion side stories |
 
 File names are `NNN-<story-slug>.md` with a three-digit number for reading order:
 

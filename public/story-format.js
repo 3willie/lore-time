@@ -3,13 +3,18 @@
 export const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
 
+/** **bold**, *italic* and _italic_ inside one line (also used for titles). */
+export const inline = (s) =>
+  esc(s)
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^\w*])\*(?!\s)(.+?)\*(?!\w)/g, '$1<em>$2</em>')
+    .replace(/(^|[^\w])_(?!\s)(.+?)_(?!\w)/g, '$1<em>$2</em>')
+
+/** A title as plain text, for the browser tab. */
+export const plain = (s) => s.replace(/\*\*(.+?)\*\*|\*(.+?)\*|(?<!\w)_(.+?)_(?!\w)/g, (_, a, b, c) => a ?? b ?? c)
+
 /** Just enough Markdown for stories: paragraphs, line breaks, ## headings, --- scene breaks, **bold**, *italic*. */
 export function renderStory(text) {
-  const inline = (s) =>
-    esc(s)
-      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-      .replace(/(^|[^\w*])\*(?!\s)(.+?)\*(?!\w)/g, '$1<em>$2</em>')
-      .replace(/(^|[^\w])_(?!\s)(.+?)_(?!\w)/g, '$1<em>$2</em>')
   return text
     .split(/\n\s*\n/)
     .map((block) => block.trim())

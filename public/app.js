@@ -5,7 +5,7 @@
 //   #/<topic>             pick a story in that topic
 //   #/<topic>/<story>     read it
 
-import { esc, renderStory } from './story-format.js'
+import { esc, inline, plain, renderStory } from './story-format.js'
 
 const app = document.getElementById('app')
 
@@ -163,7 +163,7 @@ function renderHome() {
         <span class="emoji" aria-hidden="true">${esc(t.emoji)}</span>
         <span class="name">${esc(t.name)}</span>
         <span class="meta">${t.stories.length} ${t.stories.length === 1 ? 'story' : 'stories'}${done ? ` · ${done} read` : ''}</span>
-        <span class="next">${next ? `Up next: ${esc(next.title)}` : 'All read! 🎉'}</span>
+        <span class="next">${next ? `Up next: ${inline(next.title)}` : 'All read! 🎉'}</span>
       </a>`
     })
     .join('')
@@ -178,7 +178,7 @@ function renderTopic(topic, index) {
       const isNext = s === next
       return `<li><a class="story${read ? ' read' : ''}${isNext ? ' upnext' : ''}" href="${href(topic.id, s.id)}">
         <span class="num" aria-hidden="true">${read ? '✓' : i + 1}</span>
-        <span class="title">${esc(s.title)}${isNext ? '<span class="badge">Up next</span>' : ''}${read ? '<span class="sr-only"> (read)</span>' : ''}</span>
+        <span class="title">${inline(s.title)}${isNext ? '<span class="badge">Up next</span>' : ''}${read ? '<span class="sr-only"> (read)</span>' : ''}</span>
         <span class="mins">${minutes(s)} min</span>
       </a></li>`
     })
@@ -207,11 +207,11 @@ function renderReader(topic, index, story) {
       <button class="btn icon" data-action="bigger" aria-label="Bigger text">A+</button>
     </div>
     <article>
-      <header><div class="emoji" aria-hidden="true">${esc(topic.emoji)}</div><h2>${esc(story.title)}</h2></header>
+      <header><div class="emoji" aria-hidden="true">${esc(topic.emoji)}</div><h2>${inline(story.title)}</h2></header>
       <div class="story-text">${renderStory(story.text)}</div>
       <p class="the-end" id="the-end">The End</p>
       <div class="end-actions">
-        ${next ? `<a class="btn primary" href="${href(topic.id, next.id)}" data-action="next">Next: ${esc(next.title)} →</a>` : ''}
+        ${next ? `<a class="btn primary" href="${href(topic.id, next.id)}" data-action="next">Next: ${inline(next.title)} →</a>` : ''}
         <a class="btn" href="${href(topic.id)}">All ${esc(topic.name)} stories</a>
         <a class="btn" href="#/">Topics</a>
       </div>
@@ -249,7 +249,7 @@ async function route() {
   if (topic && story) {
     current = { topic, story }
     app.innerHTML = renderReader(topic, index, story)
-    document.title = `${story.title} · Story Time`
+    document.title = `${plain(story.title)} · Story Time`
     if (!timer.running && timer.left === BRUSH_SECONDS) startTimer()
     paintTimer()
     keepAwake(true)

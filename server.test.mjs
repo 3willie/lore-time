@@ -4,7 +4,7 @@ import { join } from 'node:path'
 import { after, before, describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import { createApp, parseStory, readLibrary, storyId } from './server.mjs'
-import { renderStory } from './public/story-format.js'
+import { inline, plain, renderStory } from './public/story-format.js'
 
 const here = new URL('.', import.meta.url).pathname
 
@@ -114,6 +114,11 @@ describe('server', () => {
 })
 
 describe('story text', () => {
+  it('renders emphasis in titles', () => {
+    assert.equal(inline('The Roar That Meant *Come With Me*'), 'The Roar That Meant <em>Come With Me</em>')
+    assert.equal(plain('The Roar That Meant *Come With Me*'), 'The Roar That Meant Come With Me')
+  })
+
   it('renders paragraphs, emphasis and scene breaks, and escapes HTML', () => {
     const html = renderStory('Hi *there*, **you**.\nNew line.\n\n---\n\n<b>no</b> it_s fine')
     assert.equal(

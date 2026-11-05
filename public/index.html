@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#1e1b4b" />
+    <title>Story Time</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Pick the theme before the first paint: ?theme=dark|light (handy in a Home Assistant iframe URL),
+      // else the last choice on this device, else the system setting.
+      try {
+        var t = new URLSearchParams(location.search).get('theme') || localStorage.getItem('storytime.theme')
+        if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <p class="loading">Opening the story books…</p>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

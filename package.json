@@ -1,0 +1,14 @@
+{
+  "name": "lore-time",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Two-minute stories to read while brushing teeth. No dependencies.",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,15 @@
+# Pulls the image GitHub Actions builds (no build on the NAS).
+# Synology Container Manager: Project > Create, choose a folder, and paste this file as docker-compose.yml.
+services:
+  lore-time:
+    image: ghcr.io/3willie/lore-time:latest
+    container_name: lore-time
+    restart: unless-stopped
+    ports:
+      - "8090:8090"         # change the left side if 8090 is taken on your NAS
+    environment:
+      TZ: Etc/UTC
+      # PUID: 1026          # optional: a DSM user that can read the stories folder (`id <user>` over SSH)
+      # PGID: "100"
+    volumes:
+      - ./stories:/stories:ro   # one folder per topic; add or edit stories here with File Station

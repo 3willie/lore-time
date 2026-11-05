@@ -43,6 +43,27 @@ stories/
 New and changed stories show up the next time the page opens: no restart needed. The stories in this folder
 are samples; while the NAS's `stories` folder is empty, the app shows them.
 
+### Koda story series: naming scheme
+
+Koda's stories are written in Claude chats and pushed here. Each series is its own topic folder:
+
+| Folder | Series |
+| --- | --- |
+| `stories/koda-pokemon/` | Koda's Pokémon Journey (main canon, in reading order) |
+| `stories/koda-powers/` | Koda & Wren in the Powers universe (add when stories arrive) |
+| `stories/koda-side-stories/` | Standalone / non-canon stories, e.g. Koda & Rion side stories (add when stories arrive) |
+
+File names are `NNN-<story-slug>.md` with a three-digit number for reading order:
+
+- **Gaps are on purpose.** `koda-pokemon` starts at `020`; `001`–`019` are kept free for the earliest
+  stories (Abra, Growlithe, Brock, Misty, first Team Rocket attack) from older chats. New stories continue
+  from the highest number.
+- **Stories that belong together share a slug.** A multi-part story uses `-part-1`, `-part-2`
+  (`024-the-vermilion-challenge-part-1.md`, `025-the-vermilion-challenge-part-2.md`) and its title ends in
+  `, Part One` / `, Part Two`. A set of linked short stories uses `-1-`, `-2-` after the shared slug
+  (`034-five-roads-with-athena-1-the-rattata-problem.md`).
+- The first line is always `# Title`; no other metadata goes in the file, since everything in it is shown to the reader.
+
 ## Running on the Synology NAS
 
 ### Option A: pull the image GitHub builds

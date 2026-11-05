@@ -62,7 +62,7 @@ describe('library', () => {
     const { topics } = await readLibrary(join(here, 'stories'))
     assert.deepEqual(
       topics.map((t) => t.id),
-      ['powers', 'pokemon', 'unicorns'],
+      ['powers', 'pokemon', 'koda-pokemon', 'unicorns'],
     )
   })
 })
@@ -90,7 +90,7 @@ describe('server', () => {
     const res = await fetch(base + 'api/library')
     assert.equal(res.status, 200)
     const { topics } = await res.json()
-    assert.equal(topics.length, 3)
+    assert.equal(topics.length, 4)
     assert.ok(topics[0].stories[0].text.length > 100)
   })
 

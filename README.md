@@ -51,7 +51,8 @@ Koda's stories are written in Claude chats and pushed here. Each series is its o
 | --- | --- |
 | `stories/koda-pokemon/` | Koda's Pokémon Journey (main canon, in reading order) |
 | `stories/koda-powers/` | Koda & Wren in the Powers universe (add when stories arrive) |
-| `stories/koda-side-stories/` | Standalone / non-canon stories, e.g. Koda & Rion side stories |
+| `stories/koda-rion/` | Koda & Rion: a separate arc where Koda's partner is Pikachu and Rion becomes a Lapras |
+| `stories/koda-side-stories/` | Standalone / non-canon stories (Entei, PokePark Kanto, space, hot springs) |
 
 File names are `NNN-<story-slug>.md` with a three-digit number for reading order:
 
@@ -59,9 +60,11 @@ File names are `NNN-<story-slug>.md` with a three-digit number for reading order
   stories (Abra, Growlithe, Brock, Misty, first Team Rocket attack) from older chats. New stories continue
   from the highest number.
 - **Stories that belong together share a slug.** A multi-part story uses `-part-1`, `-part-2`
-  (`024-the-vermilion-challenge-part-1.md`, `025-the-vermilion-challenge-part-2.md`) and its title ends in
-  `, Part One` / `, Part Two`. A set of linked short stories uses `-1-`, `-2-` after the shared slug
-  (`034-five-roads-with-athena-1-the-rattata-problem.md`).
+  (`027-the-vermilion-challenge-part-1.md` … `029-the-vermilion-challenge-part-3.md`) and its title ends in
+  `, Part One`, `, Part Two` and so on. A set of linked short stories uses `-1-`, `-2-` after the shared slug
+  (`046-five-roads-with-athena-1-the-rattata-problem.md`).
+- **Each file is one two-minute read** (about 300–500 words, the length of a toothbrushing session). A longer
+  story is split into parts at its scene breaks, and the numbers after it move up.
 - The first line is always `# Title`; no other metadata goes in the file, since everything in it is shown to the reader.
 
 ## Running on the Synology NAS

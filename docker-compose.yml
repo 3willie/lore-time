@@ -10,7 +10,9 @@ services:
       - "8090:8090"         # change the left side if 8090 is taken on your NAS
     environment:
       TZ: Etc/UTC
-      # PUID: 1026          # optional: a DSM user that can read the stories folder (`id <user>` over SSH)
+      # PUID: 1026          # optional: a DSM user that can read a mounted stories folder (`id <user>` over SSH)
       # PGID: "100"
-    volumes:
-      - ./stories:/stories:ro   # one folder per topic; add or edit stories here with File Station
+    # The stories are built into the image. To serve a folder on the NAS instead (e.g. to try new
+    # stories before pushing them), uncomment these two lines and put one folder per topic in ./stories.
+    # volumes:
+    #   - ./stories:/stories:ro

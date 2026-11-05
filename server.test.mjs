@@ -58,11 +58,11 @@ describe('library', () => {
     assert.equal(topics[1].stories[0].title, 'Pip')
   })
 
-  it('reads the bundled sample stories', async () => {
+  it('reads the bundled stories', async () => {
     const { topics } = await readLibrary(join(here, 'stories'))
     assert.deepEqual(
       topics.map((t) => t.id),
-      ['powers', 'pokemon', 'koda-pokemon', 'unicorns', 'koda-rion', 'koda-side-stories'],
+      ['koda-pokemon', 'koda-rion', 'koda-side-stories'],
     )
   })
 })
@@ -90,7 +90,7 @@ describe('server', () => {
     const res = await fetch(base + 'api/library')
     assert.equal(res.status, 200)
     const { topics } = await res.json()
-    assert.equal(topics.length, 6)
+    assert.equal(topics.length, 3)
     assert.ok(topics[0].stories[0].text.length > 100)
   })
 

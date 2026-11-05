@@ -16,7 +16,6 @@ const SIZE_MIN = 18
 const SIZE_MAX = 44
 
 /** Fallback colours for topics without one in topic.json. */
-const TOPIC_COLORS = { powers: '#f59e0b', pokemon: '#ef4444', unicorns: '#c026d3' }
 const PALETTE = ['#4f46e5', '#0891b2', '#16a34a', '#ea580c', '#db2777', '#7c3aed', '#0d9488']
 
 // ---------- per-device memory (which stories are read, text size) ----------
@@ -71,7 +70,7 @@ async function loadLibrary() {
   }
 }
 
-const topicColor = (topic, i) => topic.color || TOPIC_COLORS[topic.id] || PALETTE[i % PALETTE.length]
+const topicColor = (topic, i) => topic.color || PALETTE[i % PALETTE.length]
 const upNext = (topic) => topic.stories.find((s) => !isRead(topic, s))
 const minutes = (story) => Math.max(1, Math.round(story.words / READ_ALOUD_WPM))
 

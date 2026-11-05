@@ -3,10 +3,10 @@
 // Stories are plain text files on disk, one folder per topic:
 //
 //   stories/
-//     powers/
-//       topic.json          optional: { "name": "Powers", "emoji": "⚡", "color": "#f59e0b", "blurb": "..." }
-//       01-the-spark.md     "# Title" on the first line, then the story; files are read in name order
-//       02-...
+//     koda-pokemon/
+//       topic.json                      optional: { "name": "...", "emoji": "🌪️", "color": "#0ea5e9", "blurb": "...", "order": 3 }
+//       020-koda-and-the-sky-rival.md   "# Title" on the first line, then the story; files are read in name order
+//       021-...
 //
 //   GET /api/health   -> { ok: true }
 //   GET /api/library  -> { topics: [{ id, name, emoji, color, blurb, stories: [{ id, title, words, text }] }] }
@@ -114,7 +114,7 @@ export async function readLibrary(dir) {
   return { topics }
 }
 
-/** The first folder that exists and holds at least one topic (the mounted one, else the bundled samples). */
+/** The first folder that exists and holds at least one topic (the mounted one, else the built-in stories). */
 async function pickStoriesDir(dirs) {
   for (const dir of dirs) {
     try {

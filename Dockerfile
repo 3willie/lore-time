@@ -13,7 +13,7 @@ ENV NODE_ENV=production \
 WORKDIR /app
 COPY --from=test /app/server.mjs /app/package.json ./
 COPY --from=test /app/public ./public
-# The sample stories, used whenever the mounted /stories folder has no topics in it yet.
+# The stories, used unless a folder with topics in it is mounted at /stories.
 COPY --from=test /app/stories ./stories
 ARG APP_VERSION=dev
 ENV APP_VERSION=$APP_VERSION

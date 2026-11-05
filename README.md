@@ -9,7 +9,8 @@ Two-minute stories to read while brushing teeth. Pick a **topic**, then a **stor
   Tap it to pause or restart.
 - **A− / A+** change the text size (remembered on that device). The screen stays on while reading where the
   browser allows it (HTTPS only).
-- No accounts, no database, no internet needed. Stories are plain text files you can add with File Station.
+- No accounts, no database, no internet needed. Stories are plain text files in this repository's `stories`
+  folder, built into the image, so pushing a new story and updating the container is all it takes.
 
 ## Adding stories
 
@@ -17,14 +18,16 @@ The `stories` folder holds one folder per topic, with one file per story:
 
 ```
 stories/
-  powers/
+  koda-pokemon/
     topic.json            optional, see below
-    01-the-spark.md
-    02-leos-turn.md
-  pokemon/
-    01-a-partner-at-last.md
-  unicorns/
-    01-the-quiet-horn.md
+    020-koda-and-the-sky-rival.md
+    021-the-three-way-test.md
+    ...
+  koda-rion/
+    001-the-storm-and-the-sea.md
+    ...
+  koda-side-stories/
+    ...
 ```
 
 - **Order**: stories are read in file-name order, so start names with a number (`01-`, `02-`, … `10-` sorts
@@ -35,13 +38,15 @@ stories/
 - **topic.json** (optional) sets how a topic looks; a topic without one is named after its folder:
 
   ```json
-  { "name": "Pokémon", "emoji": "🔴", "color": "#ef4444", "blurb": "Shown above the story list.", "order": 2 }
+  { "name": "Koda's Pokémon Journey", "emoji": "🌪️", "color": "#0ea5e9", "blurb": "Shown above the story list.", "order": 3 }
   ```
 
   `order` puts topics in a fixed order on the first page; otherwise they are alphabetical.
 
-New and changed stories show up the next time the page opens: no restart needed. The stories in this folder
-are samples; while the NAS's `stories` folder is empty, the app shows them.
+The stories here are built into the image, so after a push they reach the NAS with the next image update (see
+below). To try stories without a push, you can instead mount a folder from the NAS at `/stories` (see the
+compose file); while that folder has any topics in it, the app shows it instead of the built-in stories, and
+picks up changes the next time the page opens, with no restart.
 
 ### Koda story series: naming scheme
 
@@ -74,15 +79,23 @@ File names are `NNN-<story-slug>.md` with a three-digit number for reading order
 Every push to `main` runs the **Story Time image** workflow, which tests the app and
 publishes `ghcr.io/3willie/lore-time` for Intel/AMD and ARM NASes. If the repository is private, so is the
 package: make it public (GitHub → profile → **Packages** → `lore-time` → **Package settings** → **Change
-visibility**; it holds only the app and sample stories), or log the NAS in once: create a GitHub personal access
-token (classic) with only `read:packages`, then in **Container Manager → Registry → Settings → Add** use
-`https://ghcr.io` with your GitHub username and that token.
+visibility**), or keep it private and log the NAS in once: create a GitHub personal access token (classic) with
+only `read:packages`, then in **Container Manager → Registry → Settings → Add** use `https://ghcr.io` with your
+GitHub username and that token. **The image contains all the stories**, so keep it private if they use family
+names you'd rather not publish.
 
-1. In File Station create `/volume1/docker/lore-time/stories`, and inside it a folder per topic with your
-   stories (or copy this repository's `stories` folder to start).
+1. In File Station create the folder `/volume1/docker/lore-time`.
 2. **Container Manager → Project → Create**: path `/volume1/docker/lore-time`, source
    **Create docker-compose.yml**, paste [`docker-compose.ghcr.yml`](docker-compose.ghcr.yml). Start it.
 3. Open `http://<nas-address>:8090`.
+
+**Getting new stories onto the NAS:** push them to `main`, wait for the workflow to finish, then in Container
+Manager open the project and choose **Action → Build** (it pulls the new `latest`). To do this automatically,
+add a DSM **Task Scheduler** task (user `root`, e.g. nightly) that runs:
+
+```sh
+cd /volume1/docker/lore-time && docker compose pull && docker compose up -d && docker image prune -f
+```
 
 ### Option B: build on the NAS
 
@@ -92,8 +105,8 @@ Copy or `git clone` this repository to the NAS and create the project from it; i
 | Setting | Default | What it does |
 | --- | --- | --- |
 | `ports` | `8090:8090` | Change the left number if 8090 is taken |
-| `./stories:/stories:ro` | | Your stories. Mounted read-only: the app never changes them |
-| `PUID` / `PGID` | `1000` / `1000` | The user the app runs as. If it can't read the folder (Synology ACLs), the app stays root and logs how to fix it; set these to a DSM user that can read it (`id <user>` over SSH) |
+| `./stories:/stories:ro` | off | Optional: serve stories from a NAS folder instead of the built-in ones (read-only; the app never changes them) |
+| `PUID` / `PGID` | `1000` / `1000` | The user the app runs as. If it can't read a mounted stories folder (Synology ACLs), the app stays root and logs how to fix it; set these to a DSM user that can read it (`id <user>` over SSH) |
 
 Without Docker: `node server.mjs` (Node 20+) serves the bundled stories on port 8090; set `STORIES_DIR` to use
 another folder and `PORT` to change the port.
@@ -103,7 +116,7 @@ another folder and `PORT` to change the port.
 1. **Settings → Dashboards → Add dashboard → Webpage**, URL `http://<nas-address>:8090`, give it a name and an
    icon (e.g. `mdi:book-open-variant`). Or add a **Webpage** card to an existing dashboard.
 2. Add `?theme=dark` or `?theme=light` to the URL to fix the colours, e.g. `http://<nas-address>:8090/?theme=dark`.
-3. To open straight to a topic, add it after `#/`: `http://<nas-address>:8090/#/powers`.
+3. To open straight to a topic, add it after `#/`: `http://<nas-address>:8090/#/koda-pokemon`.
 
 **If Home Assistant is opened over HTTPS** (Nabu Casa, or your own certificate), browsers block an `http://`
 page inside it and the dashboard shows blank. Give Story Time an HTTPS address too: in DSM, **Control Panel →

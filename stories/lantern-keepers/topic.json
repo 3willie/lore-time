@@ -1,0 +1,8 @@
+{
+  "name": "The Lantern Keepers",
+  "emoji": "🏮",
+  "color": "#d97706",
+  "blurb": "{{hero}} and {{brother}} spend a summer on a foggy island whose lamps guide lost things home.",
+  "order": 6,
+  "characters": { "hero": "Sam", "brother": "Leo", "dad": "Dad", "mom": "Mom" }
+}

@@ -77,7 +77,8 @@ to be in this repository or the image:
 
 ### Koda story series: naming scheme
 
-Koda's stories are written in Claude chats and pushed here. Each series is its own topic folder:
+Stories are written in Claude chats and pushed here. Each series is its own topic folder. The three newer
+series use `{{hero}}`, `{{brother}}`, `{{dad}}` and `{{mom}}` placeholders, named in ⚙️ Settings:
 
 | Folder | Series |
 | --- | --- |
@@ -85,6 +86,9 @@ Koda's stories are written in Claude chats and pushed here. Each series is its o
 | `stories/koda-powers/` | Koda & Wren in the Powers universe (add when stories arrive) |
 | `stories/koda-rion/` | Koda & Rion: a separate arc where Koda's partner is Pikachu and Rion becomes a Lapras |
 | `stories/koda-side-stories/` | Standalone / non-canon stories (Entei, PokePark Kanto, space, hot springs) |
+| `stories/lantern-keepers/` | The Lantern Keepers: a summer on a foggy island whose lamps light for patience, honesty and trust |
+| `stories/star-rangers/` | Star Rangers: a tiny ship, a nervous robot, and the map to the Hidden Star |
+| `stories/the-map/` | The Map That Draws Itself: Grandpa's map adds a place after each truly kind or brave day |
 
 File names are `NNN-<story-slug>.md` with a three-digit number for reading order:
 

@@ -1,0 +1,8 @@
+{
+  "name": "Star Rangers",
+  "emoji": "🚀",
+  "color": "#4f46e5",
+  "blurb": "{{hero}}, {{brother}} and a nervous robot named Bolt crew a tiny ship, solving problems with curiosity and kindness.",
+  "order": 7,
+  "characters": { "hero": "Sam", "brother": "Leo", "dad": "Dad", "mom": "Mom" }
+}

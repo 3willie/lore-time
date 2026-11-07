@@ -1,0 +1,8 @@
+{
+  "name": "The Map That Draws Itself",
+  "emoji": "🗺️",
+  "color": "#059669",
+  "blurb": "An old map in the attic adds a new place every night, but only after {{hero}} and {{brother}} do something brave or kind.",
+  "order": 8,
+  "characters": { "hero": "Sam", "brother": "Leo", "dad": "Dad", "mom": "Mom" }
+}

@@ -77,7 +77,7 @@ to be in this repository or the image:
 
 ### Koda story series: naming scheme
 
-Stories are written in Claude chats and pushed here. Each series is its own topic folder. The three newer
+Stories are written in Claude chats and pushed here. Each series is its own topic folder. The newer
 series use `{{hero}}`, `{{brother}}`, `{{dad}}` and `{{mom}}` placeholders, named in ⚙️ Settings:
 
 | Folder | Series |
@@ -89,6 +89,8 @@ series use `{{hero}}`, `{{brother}}`, `{{dad}}` and `{{mom}}` placeholders, name
 | `stories/lantern-keepers/` | The Lantern Keepers: a summer on a foggy island whose lamps light for patience, honesty and trust |
 | `stories/star-rangers/` | Star Rangers: a tiny ship, a nervous robot, and the map to the Hidden Star |
 | `stories/the-map/` | The Map That Draws Itself: Grandpa's map adds a place after each truly kind or brave day |
+| `stories/dragon-riders/` | Dragon Riders of Highcrag: the brothers are chosen by Skye and Cinder, and learn to train and ride them |
+| `stories/fernhollow/` | Fernhollow: a hidden valley of dinosaurs behind a waterfall, Ranger Juno, and Toot the baby duckbill |
 
 File names are `NNN-<story-slug>.md` with a three-digit number for reading order:
 

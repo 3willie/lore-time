@@ -1,0 +1,8 @@
+{
+  "name": "Dragon Riders of Highcrag",
+  "emoji": "🐉",
+  "color": "#dc2626",
+  "blurb": "At the mountain aerie of Highcrag, {{hero}} and {{brother}} are chosen by two very different dragons, and learn to train them and ride them.",
+  "order": 9,
+  "characters": { "hero": "Sam", "brother": "Leo", "dad": "Dad", "mom": "Mom" }
+}

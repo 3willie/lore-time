@@ -1,0 +1,8 @@
+{
+  "name": "Fernhollow",
+  "emoji": "🦕",
+  "color": "#65a30d",
+  "blurb": "Behind a waterfall, {{hero}} and {{brother}} find a hidden valley where dinosaurs never went away, and become its youngest keepers.",
+  "order": 10,
+  "characters": { "hero": "Sam", "brother": "Leo", "dad": "Dad", "mom": "Mom" }
+}

@@ -4,9 +4,8 @@ Two-minute stories to read while brushing teeth. Pick a **topic**, then a **stor
 
 - Big, tap-friendly buttons for a phone, tablet or wall panel, with light and dark colours.
 - Each topic is a series: stories are listed in order, the next unread one is marked **Up next**,
-  stories you finish get a ✓ (on that device), and the end of each story has a **Next** button.
-- A 🪥 two-minute brushing timer starts when you open a story and keeps going into the next one.
-  Tap it to pause or restart.
+  stories get a ✓ (on that device) once you've scrolled through three quarters of them, and the end of each story has a **Next** button.
+- A 🪥 two-minute brushing timer: tap it to start or pause. Once started it keeps going into the next story.
 - **A− / A+** change the text size (remembered on that device). The screen stays on while reading where the
   browser allows it (HTTPS only).
 - No accounts, no database, no internet needed. Stories are plain text files in this repository's `stories`

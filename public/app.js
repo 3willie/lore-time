@@ -220,8 +220,37 @@ function renderReader(topic, index, story) {
 
 // ---------- router ----------
 
-let endObserver = null
+const READ_FRACTION = 0.75
+let stopReadWatch = null
 let current = { topic: null, story: null }
+
+/**
+ * Marks the story read once the reader has scrolled until three quarters of its text has come into view.
+ * Only scrolling counts (opening a story at the top never does), so it isn't ticked off just by tapping in.
+ */
+function watchReading(topic, story) {
+  if (isRead(topic, story)) return null
+  const text = app.querySelector('.story-text')
+  let frame = 0
+  const check = () => {
+    frame = 0
+    if (window.scrollY <= 0) return
+    const box = text.getBoundingClientRect()
+    if (window.innerHeight - box.top >= box.height * READ_FRACTION) {
+      markRead(topic, story)
+      stop()
+    }
+  }
+  const onScroll = () => {
+    if (!frame) frame = requestAnimationFrame(check)
+  }
+  const stop = () => {
+    window.removeEventListener('scroll', onScroll)
+    cancelAnimationFrame(frame)
+  }
+  window.addEventListener('scroll', onScroll, { passive: true })
+  return stop
+}
 
 function parseRoute() {
   const parts = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent)
@@ -231,8 +260,8 @@ function parseRoute() {
 async function route() {
   const { topicId, storyId } = parseRoute()
   if (!storyId || !library) await loadLibrary()
-  endObserver?.disconnect()
-  endObserver = null
+  stopReadWatch?.()
+  stopReadWatch = null
   current = { topic: null, story: null }
 
   if (!library) {
@@ -249,17 +278,10 @@ async function route() {
     current = { topic, story }
     app.innerHTML = renderReader(topic, index, story)
     document.title = `${plain(story.title)} · Story Time`
-    if (!timer.running && timer.left === BRUSH_SECONDS) startTimer()
+    // The timer starts only when tapped; one already running carries on into the next story.
     paintTimer()
     keepAwake(true)
-    // Reaching "The End" counts as read.
-    const end = document.getElementById('the-end')
-    if ('IntersectionObserver' in window) {
-      endObserver = new IntersectionObserver((entries) => {
-        if (entries.some((e) => e.isIntersecting)) markRead(topic, story)
-      })
-      endObserver.observe(end)
-    }
+    stopReadWatch = watchReading(topic, story)
   } else {
     keepAwake(false)
     resetTimer()

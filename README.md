@@ -127,8 +127,16 @@ The app keeps its settings in a `data` folder it creates inside the project fold
 Hyper Backup if you want the names backed up.
 
 **Getting new stories onto the NAS:** push them to `main`, wait for the workflow to finish, then in Container
-Manager open the project and choose **Action → Build** (it pulls the new `latest`). To do this automatically,
-add a DSM **Task Scheduler** task (user `root`, e.g. nightly) that runs:
+Manager select the project and choose **Action → Build**. The compose file's `pull_policy: always` makes that
+download the newest image; without it (a project created before that line was added), Container Manager reuses
+the image it already has. To check, ⚙️ Settings shows the app version at the bottom: it should match the newest
+commit on GitHub.
+
+If a project was created from an older copy of the compose file, update it once: **Action → Stop**, open the
+project, **YAML Configurations → Edit**, paste the current [`docker-compose.ghcr.yml`](docker-compose.ghcr.yml),
+save, then **Action → Build**.
+
+To update automatically, add a DSM **Task Scheduler** task (user `root`, e.g. nightly) that runs:
 
 ```sh
 cd /volume1/docker/lore-time && docker compose pull && docker compose up -d && docker image prune -f

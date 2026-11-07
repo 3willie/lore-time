@@ -4,6 +4,7 @@
 services:
   lore-time:
     image: ghcr.io/3willie/lore-time:latest
+    pull_policy: always   # Build/Start in Container Manager always fetches the newest image
     container_name: lore-time
     restart: unless-stopped
     ports:

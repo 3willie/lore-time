@@ -8,9 +8,9 @@
 //       020-koda-and-the-sky-rival.md   "# Title" on the first line, then the story; files are read in name order
 //       021-...
 //
-//   GET /api/health    -> { ok: true }
+//   GET /api/health    -> { ok: true, version }
 //   GET /api/library   -> { topics: [{ id, name, emoji, color, blurb, stories: [{ id, title, words, text }] }], characters }
-//   GET /api/settings  -> { names, characters: [{ key, label, default, topics }], canSave }
+//   GET /api/settings  -> { names, characters: [{ key, label, default, topics }], canSave, version }
 //   PUT /api/settings  <- { names: { hero: 'Koda' } } -> { names }
 //   anything else      -> the reader app in public/ (hash routing, so every page is index.html)
 //
@@ -42,6 +42,8 @@ const MIME = {
 const COMPRESSIBLE = new Set(['.html', '.js', '.css', '.json', '.svg', '.webmanifest'])
 const STORY_EXT = new Set(['.md', '.txt'])
 const MAX_STORY_BYTES = 256 * 1024
+/** The commit the image was built from (set by the GitHub workflow), shortened like GitHub shows it. */
+const VERSION = (process.env.APP_VERSION || 'dev').slice(0, 7)
 const MAX_BODY = 16 * 1024
 const MAX_NAME_LENGTH = 40
 const MAX_NAMES = 100
@@ -289,7 +291,7 @@ export function createApp({ staticDir, storiesDirs, dataDir }) {
         return send(res, 200, { names })
       }
       if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, { error: 'Method not allowed' })
-      if (path === '/api/health') return send(res, 200, { ok: true })
+      if (path === '/api/health') return send(res, 200, { ok: true, version: VERSION })
       if (path === '/api/library' || path === '/api/settings') {
         const dir = await pickStoriesDir(storiesDirs)
         const { names } = await readSettings(dataDir)
@@ -301,7 +303,7 @@ export function createApp({ staticDir, storiesDirs, dataDir }) {
           return send(res, 500, { error: `Cannot read the stories folder (${e.code ?? e.message})` })
         }
         if (path === '/api/library') return send(res, 200, library)
-        return send(res, 200, { names, characters: library.characters, canSave: await canSave() })
+        return send(res, 200, { names, characters: library.characters, canSave: await canSave(), version: VERSION })
       }
       if (path.startsWith('/api/')) return send(res, 404, { error: 'Not found' })
       await serveStatic(req, res, path)

@@ -164,7 +164,7 @@ function setTheme(theme) {
 }
 
 function renderSettings(settings) {
-  const { names, characters, canSave } = settings
+  const { names, characters, canSave, version } = settings
   const fields = characters
     .map(
       (c) => `<label class="field">
@@ -216,6 +216,8 @@ function renderSettings(settings) {
         <button class="link" data-action="reset-all">Clear every ✓ mark on this device</button>
       </div>
     </section>
+    <p class="hint version">App version ${esc(version || 'unknown')}. After an update, this should match the newest
+      commit on GitHub.</p>
   </div>`
 }
 

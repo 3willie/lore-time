@@ -520,3 +520,8 @@ article h2 {
 .settings .link {
   padding: 8px 0;
 }
+
+.version {
+  text-align: center;
+  margin: 8px 0 24px;
+}

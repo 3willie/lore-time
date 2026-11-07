@@ -146,6 +146,7 @@ describe('server', () => {
     let settings = await (await fetch(base + 'api/settings')).json()
     assert.deepEqual(settings.names, {})
     assert.equal(settings.canSave, true)
+    assert.equal(typeof settings.version, 'string')
     assert.equal(settings.characters[0].default, 'Sam')
 
     const put = (body) => fetch(base + 'api/settings', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body })

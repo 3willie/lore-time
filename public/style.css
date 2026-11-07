@@ -399,3 +399,124 @@ article h2 {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* ---------- settings ---------- */
+.settings {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.panel {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.panel h2 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+.panel > .hint {
+  margin: 0 0 16px;
+}
+.hint {
+  color: var(--muted);
+  font-size: 16px;
+}
+.warn {
+  color: #b91c1c;
+  font-weight: 700;
+}
+.fields {
+  display: grid;
+  gap: 16px;
+}
+.field {
+  display: grid;
+  gap: 6px;
+}
+.field-label,
+.setting-label {
+  font-weight: 800;
+  font-size: 19px;
+}
+.field input {
+  width: 100%;
+  min-height: 56px;
+  padding: 0 16px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 22px;
+}
+.field input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+.field input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.setting {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.setting:first-of-type {
+  border-top: 0;
+}
+.segmented {
+  display: inline-flex;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 2px solid var(--line);
+}
+.seg {
+  min-height: 48px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+.seg[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+.size-row {
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.size-sample {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  font-family: var(--read-font);
+  font-size: var(--story-size);
+  line-height: 1.2;
+}
+.settings .link {
+  padding: 8px 0;
+}

@@ -3,22 +3,26 @@
 FROM node:22-alpine AS test
 WORKDIR /app
 COPY . .
-RUN node --test
+RUN node --test && mkdir /data-empty
 
 FROM node:22-alpine
 ENV NODE_ENV=production \
     PORT=8090 \
     STORIES_DIR=/stories \
+    DATA_DIR=/data \
     PUID=1000 PGID=1000
 WORKDIR /app
 COPY --from=test /app/server.mjs /app/package.json ./
 COPY --from=test /app/public ./public
 # The stories, used unless a folder with topics in it is mounted at /stories.
 COPY --from=test /app/stories ./stories
+# Settings saved from the app (character names) live here; mount it so they survive updates.
+COPY --from=test --chown=node:node /data-empty /data
+VOLUME ["/data"]
 ARG APP_VERSION=dev
 ENV APP_VERSION=$APP_VERSION
 EXPOSE 8090
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s \
   CMD wget -qO- "http://127.0.0.1:${PORT}/api/health" || exit 1
-# Starts as root only to check the app user can read /stories, then drops to PUID:PGID (see server.mjs).
+# Starts as root only to hand /data to the app user and check its access, then drops to PUID:PGID (see server.mjs).
 CMD ["node", "server.mjs"]

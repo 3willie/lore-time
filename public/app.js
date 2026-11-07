@@ -142,17 +142,126 @@ document.addEventListener('visibilitychange', () => {
 
 // ---------- pages ----------
 
-function themeButton() {
-  const dark =
-    document.documentElement.dataset.theme === 'dark' ||
-    (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches)
-  return `<button class="btn icon" data-action="theme" aria-label="Switch to ${dark ? 'light' : 'dark'} colours">${dark ? '☀️' : '🌙'}</button>`
+const settingsButton = '<a class="btn icon" href="#/settings" aria-label="Settings">⚙️</a>'
+
+/** The colour choice saved on this device: 'light', 'dark' or '' (follow the device). */
+function savedTheme() {
+  try {
+    return localStorage.getItem('storytime.theme') || ''
+  } catch {
+    return ''
+  }
+}
+function setTheme(theme) {
+  try {
+    if (theme) localStorage.setItem('storytime.theme', theme)
+    else localStorage.removeItem('storytime.theme')
+  } catch {
+    /* storage blocked: still applies until the page reloads */
+  }
+  if (theme) document.documentElement.dataset.theme = theme
+  else delete document.documentElement.dataset.theme
+}
+
+function renderSettings(settings) {
+  const { names, characters, canSave } = settings
+  const fields = characters
+    .map(
+      (c) => `<label class="field">
+        <span class="field-label">${esc(c.label)}</span>
+        <input name="${esc(c.key)}" value="${esc(names[c.key] ?? '')}" placeholder="${esc(c.default || c.label)}"
+          maxlength="40" autocomplete="off" autocapitalize="words" spellcheck="false" />
+        <span class="hint">${c.default ? `Leave blank for “${esc(c.default)}”. ` : ''}In ${c.topics.map(esc).join(', ')}.</span>
+      </label>`,
+    )
+    .join('')
+  const nameSection = characters.length
+    ? `<form id="names-form" class="fields">${fields}
+        <div class="form-actions">
+          <button class="btn primary" type="submit"${canSave ? '' : ' disabled'}>Save names</button>
+          <span id="save-status" class="hint" role="status"></span>
+        </div>
+        ${canSave ? '' : '<p class="warn">The app can’t save on the NAS right now: its <code>data</code> folder isn’t writable. See the README.</p>'}
+      </form>`
+    : '<p class="hint">None of the stories use changeable names yet. Stories written with names like <code>{{hero}}</code> list them here.</p>'
+  const theme = savedTheme()
+  const choice = (value, label) =>
+    `<button class="seg" data-action="theme-set" data-value="${value}" aria-pressed="${theme === value}">${label}</button>`
+  return `<div class="settings">
+    <div class="bar">
+      <a class="btn" href="#/" aria-label="All topics">← <span class="label">Topics</span></a>
+      <h1>Settings</h1>
+    </div>
+    <section class="panel">
+      <h2>Character names</h2>
+      <p class="hint">Saved on the NAS, so every device reads the same names.</p>
+      ${nameSection}
+    </section>
+    <section class="panel">
+      <h2>This device</h2>
+      <div class="setting">
+        <span class="setting-label">Colours</span>
+        <div class="segmented" role="group" aria-label="Colours">${choice('', 'Auto')}${choice('light', '☀️ Light')}${choice('dark', '🌙 Dark')}</div>
+      </div>
+      <div class="setting">
+        <span class="setting-label">Story text size</span>
+        <div class="size-row">
+          <button class="btn icon" data-action="smaller" aria-label="Smaller text">A−</button>
+          <span class="size-sample">Once upon a time</span>
+          <button class="btn icon" data-action="bigger" aria-label="Bigger text">A+</button>
+        </div>
+      </div>
+      <div class="setting">
+        <span class="setting-label">Reading progress</span>
+        <button class="link" data-action="reset-all">Clear every ✓ mark on this device</button>
+      </div>
+    </section>
+  </div>`
+}
+
+async function showSettings() {
+  app.innerHTML = '<p class="loading">Opening settings…</p>'
+  document.title = 'Settings · Story Time'
+  try {
+    const res = await fetch('api/settings', { cache: 'no-store' })
+    const body = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(body.error || `The server said ${res.status}`)
+    if (parseRoute().topicId === 'settings') app.innerHTML = renderSettings(body)
+  } catch (e) {
+    app.innerHTML = `<div class="message"><h1>Can't open settings</h1><p>${esc(e.message || e)}</p>
+      <p><button class="btn primary" data-action="retry">Try again</button> <a class="btn" href="#/">Topics</a></p></div>`
+  }
+}
+
+async function saveNames(form) {
+  const status = document.getElementById('save-status')
+  const button = form.querySelector('button[type=submit]')
+  const names = {}
+  for (const input of form.querySelectorAll('input[name]')) names[input.name] = input.value
+  button.disabled = true
+  status.textContent = 'Saving…'
+  try {
+    const res = await fetch('api/settings', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ names }),
+    })
+    const body = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(body.error || `The server said ${res.status}`)
+    for (const input of form.querySelectorAll('input[name]')) input.value = body.names[input.name] ?? ''
+    library = null // re-read so the stories use the new names
+    status.textContent = 'Saved ✓'
+  } catch (e) {
+    status.textContent = `Not saved: ${e.message || e}`
+  } finally {
+    button.disabled = false
+  }
 }
 
 function renderHome() {
   const topics = library.topics
   if (!topics.length) {
-    return `<div class="message"><h1>No stories yet</h1><p>Add a folder for each topic, with a story file or two inside, to the stories folder. The README explains how.</p></div>`
+    return `<div class="bar"><span class="spacer"></span>${settingsButton}</div><div class="message"><h1>No stories yet</h1><p>Add a folder for each topic, with a story file or two inside, to the stories folder. The README explains how.</p></div>`
   }
   const cards = topics
     .map((t, i) => {
@@ -166,7 +275,7 @@ function renderHome() {
       </a>`
     })
     .join('')
-  return `<div class="bar"><h1>Story Time 🪥</h1>${themeButton()}</div><nav class="topics" aria-label="Topics">${cards}</nav>`
+  return `<div class="bar"><h1>Story Time 🪥</h1>${settingsButton}</div><nav class="topics" aria-label="Topics">${cards}</nav>`
 }
 
 function renderTopic(topic, index) {
@@ -259,10 +368,16 @@ function parseRoute() {
 
 async function route() {
   const { topicId, storyId } = parseRoute()
-  if (!storyId || !library) await loadLibrary()
   stopReadWatch?.()
   stopReadWatch = null
   current = { topic: null, story: null }
+  if (topicId === 'settings') {
+    keepAwake(false)
+    resetTimer()
+    window.scrollTo(0, 0)
+    return showSettings()
+  }
+  if (!storyId || !library) await loadLibrary()
 
   if (!library) {
     app.innerHTML = `<div class="message"><h1>Can't open the story books</h1><p>${esc(loadError)}</p>
@@ -312,15 +427,19 @@ app.addEventListener('click', (e) => {
     applySize()
   } else if (action === 'next') {
     if (current.topic) markRead(current.topic, current.story)
-  } else if (action === 'theme') {
-    const dark = el.textContent.includes('🌙')
-    document.documentElement.dataset.theme = dark ? 'dark' : 'light'
-    try {
-      localStorage.setItem('storytime.theme', document.documentElement.dataset.theme)
-    } catch {
-      /* ignore */
+  } else if (action === 'theme-set') {
+    setTheme(el.dataset.value)
+    for (const b of el.parentElement.children) b.setAttribute('aria-pressed', String(b === el))
+  } else if (action === 'reset-all') {
+    if (!el.dataset.armed) {
+      el.dataset.armed = '1'
+      el.textContent = 'Tap again to clear them all'
+      return
     }
-    el.outerHTML = themeButton()
+    prefs.read = {}
+    savePrefs()
+    el.textContent = 'Cleared ✓'
+    el.disabled = true
   } else if (action === 'reset') {
     // Two taps rather than confirm(), which some Home Assistant webviews block.
     if (!el.dataset.armed) {
@@ -335,6 +454,12 @@ app.addEventListener('click', (e) => {
   } else if (action === 'retry') {
     route()
   }
+})
+
+app.addEventListener('submit', (e) => {
+  if (e.target.id !== 'names-form') return
+  e.preventDefault()
+  saveNames(e.target)
 })
 
 window.addEventListener('hashchange', route)

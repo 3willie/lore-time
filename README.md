@@ -8,6 +8,8 @@ Two-minute stories to read while brushing teeth. Pick a **topic**, then a **stor
 - A 🪥 two-minute brushing timer: tap it to start or pause. Once started it keeps going into the next story.
 - **A− / A+** change the text size (remembered on that device). The screen stays on while reading where the
   browser allows it (HTTPS only).
+- A ⚙️ **Settings** page: character names (saved on the NAS, shared by every device), and for this device the
+  colours (auto, light or dark), text size and clearing the ✓ marks.
 - No accounts, no database, no internet needed. Stories are plain text files in this repository's `stories`
   folder, built into the image, so pushing a new story and updating the container is all it takes.
 
@@ -66,16 +68,10 @@ to be in this repository or the image:
   { "name": "The Lantern Keepers", "characters": { "hero": "Sam", "sidekick": "Leo" } }
   ```
 
-- Set the real names on the NAS in `docker-compose.yml`, one `NAME_` line per placeholder (`NAME_HERO` fills
-  `{{hero}}`, `NAME_LITTLE_BROTHER` fills `{{little-brother}}`), then restart the project:
-
-  ```yaml
-      environment:
-        NAME_HERO: Koda
-        NAME_SIDEKICK: Wren
-  ```
-
-  These apply to every topic that uses the same placeholder, so a character can carry across series.
+- Set the real names in the app: ⚙️ **Settings → Character names** lists every placeholder the stories use.
+  Type a name and **Save names**; leave one blank to use the default. Names are saved on the NAS (in the
+  project's `data` folder), so every device sees them, and they never go into the repository or the image.
+  A name applies to every topic that uses the same placeholder, so a character can carry across series.
 - A placeholder with no name anywhere stays visible as `{{name}}`, so a typo is easy to spot.
 - Only names change: pronouns are written into the story, so keep each character's pronouns in mind.
 
@@ -117,8 +113,12 @@ names you'd rather not publish.
 
 1. In File Station create the folder `/volume1/docker/lore-time`.
 2. **Container Manager → Project → Create**: path `/volume1/docker/lore-time`, source
-   **Create docker-compose.yml**, paste [`docker-compose.ghcr.yml`](docker-compose.ghcr.yml). Start it.
-3. Open `http://<nas-address>:8090`.
+   **Create docker-compose.yml**, paste [`docker-compose.ghcr.yml`](docker-compose.ghcr.yml) as it is (there is
+   nothing to edit in it). Start it.
+3. Open `http://<nas-address>:8090`, then ⚙️ **Settings** to set the character names.
+
+The app keeps its settings in a `data` folder it creates inside the project folder; include that folder in
+Hyper Backup if you want the names backed up.
 
 **Getting new stories onto the NAS:** push them to `main`, wait for the workflow to finish, then in Container
 Manager open the project and choose **Action → Build** (it pulls the new `latest`). To do this automatically,
@@ -133,20 +133,23 @@ cd /volume1/docker/lore-time && docker compose pull && docker compose up -d && d
 Copy or `git clone` this repository to the NAS and create the project from it; it uses
 [`docker-compose.yml`](docker-compose.yml), which builds the image there.
 
-| Setting | Default | What it does |
-| --- | --- | --- |
-| `ports` | `8090:8090` | Change the left number if 8090 is taken |
-| `./stories:/stories:ro` | off | Optional: serve stories from a NAS folder instead of the built-in ones (read-only; the app never changes them) |
-| `PUID` / `PGID` | `1000` / `1000` | The user the app runs as. If it can't read a mounted stories folder (Synology ACLs), the app stays root and logs how to fix it; set these to a DSM user that can read it (`id <user>` over SSH) |
+The compose files need no changes. Only if you run into one of these:
 
-Without Docker: `node server.mjs` (Node 20+) serves the bundled stories on port 8090; set `STORIES_DIR` to use
-another folder and `PORT` to change the port.
+| If… | Then |
+| --- | --- |
+| port 8090 is already used on the NAS | change the left number under `ports`, e.g. `"8091:8090"` |
+| you want to try stories from a NAS folder before pushing them | uncomment the `./stories:/stories:ro` line; while that folder has topics in it, the app shows them instead of the built-in stories |
+| the log says the app user can't use the project folder (Synology ACLs) | it keeps working as root; to avoid that, add `environment:` with `PUID` / `PGID` set to a DSM user with access (`id <user>` over SSH) |
+
+Without Docker: `node server.mjs` (Node 20+) serves the bundled stories on port 8090 and keeps settings in
+`./data`; `STORIES_DIR`, `DATA_DIR` and `PORT` change those.
 
 ## Adding it to Home Assistant
 
 1. **Settings → Dashboards → Add dashboard → Webpage**, URL `http://<nas-address>:8090`, give it a name and an
    icon (e.g. `mdi:book-open-variant`). Or add a **Webpage** card to an existing dashboard.
-2. Add `?theme=dark` or `?theme=light` to the URL to fix the colours, e.g. `http://<nas-address>:8090/?theme=dark`.
+2. Colours follow the device; to fix them for the dashboard, pick Light or Dark in ⚙️ Settings on that device, or add
+   `?theme=dark` / `?theme=light` to the URL.
 3. To open straight to a topic, add it after `#/`: `http://<nas-address>:8090/#/koda-pokemon`.
 
 **If Home Assistant is opened over HTTPS** (Nabu Casa, or your own certificate), browsers block an `http://`

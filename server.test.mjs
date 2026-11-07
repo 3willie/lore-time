@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { after, before, describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { createApp, fillNames, namesFromEnv, parseStory, readLibrary, storyId } from './server.mjs'
+import { cleanNames, createApp, fillNames, parseStory, readLibrary, storyId } from './server.mjs'
 import { inline, plain, renderStory } from './public/story-format.js'
 
 const here = new URL('.', import.meta.url).pathname
@@ -27,11 +27,13 @@ describe('story files', () => {
 })
 
 describe('character names', () => {
-  it('reads NAME_ variables', () => {
-    assert.deepEqual(namesFromEnv({ NAME_HERO: ' Koda ', NAME_LITTLE_BROTHER: 'Wren', NAME_EMPTY: '', PATH: '/bin' }), {
+  it('keeps only sensible saved names', () => {
+    assert.deepEqual(cleanNames({ Hero: '  Koda  ', Little_Brother: 'Wren', empty: ' ', '1bad': 'x', n: 5, long: 'x'.repeat(60) }), {
       hero: 'Koda',
       'little-brother': 'Wren',
+      long: 'x'.repeat(40),
     })
+    assert.equal(cleanNames(['Koda']), null)
   })
 
   it('fills placeholders and leaves unknown ones showing', () => {
@@ -48,7 +50,12 @@ describe('character names', () => {
         JSON.stringify({ name: "{{hero}}'s Sky", blurb: '{{hero}} and {{sidekick}}.', characters: { hero: 'Sam', sidekick: 'Pip' } }),
       )
       await writeFile(join(dir, 'sky', '01-up.md'), '# {{hero}} Flies\n\n{{hero}} and {{sidekick}} flew.')
-      const [plain] = (await readLibrary(dir)).topics
+      const lib = await readLibrary(dir)
+      assert.deepEqual(lib.characters, [
+        { key: 'hero', label: 'Hero', default: 'Sam', topics: ["Sam's Sky"] },
+        { key: 'sidekick', label: 'Sidekick', default: 'Pip', topics: ["Sam's Sky"] },
+      ])
+      const [plain] = lib.topics
       assert.equal(plain.name, "Sam's Sky")
       assert.equal(plain.stories[0].title, 'Sam Flies')
       assert.equal(plain.stories[0].text, 'Sam and Pip flew.')
@@ -112,7 +119,7 @@ describe('server', () => {
     await writeFile(join(dir, 'public', 'index.html'), '<!doctype html><title>Story Time</title>')
     await writeFile(join(dir, 'secret.txt'), 'nope')
     // The mounted folder is empty, so the bundled stories are served.
-    server = createApp({ staticDir: join(dir, 'public'), storiesDirs: [join(dir, 'mounted'), join(here, 'stories')] })
+    server = createApp({ staticDir: join(dir, 'public'), storiesDirs: [join(dir, 'mounted'), join(here, 'stories')], dataDir: join(dir, 'data') })
     await new Promise((r) => server.listen(0, '127.0.0.1', r))
     base = `http://127.0.0.1:${server.address().port}/`
   })
@@ -128,6 +135,28 @@ describe('server', () => {
     const { topics } = await res.json()
     assert.equal(topics.length, 3)
     assert.ok(topics[0].stories[0].text.length > 100)
+  })
+
+  it('saves character names from Settings and uses them in the stories', async () => {
+    await mkdir(join(dir, 'mounted', 'sky'), { recursive: true })
+    await writeFile(join(dir, 'mounted', 'sky', 'topic.json'), JSON.stringify({ characters: { hero: 'Sam' } }))
+    await writeFile(join(dir, 'mounted', 'sky', '01-up.md'), '# Up\n\n{{hero}} flew.')
+    let settings = await (await fetch(base + 'api/settings')).json()
+    assert.deepEqual(settings.names, {})
+    assert.equal(settings.canSave, true)
+    assert.equal(settings.characters[0].default, 'Sam')
+
+    const put = (body) => fetch(base + 'api/settings', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body })
+    assert.equal((await put('nope')).status, 400)
+    assert.equal((await put(JSON.stringify({ names: 'Koda' }))).status, 400)
+    const res = await put(JSON.stringify({ names: { hero: ' Koda ' } }))
+    assert.deepEqual(await res.json(), { names: { hero: 'Koda' } })
+
+    settings = await (await fetch(base + 'api/settings')).json()
+    assert.deepEqual(settings.names, { hero: 'Koda' })
+    const { topics } = await (await fetch(base + 'api/library')).json()
+    assert.equal(topics[0].stories[0].text, 'Koda flew.')
+    await rm(join(dir, 'mounted', 'sky'), { recursive: true })
   })
 
   it('picks up stories added to the mounted folder without a restart', async () => {
@@ -146,6 +175,7 @@ describe('server', () => {
     assert.notEqual(await res.text(), 'nope')
     assert.equal((await fetch(base + 'api/nope')).status, 404)
     assert.equal((await fetch(base + 'api/library', { method: 'POST' })).status, 405)
+    assert.equal((await fetch(base + 'api/library', { method: 'PUT' })).status, 405)
   })
 })
 

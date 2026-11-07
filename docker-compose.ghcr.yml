@@ -1,5 +1,6 @@
 # Pulls the image GitHub Actions builds (no build on the NAS).
 # Synology Container Manager: Project > Create, choose a folder, and paste this file as docker-compose.yml.
+# Nothing here needs editing: everything is set in the app's Settings page.
 services:
   lore-time:
     image: ghcr.io/3willie/lore-time:latest
@@ -7,15 +8,8 @@ services:
     restart: unless-stopped
     ports:
       - "8090:8090"         # change the left side if 8090 is taken on your NAS
-    environment:
-      TZ: Etc/UTC
-      # PUID: 1026          # optional: a DSM user that can read a mounted stories folder (`id <user>` over SSH)
-      # PGID: "100"
-      # Character names for stories written with placeholders such as {{hero}} (see the README).
-      # Set here, real names stay on the NAS and out of the repository and the image.
-      # NAME_HERO: Sam
-      # NAME_SIDEKICK: Leo
+    volumes:
+      - ./data:/data        # settings saved from the app's Settings page
     # The stories are built into the image. To serve a folder on the NAS instead (e.g. to try new
-    # stories before pushing them), uncomment these two lines and put one folder per topic in ./stories.
-    # volumes:
+    # stories before pushing them), uncomment the line below and put one folder per topic in ./stories.
     #   - ./stories:/stories:ro

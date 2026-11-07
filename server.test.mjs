@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { after, before, describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { createApp, parseStory, readLibrary, storyId } from './server.mjs'
+import { createApp, fillNames, namesFromEnv, parseStory, readLibrary, storyId } from './server.mjs'
 import { inline, plain, renderStory } from './public/story-format.js'
 
 const here = new URL('.', import.meta.url).pathname
@@ -23,6 +23,42 @@ describe('story files', () => {
 
   it('falls back to the file name when there is no heading', () => {
     assert.equal(parseStory('03-a-new-friend.txt', 'Once upon a time.').title, 'A New Friend')
+  })
+})
+
+describe('character names', () => {
+  it('reads NAME_ variables', () => {
+    assert.deepEqual(namesFromEnv({ NAME_HERO: ' Koda ', NAME_LITTLE_BROTHER: 'Wren', NAME_EMPTY: '', PATH: '/bin' }), {
+      hero: 'Koda',
+      'little-brother': 'Wren',
+    })
+  })
+
+  it('fills placeholders and leaves unknown ones showing', () => {
+    const names = { hero: 'Koda', 'little-brother': 'Wren' }
+    assert.equal(fillNames("{{hero}}'s brother {{ Little_Brother }} met {{dragon}}.", names), "Koda's brother Wren met {{dragon}}.")
+  })
+
+  it('uses topic defaults unless a name is set, in titles, text, blurbs and word counts', async () => {
+    const dir = await mkdtemp(join(tmpdir(), 'names-'))
+    try {
+      await mkdir(join(dir, 'sky'))
+      await writeFile(
+        join(dir, 'sky', 'topic.json'),
+        JSON.stringify({ name: "{{hero}}'s Sky", blurb: '{{hero}} and {{sidekick}}.', characters: { hero: 'Sam', sidekick: 'Pip' } }),
+      )
+      await writeFile(join(dir, 'sky', '01-up.md'), '# {{hero}} Flies\n\n{{hero}} and {{sidekick}} flew.')
+      const [plain] = (await readLibrary(dir)).topics
+      assert.equal(plain.name, "Sam's Sky")
+      assert.equal(plain.stories[0].title, 'Sam Flies')
+      assert.equal(plain.stories[0].text, 'Sam and Pip flew.')
+      const [named] = (await readLibrary(dir, { hero: 'Mary Jane' })).topics
+      assert.equal(named.blurb, 'Mary Jane and Pip.')
+      assert.equal(named.stories[0].text, 'Mary Jane and Pip flew.')
+      assert.equal(named.stories[0].words, 5)
+    } finally {
+      await rm(dir, { recursive: true, force: true })
+    }
   })
 })
 

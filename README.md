@@ -47,6 +47,38 @@ below). To try stories without a push, you can instead mount a folder from the N
 compose file); while that folder has any topics in it, the app shows it instead of the built-in stories, and
 picks up changes the next time the page opens, with no restart.
 
+### Character names (placeholders)
+
+A story can use a placeholder instead of a real name, so the names can be changed and real names never have
+to be in this repository or the image:
+
+```md
+# {{hero}} and the Lantern Fox
+
+{{hero}} pulled on his boots while {{sidekick}} was still yawning.
+```
+
+- Write `{{name}}` wherever the character's name goes. `{{hero}}'s` works for possessives, and placeholders
+  work in titles and in the topic's `name` and `blurb` too.
+- Give each placeholder a made-up default in the topic's `topic.json`, so the story reads properly anywhere:
+
+  ```json
+  { "name": "The Lantern Keepers", "characters": { "hero": "Sam", "sidekick": "Leo" } }
+  ```
+
+- Set the real names on the NAS in `docker-compose.yml`, one `NAME_` line per placeholder (`NAME_HERO` fills
+  `{{hero}}`, `NAME_LITTLE_BROTHER` fills `{{little-brother}}`), then restart the project:
+
+  ```yaml
+      environment:
+        NAME_HERO: Koda
+        NAME_SIDEKICK: Wren
+  ```
+
+  These apply to every topic that uses the same placeholder, so a character can carry across series.
+- A placeholder with no name anywhere stays visible as `{{name}}`, so a typo is easy to spot.
+- Only names change: pronouns are written into the story, so keep each character's pronouns in mind.
+
 ### Koda story series: naming scheme
 
 Koda's stories are written in Claude chats and pushed here. Each series is its own topic folder:

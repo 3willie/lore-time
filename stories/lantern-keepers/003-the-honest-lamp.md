@@ -1,45 +1,45 @@
 # The Honest Lamp
 
-It was an accident. That was the worst part.
+{{hero}} only wanted to look.
 
-{{hero}} had only wanted to *look* at the green lamp's lens — the thick curved glass that sat in front of the flame. He lifted it, just a little, and it slipped. It didn't shatter. It just cracked: one thin silver line, right across the middle.
+He lifted the glass cover on the green lamp. Just a little. But it slipped — *clink!* — and a crack ran across it.
 
-His heart thumped. He set the lens back exactly where it had been and turned it so the crack faced the wall.
+Oh no.
 
-*Nobody will notice,* he told himself. *It still works.*
+{{hero}}'s tummy went wobbly. He put the cover back and turned it so the crack faced the wall.
 
-That evening, the fog rolled in thick and heavy. Old Wick climbed to the green landing and laid his hand on the lamp, the way he did every night.
+*Nobody will see,* he thought.
+
+That night, the fog came. Old Wick put his hand on the green lamp to turn it on.
 
 Nothing happened.
 
-He tried again. The green lamp stayed dark and cold.
+He tried again. Still nothing.
 
-"Strange," Old Wick murmured. "Very strange."
+Then, far out at sea, they heard a sound. *Toooot.* A boat's horn. A little boat was lost in the fog, looking for the light.
 
-From somewhere out in the gray, a foghorn sounded. Low and lonely. A boat — lost, and looking for the light.
+{{hero}}'s tummy felt even more wobbly.
 
-{{hero}}'s stomach twisted. He looked at the lens. He looked at the floor. He looked at {{brother}}, who was looking at *him*, because brothers always know.
+{{brother}} looked at him. Brothers always know.
 
-"It was me," {{hero}} said. The words came out wobbly. "I cracked the lens. I turned it round so you wouldn't see. I'm sorry."
+{{hero}} took a big breath.
 
-He waited for Old Wick to be angry.
+"Old Wick," he said. "It was me. I cracked the glass, and I hid it. I'm sorry."
 
-Instead, the old man let out a long breath and nodded slowly. "Ah. That explains it."
+Old Wick didn't get upset. He just nodded, and turned the glass around so the crack showed.
 
-He turned the lens so the crack faced out, right where everyone could see it. Then he put his hand on {{hero}}'s shoulder.
+"The green lamp turns on with *honesty*," he said. "It can shine through a crack. But not through a secret."
 
-"The green lamp lights for honesty," he said. "It can shine through a cracked lens just fine. What it can't shine through is a hidden one."
+He nodded at {{hero}}. "You try."
 
-He nodded at the lamp. "Go on. You try."
+{{hero}} put his hand on the lamp.
 
-{{hero}} laid his hand on the cool glass.
+*Whoosh!* Green light poured out across the water, bright and clear.
 
-Green light bloomed — bright and clear, pouring out of the window and across the water. The crack showed up as a thin bright line in the beam, like a scar that didn't mind being seen.
+*Toooot!* went the boat. Closer. Closer. *Bump.* It was safe at the dock.
 
-Far out in the fog, the foghorn sounded again. Closer this time. Then closer. Then, at last, the soft bump of a boat finding the dock.
+{{hero}} let out a big breath. His tummy wasn't wobbly anymore.
 
-{{hero}} let out a breath he felt like he'd been holding all day.
+"Telling the truth feels better," said {{brother}}.
 
-"Feels better, doesn't it?" said {{brother}}.
-
-It really did.
+"It really does," said {{hero}}.

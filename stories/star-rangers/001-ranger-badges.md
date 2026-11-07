@@ -1,41 +1,43 @@
 # Ranger Badges
 
-The badges were small and silver, shaped like stars with one point bent slightly crooked.
+{{mom}} pinned a shiny silver star onto {{hero}}'s shirt. Then one onto {{brother}}'s.
 
-"That's on purpose," said {{mom}}, pinning one onto {{hero}}'s jacket and one onto {{brother}}'s. "Nobody's perfect. Not even a Star Ranger."
+"You are now Junior Star Rangers," she said.
 
-They were standing in Hangar Nine of Ranger Base, a huge round station floating above a blue-green planet. All around them, Ranger ships were coming and going — sleek silver cruisers, huge cargo haulers, fast little scouts.
+"YES!" shouted {{brother}}.
 
-And then there was theirs.
+They were on Ranger Base, a big round space station floating high above a blue-green planet. Spaceships zoomed in and out. *Zoom! Whoosh!*
 
-"That's *our* ship?" {{brother}} asked.
+"Which ship is ours?" asked {{hero}}.
 
-It was round and dented, with patched-up wings and one headlight that blinked when it should have stayed on. Someone had painted a name on the side in careful letters: *PEBBLE*.
+{{mom}} pointed.
 
-"She's small," said {{mom}}, "but she's brave. Like you two."
+It was small. And round. And a bit dented. One headlight blinked on and off. On the side, someone had painted its name: *PEBBLE*.
 
-The hatch hissed open, and a robot peeked out. He was about as tall as {{brother}}, with a round head, long thin arms, and two big blue eyes that blinked very fast.
+"She's little," said {{mom}}, "but she's brave."
 
-"H-hello," said the robot. "I'm Bolt. I'm your ship's helper. I should tell you right away that I am not very good at being brave. I'm better at counting things. And worrying."
+The door went *hiss*, and a robot peeked out. He had a round head, long skinny arms, and big blue eyes that blinked very fast.
 
-"That's okay," said {{hero}}. "I'm not very good at counting."
+"H-hello," said the robot. "I'm Bolt. I help on the ship. I'm very good at counting. I'm not very good at being brave."
 
-Bolt's eyes blinked slower. It looked like a smile.
+"That's okay," said {{brother}}. "We can be brave together."
 
-{{mom}} would stay on Ranger Base, running Mission Control. Her voice would come through the *Pebble*'s speakers whenever they needed her.
+Bolt's eyes blinked slowly. It looked like a smile.
 
-"Your first job is simple," she said. "Just get to know your ship."
+{{mom}} would stay on Ranger Base and talk to them on the radio. "Your first job," she said, "is to get to know your ship."
 
-So they did. They found the snack drawer (mostly crackers). They found the bunk beds (squeaky). And, in a dusty cupboard at the back, they found a small round box with a star on the lid.
+So they explored!
 
-Inside was a scrap of glowing blue paper. A torn piece of a map.
+They found the snack drawer. (Crackers!)
 
-It showed stars — hundreds of them — and, right at the torn edge, the beginning of something bright. A star with no name.
+They found the bunk beds. (Squeaky!)
 
-"Bolt," {{hero}} said slowly. "What *is* this?"
+And in a dusty cupboard, they found a little box with a star on the lid.
 
-Bolt's eyes went very wide. "Oh," he whispered. "Oh, oh. I think that's a piece of the map to the Hidden Star. Nobody's ever found it."
+Inside was a piece of glowing blue paper. It was part of a map! It showed lots of stars, and at the very edge, the start of one big, bright, special star.
 
-{{brother}} looked at {{hero}}. {{hero}} looked at the map.
+"Oh!" said Bolt. "That's a map to the Hidden Star. Nobody has ever found it!"
+
+{{hero}} grinned at {{brother}}.
 
 "Nobody," said {{hero}}, "*yet*."

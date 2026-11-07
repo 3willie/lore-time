@@ -1,39 +1,45 @@
 # The Quiet Planet
 
-"New mission, Rangers," said {{mom}}'s voice over the speaker. "There's a planet called Hush that's stopped answering our calls. Go and see if they're all right."
+"Rangers," said {{mom}} on the radio. "Please visit the planet Hush. They haven't called us in a while. Make sure they're okay."
 
-The *Pebble* landed in a valley of soft purple moss. Tall glassy trees chimed gently in the wind. It was the quietest place {{hero}} had ever been.
+The *Pebble* landed on soft purple grass. Tall glass trees went *ting, ting* in the wind.
 
-"HELLO!" {{brother}} shouted, jumping out of the hatch. "WE'RE THE STAR RANGERS! IS ANYBODY HERE?"
+"HELLO!" shouted {{brother}}. "WE'RE THE STAR RANGERS!"
 
-The trees stopped chiming. Somewhere, something small went *eep* and hid.
+*Eep!* Something small ran away and hid.
 
-"I don't think they like shouting," Bolt whispered, ducking behind {{hero}}.
+"I don't think they like shouting," whispered Bolt.
 
-They walked for a long time and found no one. {{brother}} called out. {{hero}} called out. Bolt counted the trees (four hundred and twelve). Nobody answered.
+They looked everywhere. Nobody was there.
 
-Finally, {{hero}} sat down on a mossy rock. "Maybe they're just hiding," he said quietly.
+{{hero}} sat down on a rock. He was tired of calling. He was very, very quiet.
 
-As soon as he stopped talking, he noticed something. The glassy trees weren't just chiming. They were *glowing* — tiny flickers of color, pink and gold and green, passing from one tree to the next.
+And then he saw it.
 
-"They *are* talking," {{hero}} breathed. "With lights. We just couldn't see it because we were too busy being loud."
+The glass trees were *glowing*. Little twinkles of pink, and gold, and green, passing from tree to tree.
 
-{{brother}} sat down too. Bolt sat down. They held very still and watched.
+"They're talking!" whispered {{hero}}. "With lights! We couldn't see because we were too busy being loud."
 
-Slowly, out from behind the trees, came the people of Hush. They were small and round, like glowing dandelion puffs, and they floated just above the moss. Their lights flickered fast and worried — orange, orange, orange.
+{{brother}} sat down. Bolt sat down. They were as quiet as mice.
 
-"Something's wrong," said {{hero}}. "Bolt, can you read their colors?"
+Out from behind the trees came the people of Hush. They were round and fluffy, like little glowing dandelion puffs. They floated just above the grass.
 
-Bolt's eyes whirred. "They're saying… their big listening tower broke. That's how they hear us. They've been trying to call for help for weeks."
+Their lights blinked orange, orange, orange.
 
-It turned out to be one loose wire. {{hero}} held the flashlight, {{brother}} passed the tools, and Bolt — hands trembling only a little — clicked it back into place.
+"Orange means *worried*," said Bolt. "Their talking tower is broken. They can't call for help!"
 
-The tower hummed. The whole valley flashed gold.
+"We can fix it," said {{hero}}.
 
-"That means *thank you*," said Bolt. "Lots of thank you."
+It was just one loose wire. {{brother}} held the light. {{hero}} held the tools. And Bolt — with only a little bit of shaking — went *click*. Fixed!
 
-The smallest dandelion-person floated up to {{brother}} and dropped something into his hand. A torn piece of glowing blue paper.
+The whole planet flashed gold.
 
-The second piece of the map.
+"Gold means *thank you*," said Bolt happily.
 
-"Thank you," {{brother}} whispered. Not loud at all.
+The smallest dandelion puff floated up to {{brother}}. It gave him a piece of glowing blue paper.
+
+The second piece of the map!
+
+"Thank you," whispered {{brother}}.
+
+Very, very quietly.

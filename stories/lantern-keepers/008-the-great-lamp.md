@@ -1,43 +1,47 @@
 # The Great Lamp
 
-They put their hands on the glass.
+{{brother}} put his hand on the Great Lamp first.
 
-Not at the same time, this time. {{brother}} went first. Then {{hero}} put his hand right next to it, so their fingers touched.
+Then {{hero}} put his hand right next to it, so their fingers touched.
 
-{{hero}} didn't think about pressing harder. He didn't think about doing it right. He thought about the market, and the swimming pool, and the narrow stairs just now, and his little brother's hand pulling him up.
+{{hero}} thought about the store, and the swimming pool, and the stairs just now, and his little brother holding his hand.
 
-*I trust you,* he thought. *To lead. To follow. Both.*
+*I trust you,* he thought.
 
-Deep inside the glass, the gold spark that had been waiting for two days began to grow.
+*I trust you too,* thought {{brother}}.
 
-It grew like a sunrise. Slowly at first, then all at once. Light poured out of the Great Lamp — warm and golden — through the windows, across the rocks, over the angry waves, out and out and out into the storm.
+Deep inside the glass, the tiny gold sparkle began to grow.
 
-The boys had to shut their eyes, it was so bright.
+Bigger… and bigger… and BIGGER…
 
-From far away, the radio downstairs crackled. "*Gull Rock! We see you! We see your light! Coming home!*"
+*WHOOSH!*
 
-And it wasn't just the *Marigold*.
+Golden light poured out of the Great Lamp! It shone through the windows, over the rocks, across the wild waves, and far, far out into the storm.
 
-The Great Lamp guided *everything* home. Out of the dark came boats — three of them, four, five — bobbing toward the safe side of the island. Birds came in long lines and settled in the cliffs. And all along the shore, the waves rolled in gently and left gifts on the sand: a red kite, a toy boat, a single blue mitten, a teddy bear with one ear. Lost things, finding their way back.
+"*We see you!*" crackled the radio. "*We see your light! We're coming home!*"
 
-By morning, the storm had blown itself out.
+And the Great Lamp didn't just help one boat.
 
-The *Marigold* was tied to the dock. A second, smaller boat had come in behind it. An old woman climbed out of it, slowly, with a stick. Her hair was white and her coat had far too many pockets.
+It helped *everything* come home.
 
-Old Wick, sitting on the steps with his bandaged ankle, went very still.
+Boats came bobbing safely to the dock. Birds flew in and snuggled into the cliffs. And the waves rolled up onto the beach, gently, and left presents in the sand: a red kite, a toy boat, a blue mitten, and a teddy bear with one ear.
 
-"Nell?" he whispered.
+Lost things, finding their way home.
 
-The old woman looked up at the tower, where the Great Lamp was still glowing softly in the morning light.
+By morning, the storm was gone and the sky was blue.
 
-"I saw it from all the way across the bay," she said. "I thought I'd never see it lit again."
+A little boat came to the dock. Out stepped an old lady with a coat full of pockets.
 
-Ember ran down the path and leapt into her arms.
+"Nell!" said Old Wick.
 
-The boys stood a little way off, watching.
+"I saw the Great Lamp from far away," said Nell, smiling. "I knew someone had lit it."
 
-"We did that," {{brother}} whispered.
+Ember ran to her and jumped into her arms.
 
-"We did," said {{hero}}. He put his arm around his brother's shoulders. He didn't need to go first. He didn't need to go second. He was just exactly where he wanted to be.
+{{hero}} put his arm around his brother.
 
-Beside him.
+"We did it," whispered {{brother}}.
+
+"*Together*," said {{hero}}.
+
+And the Great Lamp glowed, warm and gold, all summer long.

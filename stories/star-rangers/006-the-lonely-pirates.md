@@ -1,49 +1,49 @@
 # The Lonely Pirates
 
-The other ship came out of nowhere.
+A big black ship zoomed up beside the *Pebble*. It was covered in spikes!
 
-It was big and black and covered in spikes, with a flag painted on the side: a grinning skull wearing a party hat. It pulled right up alongside the *Pebble* and a loud voice boomed over the radio.
+"*AHOY!*" boomed a voice on the radio. "*I am Captain Rook! Give us your map, or else!*"
 
-"*AHOY, TINY SHIP! This is Captain Rook of the* Grumble*! Hand over your map, or else!*"
+Bolt hid under the table. "Pirates! Real pirates!"
 
-Bolt dove under the table. "Pirates! Real pirates! I *knew* this would happen!"
+"Or else what?" asked {{brother}}.
 
-"Or else *what*?" {{brother}} asked the radio.
+There was a pause.
 
-There was a pause. "*Or else… we'll be very cross.*"
+"*Or else… we'll be very grumpy,*" said the voice.
 
-{{hero}} frowned. That wasn't a very pirate-y thing to say.
+That wasn't a very scary thing to say.
 
-"Why do you want our map?" he asked.
+"Why do you want our map?" asked {{hero}}.
 
-"*Because everyone wants to find the Hidden Star! And if we find it first, we'll be famous, and then — then —*" The voice wobbled. "*Then people might want to be friends with us.*"
+"*If we find the Hidden Star, everyone will notice us,*" said Captain Rook. Her voice went wobbly. "*And maybe somebody will want to be our friend.*"
 
 The boys looked at each other.
 
-"Can we come over?" {{hero}} asked.
+"Can we come and visit?" asked {{hero}}.
 
-Another pause. A much longer one. "*…Nobody's ever asked that before.*"
+"*…Nobody has ever asked us that before.*"
 
-The *Grumble* turned out to be much less scary on the inside. There were cushions everywhere, and a fish tank, and a wall covered in drawings. The crew were small, furry, purple creatures with big round eyes — and Captain Rook was the smallest of all. She wore a hat three sizes too big.
+Inside, the pirate ship was nice and cozy. There were cushions, and a fish tank, and drawings on the walls. The pirates were little, fluffy, and purple, with big round eyes. Captain Rook was the littlest. Her hat was much too big.
 
-"Everybody's scared of our ship," she said sadly, "because of the spikes. So nobody ever visits. So we got lonely. So we decided to be pirates. Because at least pirates get *noticed*."
+"Everyone is scared of our ship," she said sadly. "Because of the spikes. So nobody visits. So we're lonely."
 
-{{brother}} looked at the wall of drawings. There were pictures of picnics and games and parties. In every single one, the purple creatures were alone.
+{{brother}} thought about it.
 
-"Why don't you just take the spikes off?" he asked.
+"Why don't you take the spikes off?" he said.
 
-Captain Rook blinked. Her whole crew blinked.
+All the pirates blinked.
 
-"We… could do that," she said slowly. "We never thought of that."
+"We never thought of that!" said Captain Rook.
 
-It took an hour. Bolt counted every single spike as they came off (two hundred and six), and he was so happy to be counting again that he hummed the whole time. When they were finished, the *Grumble* was round and shiny and looked almost friendly.
+So everybody helped. Pop! Pop! Pop! Off came the spikes. Bolt counted every one. (Two hundred and six!) He was so happy to be counting again, he hummed the whole time.
 
-"Come with us," said {{hero}}. "To the Hidden Star. We can find it together."
+Now the pirate ship was round and shiny and friendly.
 
-"Really?" said Captain Rook. "Together? Like… a crew?"
+"Come with us," said {{hero}}. "We'll find the Hidden Star together."
 
-"Like friends," said {{brother}}.
+"Like a crew?" said Captain Rook.
 
-Captain Rook took off her enormous hat. Underneath, she was smiling so wide her ears wiggled.
+"Like *friends*," said {{brother}}.
 
-Two ships flew on, side by side.
+Captain Rook smiled so big that her ears wiggled.

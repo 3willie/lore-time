@@ -101,8 +101,11 @@ File names are `NNN-<story-slug>.md` with a three-digit number for reading order
   (`027-the-vermilion-challenge-part-1.md` … `029-the-vermilion-challenge-part-3.md`) and its title ends in
   `, Part One`, `, Part Two` and so on. A set of linked short stories uses `-1-`, `-2-` after the shared slug
   (`046-five-roads-with-athena-1-the-rattata-problem.md`).
-- **Each file is one two-minute read** (about 300–500 words, the length of a toothbrushing session). A longer
-  story is split into parts at its scene breaks, and the numbers after it move up.
+- **Each file is one two-minute read**, the length of a toothbrushing session. A longer story is split into
+  parts at its scene breaks, and the numbers after it move up.
+- **Written for ages 3–7** (the newer series): about 220–320 words, short sentences and everyday words, sound
+  words and repeated lines to join in with, one simple lesson per story, and nothing too scary before bed:
+  worries resolve quickly, and each story ends cozy or curious rather than on a cliffhanger.
 - The first line is always `# Title`; no other metadata goes in the file, since everything in it is shown to the reader.
 
 ## Running on the Synology NAS

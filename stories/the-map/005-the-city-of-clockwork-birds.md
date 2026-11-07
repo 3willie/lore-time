@@ -1,47 +1,47 @@
 # The City of Clockwork Birds
 
-It took three nights for the city to finish drawing itself. Rooftops first. Then towers. Then, last of all, a great round clock in the middle of a square.
+The map drew something new: a city with a big clock in the middle.
 
-On the fourth night, the boys touched it together.
+The boys touched it together. *Swoosh!*
 
-The bedroom tipped, there was the sound of a turning page — and they were standing on cobblestones, in a city made of copper and brass. Gears turned slowly in the walls. Pipes hissed gentle puffs of steam. And everywhere — on rooftops, on lampposts, on windowsills — sat birds.
+They were standing in a city made of shiny copper. Gears turned in the walls. *Click, click, click.* Pipes puffed little clouds of steam. *Pfff!*
 
-Clockwork birds. Robins and sparrows and owls and swallows, all made of tiny shining gears, each one with a little winding key in its back.
+And everywhere — on rooftops, on lamps, on windows — there were birds. Clockwork birds, made of tiny golden gears.
 
-None of them were moving.
+But none of them were moving.
 
-"Are they broken?" {{brother}} whispered.
+"Are they broken?" whispered {{brother}}.
 
-"Not broken," said a voice. "Stopped."
+"Not broken. Stopped," said a kind voice.
 
-An old woman in an apron covered in pockets was sitting on the steps of the great clock tower. She held a clockwork sparrow in her hands, very gently.
+An old woman sat on the steps of the clock tower. She was holding a little clockwork sparrow.
 
-"I'm the Clockmaker," she said. "Every bird in this city runs on the great clock. When it ticks, they fly. A week ago, it stopped. And nobody knows why."
-
-The boys looked up. The clock's hands were frozen at seven minutes past three.
+"I'm the Clockmaker," she said. "When the big clock ticks, the birds fly. But last week, the clock stopped. And I can't find out why."
 
 "Can we help?" asked {{hero}}.
 
-The Clockmaker smiled tiredly. "You can look. My eyes aren't what they were."
+"You can look," said the Clockmaker. "My eyes are very old."
 
-They climbed the stairs inside the tower. It was like being inside a giant music box — hundreds of gears, big as wheels and small as buttons, all perfectly still.
+They climbed up inside the tower. It was full of gears. Big gears like wheels. Little gears like buttons. None of them were turning.
 
-{{hero}} looked at the big gears. Nothing wrong there. He looked at the chains, the springs, the pendulum. All fine.
+{{hero}} looked at the big gears. They looked fine.
 
-{{brother}} was looking somewhere else. Low down, at the very bottom, where the smallest gears were.
+{{brother}} looked down low. At the tiny gears near the floor.
 
-"Here," he said.
+"Here!" he said.
 
-One tiny gear, no bigger than a fingernail, was missing. There was an empty space where it should have been, and the whole clock had stopped because of it.
+One teeny-tiny gear was missing. There was an empty space where it should be.
 
-"How did you see that?" {{hero}} asked.
+"How did you find that?" asked {{hero}}.
 
-{{brother}} shrugged. "You were looking at the big stuff. I'm closer to the floor."
+{{brother}} shrugged. "You looked at the big stuff. I'm closer to the floor."
 
-They searched everywhere for the missing gear. Under the stairs. Between the cobblestones. Inside the Clockmaker's many pockets.
+They looked everywhere for the missing gear. Under the stairs. Between the stones. In the Clockmaker's pockets.
 
-It wasn't anywhere.
+They couldn't find it anywhere.
 
-As they walked back across the silent square, {{hero}} noticed something. On a high windowsill, half-hidden behind a flowerpot, a small face was watching them.
+As they walked across the quiet city, {{hero}} saw something. High up on a windowsill, a little face was peeking at them.
 
-The moment he looked, it ducked out of sight.
+When he looked, it ducked away. *Whoosh!*
+
+"Who was that?" whispered {{brother}}.

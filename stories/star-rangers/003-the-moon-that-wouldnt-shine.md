@@ -1,45 +1,49 @@
 # The Moon That Wouldn't Shine
 
-The two pieces of map fit together perfectly. Now they showed a path of stars curling toward a giant yellow planet called Goldie — and, next to it, a tiny moon.
+The map led the *Pebble* to a great big yellow planet called Goldie. Goldie was so bright, the boys had to squint.
 
-"The map says *ask the little moon*," Bolt read. "That's odd. Moons don't usually talk."
+Next to Goldie was a tiny gray moon.
 
-This one did.
+"The map says to talk to the little moon," said Bolt.
 
-When the *Pebble* landed on its surface, a small voice came out of the ground, soft and sad. "Please don't look at me. I'm not very interesting."
+They landed on the moon. A tiny, sad voice said, "Hello. Please don't look at me. I'm not very special."
 
-The little moon was called Tinsel. She was dull and gray, while Goldie, the big planet beside her, glowed so bright the boys had to squint.
+"What's your name?" asked {{brother}}.
 
-"I used to shine," Tinsel said. "But next to Goldie, nobody ever noticed. So I stopped trying."
+"Tinsel," said the moon. "I used to shine. But next to Goldie, nobody noticed me. So I stopped."
 
-{{brother}} frowned. "But we came all this way to see *you*."
+"But we came all this way to see *you*," said {{hero}}.
 
 "You did?"
 
-"The map said to," said {{hero}}. "Nobody's map says *ask the big shiny planet*."
+"Yes!" said {{brother}}. "You're interesting!"
 
-Tinsel was quiet. Then she said, very small, "I don't remember how."
+"I don't know how to shine anymore," said Tinsel.
 
-{{hero}} thought about it. He thought about how {{brother}} sometimes felt small next to him, because {{hero}} was older and could do more things. He thought about what helped.
+{{hero}} had an idea. "Let's tell you all the nice things about you."
 
-"Maybe you don't have to shine like Goldie," he said. "Maybe you just have to shine like *you*."
+So they did.
 
-"What does that look like?"
+"Your craters make shadows that look like bunnies," said {{brother}}.
 
-"Let's find out," said {{brother}}.
+A little patch of Tinsel began to glow.
 
-So they told Tinsel all the things they'd noticed about her. How her craters made shadows shaped like animals. How her ground sparkled when you looked really close. How quiet and peaceful she was, a good place to rest.
+"Your ground sparkles when you look close," said {{hero}}.
 
-With every true thing they said, a little patch of Tinsel began to glow. Not gold like Goldie. Silver. Soft and cool, like moonlight on water.
+Another patch glowed.
 
-By the time they finished, the whole little moon was shining.
+"You're quiet and cozy," said Bolt. "A very nice place to rest."
 
-"Oh," said Tinsel. "Oh, I forgot I could do that."
+More and more of Tinsel started to shine. Not yellow, like Goldie. Silver! Soft and twinkly, like moonlight on water.
 
-Up in the sky, Goldie flickered, like she was waving. "*I always noticed you,*" said a big warm voice. "*I just didn't know how to say it.*"
+"Oh!" said Tinsel. "I remember now! I'm shining like *me*!"
 
-Where Tinsel's light touched the ground, a shape appeared in the dust. A torn edge of glowing blue paper, peeking out.
+Up in the sky, big Goldie twinkled. "*I always liked you, Tinsel,*" she said in a big warm voice.
 
-The third piece of the map.
+Where Tinsel's silver light touched the ground, something peeked out of the dust. A piece of glowing blue paper.
 
-{{brother}} grinned. "She was the interesting one all along."
+The third piece of the map!
+
+"See?" said {{brother}}. "You *are* special."
+
+And Tinsel shone her very best shine.

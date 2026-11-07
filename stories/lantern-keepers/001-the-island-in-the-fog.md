@@ -1,39 +1,45 @@
 # The Island in the Fog
 
-The fog came first. Then the island.
+The little boat went *putt-putt-putt* across the sea.
 
-It rose out of the gray sea like the back of a sleeping whale — a hump of dark rock with a white tower on top. Gulls wheeled around it, crying.
+"Look!" said {{brother}}. "An island!"
 
-"That's it?" {{brother}} whispered, gripping the side of the little boat. "That's where we're staying all summer?"
+Out of the fog came a big gray rock. On top stood a tall white lighthouse. Birds flew all around it. *Squawk! Squawk!*
 
-"That's Gull Rock," said {{dad}}, steering them toward a wooden dock. "And that's Old Wick."
+"That's Gull Rock," said {{dad}}. "We're staying here all summer."
 
-A man stood waiting at the end of the dock. He was tall and thin, with a beard like a cloud and a coat with far too many pockets. He held a lantern, even though it was the middle of the afternoon.
+An old man was waiting on the dock. He had a fluffy white beard and a coat with lots and lots of pockets.
 
-"Keepers," he said, nodding to the boys as if they were very important. "About time."
+"Hello, keepers," he said. "I'm Old Wick."
 
-{{hero}} looked behind him. "Keepers? We're just visiting."
+"We're not keepers," said {{hero}}. "We're just visiting."
 
-"Nobody *just visits* Gull Rock," said Old Wick. "Come on. You've got lamps to meet."
+Old Wick winked. "We'll see."
 
-He led them up a winding path to the tower. Inside, the stairs curled up and up like the inside of a shell. And on every landing sat a lamp.
+He took them inside the lighthouse. The stairs went round and round and round, all the way up.
 
-A green one, cool as sea glass. A blue one, soft as evening. A silver one, small and bright as a coin.
+On the way, they passed three lamps.
 
-"Most lighthouses have one light," said Old Wick. "Ours has more. The green lamp guides lost boats. The blue lamp guides lost birds. And the silver one —" he tapped it gently — "guides lost *things*. Keys. Kites. Teddy bears. You'd be amazed what the sea borrows."
+A **green** lamp. "That one helps lost boats," said Old Wick.
 
-"How do you light them?" {{brother}} asked. He was already reaching for a switch that wasn't there.
+A **blue** lamp. "That one helps lost birds."
 
-Old Wick smiled. "Each lamp lights for a different reason. You'll learn them one at a time."
+A little **silver** lamp. "And that one helps lost *things*. Toys. Kites. Mittens."
 
-At the very top of the tower, under a glass roof, stood the biggest lamp of all. It was taller than {{dad}}. And it was completely dark.
+"How do you turn them on?" asked {{brother}}.
 
-"What about that one?" {{hero}} asked.
+"Each lamp turns on in its own special way," said Old Wick. "You'll find out."
 
-Old Wick was quiet for a long moment.
+At the very top was the biggest lamp of all. It was bigger than {{dad}}! But it was dark.
 
-"That's the Great Lamp," he said at last. "It guides everything home. And it hasn't lit in a very long time."
+"That's the Great Lamp," said Old Wick softly. "It helps *everything* find its way home. But it hasn't shone for a long, long time."
 
-Outside, the fog pressed against the glass, listening.
+{{hero}} looked at the big dark lamp.
 
-{{hero}} looked at the dark lamp, and something in his chest said: *We're going to fix that.*
+{{brother}} looked at it too.
+
+"Maybe," whispered {{brother}}, "we can help."
+
+Old Wick smiled a big, beardy smile.
+
+"Maybe you can," he said.

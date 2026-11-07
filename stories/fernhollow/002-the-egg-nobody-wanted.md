@@ -1,43 +1,43 @@
 # The Egg Nobody Wanted
 
-Ranger Juno had a little cabin at the edge of the valley, and every weekend after that, {{dad}} brought the boys back through the waterfall.
+Every weekend, {{dad}} took the boys back through the waterfall to help Ranger Juno.
 
-There was a lot of work to do. Triceratops needed their frills scrubbed (they loved it). The long-neck — whose name was Tallulah — needed the tangles pulled out of her tail. And the little fast lizards called Zippers needed chasing out of the vegetable garden, about once an hour.
+There was lots to do! They scrubbed the triceratops' frills. (The triceratops *loved* it.) They brushed the long-neck's tail. Her name was Tallulah. And they chased the little lizards called Zippers out of the vegetable garden. *Zip! Zip! Zip!*
 
-One morning, they found the egg.
+One morning, they found an egg.
 
-It was sitting on its own, in a nest of trampled reeds by the river. Big and pale green, with brown speckles. There was no mother anywhere.
+It was big and green, with brown spots. It was all by itself in a nest of reeds. No mommy dinosaur anywhere.
 
-"A whole herd of duckbills came through here last week," said Juno, kneeling beside it. "This one must have rolled out of the nest. Got left behind."
+"A family of duckbill dinosaurs went over the hills last week," said Juno. "This egg must have rolled away. It got left behind."
 
-"Can't we take it back to them?" asked {{brother}}.
+"Can we give it back?" asked {{brother}}.
 
-Juno shook her head. "They're long gone over the hills. And they won't take back an egg that smells of another place." She was quiet for a moment. "Without someone to keep it warm, it won't hatch."
+Juno shook her head. "They're too far away now. And without somebody to keep it warm, it won't hatch."
 
-{{brother}} looked at the egg. Then he did something nobody expected. He took off his jacket, wrapped it all the way around the egg, and hugged it.
+{{brother}} took off his jacket. He wrapped it all the way around the egg. And he gave it a big hug.
 
-"*We* can keep it warm," he said.
+"*We'll* keep it warm," he said.
 
-{{hero}} thought this was a very good plan.
+So they did!
 
-So they did. They built a nest of blankets in the corner of Juno's cabin, right next to the stove. They took turns sitting with it. They talked to it, and read to it, and {{brother}} sang it the song {{mom}} sang them at bedtime. On weekdays, when they had to be at school, Juno sent {{dad}} messages: *Egg still warm. Egg still fine.*
+They made a cozy nest of blankets by Juno's stove. They took turns sitting with the egg. They read it stories. {{brother}} sang it the song {{mom}} sings at bedtime.
 
-Three weeks later, on a Saturday morning, the egg went *crack*.
+Three weeks later, the egg went *crack*.
 
-The boys held their breath.
+*Crack. Wobble. Crack-crack.*
 
-A crack. A wobble. Another crack. And then a little head pushed its way out, covered in shell and goo. It had a long snout, big dark eyes, and a funny curved crest on top of its head, like a trumpet.
+Out popped a little head! It had a long nose, big dark eyes, and a funny curly crest on top, like a trumpet.
 
 It blinked at {{brother}}. It blinked at {{hero}}.
 
-Then it opened its mouth, and out came the loudest, silliest sound either of them had ever heard.
+Then it opened its mouth and went:
 
-*TOOOOT.*
+*TOOOOT!*
 
-{{brother}} fell over laughing. {{hero}} laughed so hard his eyes watered. Even Juno was grinning.
+{{brother}} fell over laughing. {{hero}} laughed so hard his eyes watered.
 
-"A parasaurolophus," she said. "They talk through their crests. And this one's decided you two are its family."
+"It's a parasaurolophus," said Juno, grinning. "They talk through their crests. And this one thinks you're its family!"
 
-The baby dinosaur waddled out of its shell, climbed into {{brother}}'s lap, and went *toot* again, very softly, like a question.
+The baby dinosaur climbed into {{brother}}'s lap and went *toot*, very softly.
 
-"Toot," said {{brother}}. "That's his name. Obviously."
+"His name is Toot," said {{brother}}. "Obviously."

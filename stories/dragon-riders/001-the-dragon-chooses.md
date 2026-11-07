@@ -1,43 +1,43 @@
 # The Dragon Chooses
 
-Highcrag was built into the side of a mountain, so high that clouds drifted through the courtyard like lost sheep.
+Highcrag was a castle on top of a mountain. It was so high up that clouds floated right through the courtyard.
 
-Every year, on Choosing Day, the young dragons came down from the peaks. And every year, a few lucky kids were chosen to become riders.
+Today was Choosing Day.
 
-"What if nobody chooses me?" {{brother}} whispered. He was the smallest in the whole line.
+"The dragons come down from the mountains," said {{dad}}. "And each dragon chooses a rider."
 
-"Somebody will," said {{hero}}. But his own stomach was full of butterflies.
+"What if nobody chooses me?" whispered {{brother}}. He was the smallest one there.
 
-Rider Master Oona walked along the line. She was old and tough, with a long gray braid and a scar across one cheek. "Remember," she said. "You do not choose a dragon. The dragon chooses you. Stand still. Be yourselves."
+"Somebody will," said {{hero}}. But his tummy felt full of butterflies too.
 
-Then the sky filled with wings.
+Rider Master Oona walked down the line. She had a long gray braid and a serious face. "Remember," she said. "You don't choose a dragon. The dragon chooses *you*. Just be yourself."
 
-Dragons came swooping down from the peaks — green ones and bronze ones, gold ones and black ones, landing in the courtyard with great thuds that shook the stones. One by one, they walked along the line, sniffing, tilting their heads. Each time a dragon lowered its head to a kid, there was a gasp and a cheer.
+Then — *WHOOSH!* — the sky filled with wings!
 
-The biggest and most beautiful dragon landed last. She was silver-blue, like the sky just before a storm, and she moved like water. Every kid in line held their breath.
+Green dragons. Gold dragons. Bronze dragons. They landed — *THUD, THUD* — and walked along the line, sniffing. When a dragon chose someone, it bowed its head, and everyone cheered.
+
+The last dragon was the most beautiful. She was silver-blue, like the sky before a storm.
 
 She walked right past {{hero}}. She didn't even look at him.
 
-{{hero}}'s heart sank.
+{{hero}} felt sad.
 
-Then there was a crash.
+Then — *CRASH! SPLASH!*
 
-A small, round, red-orange dragon had tried to land, missed, tumbled across the courtyard, and ended up upside down in a water trough. Everyone laughed. The little dragon hiccupped, and a puff of gray smoke came out of its nose. It looked so embarrassed.
+A little round red dragon had tried to land, tripped over his own feet, and fallen *plop* into the water trough. Everybody laughed. The little dragon hiccupped. *Hic!* A puff of smoke came out of his nose.
 
-{{brother}} didn't laugh. He ran straight over, knelt by the trough, and helped tip the little dragon the right way up.
+{{brother}} didn't laugh. He ran over and helped the little dragon climb out.
 
-"You're okay," he said. "Everyone falls sometimes."
+"You're okay," he said. "Everybody falls sometimes."
 
-The little dragon looked at him for a long moment. Then it pressed its warm, bumpy nose right against {{brother}}'s forehead.
+The little dragon pressed his warm nose against {{brother}}'s forehead.
 
-"*Chosen,*" said Master Oona, and the courtyard cheered.
+"*Chosen!*" said Master Oona. Everybody cheered.
 
-{{brother}} turned around, beaming, with a dripping dragon in his arms. "His name's Cinder!" he shouted. "I don't know how I know that. I just do!"
+"His name is Cinder!" shouted {{brother}}. "I just know it!"
 
-{{hero}} cheered louder than anyone. He was so happy for his brother that he forgot to be sad for himself.
+{{hero}} cheered the loudest of all. He was so happy for his brother, he forgot to be sad.
 
-He didn't notice the silver-blue dragon at the edge of the courtyard. She had stopped, and turned, and was watching him — the boy who had cheered for someone else.
+And the silver-blue dragon saw. She turned around. She walked back. And she bowed her head to {{hero}}.
 
-She walked back across the stones. And slowly, carefully, she lowered her head to {{hero}}.
-
-"*Chosen,*" said Master Oona, raising one eyebrow. "Skye doesn't choose many."
+"*Chosen!*" said Master Oona, surprised. "Her name is Skye. She doesn't choose many."

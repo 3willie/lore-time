@@ -1,51 +1,53 @@
 # The Patient Lamp
 
-{{brother}} woke up first, which almost never happened.
+"Today," said Old Wick, "you'll meet the blue lamp."
 
-"It's lamp day," he announced, bouncing on {{hero}}'s bed. "Old Wick said we learn one today."
+The blue lamp helps tired birds find a safe place to rest.
 
-They found Old Wick on the blue landing, sitting cross-legged in front of the blue lamp with a mug of tea.
+"How do we turn it on?" asked {{brother}}. "A button? A switch?"
 
-"This one guides the birds," he said. "Storm petrels, puffins, little lost terns. When it's lit, they know there's a safe place to land."
+"You sit," said Old Wick. "And you wait. Very, very still."
 
-"How do we light it?" {{brother}} asked. "Is there a button? A string? A magic word?"
+{{brother}} sat down.
 
-"You sit," said Old Wick. "And you wait."
+He waited… one… two… three…
 
-{{brother}} sat. He waited for about four seconds.
+"Is it on yet?"
 
-"Nothing's happening."
+The lamp stayed dark.
 
-"Mm," said Old Wick, sipping his tea.
+{{brother}} wiggled. He jiggled. He hummed a song. He tapped his feet. *Tap, tap, tap.*
 
-{{brother}} wiggled. He hummed. He poked the glass. He lay on his back and stuck his feet in the air. He asked if it was lit yet eleven times.
+"Is it on *now*?"
 
-The blue lamp stayed dark.
+Still dark.
 
-"It's broken," {{brother}} grumbled, flopping onto the floor.
+"It's broken," said {{brother}}, and flopped on the floor.
 
-{{hero}} sat down beside him. He was not very good at waiting either, but he had noticed something.
+{{hero}} sat down next to him. "I think it doesn't like wiggling," he whispered. "Let's try being still. Like statues."
 
-"Every time you move," he whispered, "it gets darker."
+So they tried.
 
-{{brother}} frowned. Then he tried an experiment. He held completely still. He breathed slowly, in and out, the way {{mom}} showed them on nights when bad dreams came.
+They breathed slowly, the way {{mom}} showed them at bedtime.
 
-In. And out.
+In… and out.
 
-Deep inside the glass, a tiny blue spark appeared.
+In… and out.
 
-In. And out.
+Inside the glass, a tiny blue light went *twinkle*.
 
-The spark grew. It spread, slow and soft, like ink in water, until the whole landing glowed the color of the sky just after sunset.
+In… and out.
 
-Then — *flutter*. A small gray bird landed on the window ledge. Then another. Then six more, tucking their heads under their wings, settling in to rest.
+The light grew bigger, and bigger, until the whole room glowed soft and blue, like the sky at bedtime.
 
-{{brother}} didn't move a muscle. He didn't even smile, in case smiling counted as moving. But his eyes were shining.
+Then — *flutter, flutter* — a little gray bird landed on the window. Then another. And another! Six little birds, tucking their heads under their wings, ready to sleep.
 
-"Patience," said Old Wick quietly. "The blue lamp lights for patience. Birds won't land near a fidget."
+{{brother}} didn't move a muscle. But his eyes were shining.
 
-Later, on the way down the stairs, {{brother}} walked very slowly.
+"The blue lamp turns on with *patience*," said Old Wick quietly. "Birds won't land near a wiggle-worm."
 
-"I'm practicing," he explained.
+On the way downstairs, {{brother}} walked very, very slowly.
 
-{{hero}} grinned. One lamp down.
+"I'm practicing," he said.
+
+One lamp down!

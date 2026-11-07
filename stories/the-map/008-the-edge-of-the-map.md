@@ -1,47 +1,45 @@
 # The Edge of the Map
 
-By the end of autumn, the map was full.
+By the end of the year, the map was almost full.
 
-The library under the lake. The forest of wind chimes. The clockwork city with its birds. The treehouse. And a dozen smaller places in between, drawn on nights when the boys hadn't even noticed they'd done something kind — a bridge of stepping stones, a hill where the clouds came down to rest, a village of very polite snails.
+There was the library under the lake. The forest of wind chimes. The clockwork city. The treehouse. And lots of little places too — a bridge of stepping stones, a hill where clouds come down to nap, and a village of very polite snails.
 
-There was only one empty corner left. Up at the top, by the very edge.
+Just one empty corner was left.
 
-"What happens when it's full?" {{brother}} asked one evening. "Does it stop?"
+"What happens when it's full?" asked {{brother}}. "Does it stop?"
 
-{{hero}} didn't like that thought at all.
+{{hero}} didn't like that idea.
 
-That night, the corner began to draw. Not a forest, or a city, or a lake. Just a small wooden box, and a key beside it. And the words: *For when the map is full.*
+That night — *scritch, scratch* — the last corner filled in. It was a little wooden box. And it said: *For when the map is full.*
 
-They touched it together.
+They touched it together. *Swoosh!*
 
-They landed in their own attic. The real one — dusty, with the box of winter coats and the water heater. Except it was lit by soft gold light, and in the corner, where nothing had been before, sat the little wooden box from the map.
+They were in their own attic! But it was glowing soft and gold. And in the corner was the little wooden box.
 
-Inside was a letter. The handwriting was old and loopy.
+Inside was a letter. {{hero}} read it out loud.
 
-*Dear whoever has filled my map,*
+*Dear Map Explorers,*
 
-*Well done. If you're reading this, you've learned the secret. The map doesn't draw places. It draws who you are becoming. Every kind thing, every brave thing, every time you told the truth when it was hard — it all goes on the paper. That's why it fills up.*
+*Well done! Here is the secret. The map doesn't just draw places. It draws who you are growing into. Every kind thing. Every brave thing. Every time you told the truth.*
 
-*But here's the other secret. The map is never finished. Neither are you.*
+*And here is the other secret. The map is never finished. And neither are you.*
 
-*Turn it over.*
+*Turn it over!*
 
-*— Grandpa*
+*Love, Grandpa*
 
-{{hero}} unrolled the map and slowly turned it over.
+{{hero}} turned the map over.
 
-The back was completely blank. Creamy and new, waiting.
+The back was empty. All except for one tiny drawing, right in the middle.
 
-Except for one thing. Right in the middle, in tiny brown ink, was a house. Their house. With the crooked gate, and the apple tree, and the attic window with a little round top.
+Their house. With the crooked gate, and the apple tree, and the little round attic window.
 
-"It's starting again," {{brother}} breathed.
+"It's starting again!" said {{brother}}.
 
-"No," said {{hero}}, thinking about the letter. "It's *continuing*."
+"No," said {{hero}}, smiling. "It's *keeping going*."
 
-They woke up in their own beds. The map was on the desk, the right way up, every place still there.
+From then on, every night before bed, they turned the map over to look.
 
-But that night, and every night after, the boys turned it over before they went to sleep. Just to see.
+And one night, a brand-new little path began to curl out of the gate.
 
-On the first night, nothing.
-
-On the second night, a single tiny path began to curl out from the gate, heading somewhere neither of them had ever been.
+Off to somewhere new.

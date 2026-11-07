@@ -1,45 +1,49 @@
 # The Hidden Star
 
-It was smaller than they expected.
+There it was. The Hidden Star!
 
-All this time, {{hero}} had imagined the Hidden Star as something enormous — a great blazing sun, bigger than any star in the sky. But the thing floating in front of the *Pebble* and the *Grumble* was only about as big as a house. It glowed silver and gold, and it was humming the same sweet song they'd followed through the Nebula.
+It wasn't giant. It was only about as big as a house. It glowed silver and gold, and it was humming the lullaby they had heard in the Nebula.
 
-And it was flickering. On and off. Like a light that was very, very tired.
+But it was flickering. On… off… on… off. Like a very sleepy night-light.
 
-"Hello?" {{brother}} said into the radio.
+"Hello, Star," said {{brother}} gently.
 
-The humming stopped. A small, worn-out voice answered. "*Oh. You found me. Please don't take any.*"
+The humming stopped. "*Oh,*" said a tiny, tired voice. "*Please don't take my light.*"
 
-"Take any what?" asked {{hero}}.
+"Take it?" said {{hero}}.
 
-"*My light,*" said the Star. "*That's what everyone wants. A long time ago, people came from everywhere to fill their ships and their lamps with my light. They took and took. I got smaller and smaller. So I hid, and I made the map into pieces, so nobody could find me again.*"
+"*A long time ago, lots of people came and took my light,*" said the Star. "*They took and took, until I was all tired out. So I hid.*"
 
-Captain Rook pulled her hat down over her eyes. "We were going to take some," she admitted. "To be famous."
+Captain Rook pulled her big hat over her eyes. "We were going to take some," she said quietly. "Sorry."
 
-"We weren't going to take any," said {{brother}}. Then he paused. "We didn't really know what we were going to do."
+{{hero}} looked at the flickering Star. It reminded him of Tinsel, the little moon.
 
-{{hero}} watched the Star flicker. It reminded him of the little moon, Tinsel, who had forgotten how to shine. And of Bolt, before the spacewalk, so sure he wasn't brave.
+"Bolt," he said, "what helped Tinsel shine again?"
 
-"Bolt," he said. "When Tinsel stopped shining, what helped her?"
+"We *gave* her something," said Bolt. "Kind words."
 
-Bolt thought. "We told her true things about herself. We *gave* her something instead of taking."
+"Let's give the Star something too," said {{hero}}.
 
-"What if we do that?" said {{hero}}. "What if we give the Star something?"
+"But what?" asked {{brother}}. "We don't have any light."
 
-"But what?" said {{brother}}. "We don't have any light."
+"We have songs!" said Captain Rook. "Pirates know *lots* of songs!"
 
-Captain Rook sat up. "We have songs," she said. "Pirates know *lots* of songs."
+So everyone sang.
 
-So that's what they did.
+The pirates sang a silly song about a fish who wanted to fly.
 
-Captain Rook's crew sang a pirate song about a fish who wanted to fly. Bolt sang the counting song he'd been humming while he took the spikes off. {{brother}} sang the song {{mom}} sang at bedtime. And {{hero}}, who never sang in front of anyone, sang along anyway.
+Bolt sang his counting song. *One, two, three, four…*
+
+{{brother}} sang the song {{mom}} sings at bedtime.
+
+And {{hero}}, who never sang in front of anyone, sang along too.
 
 The Star stopped flickering.
 
-It began to hum with them. Then it began to glow — steadier, brighter, warmer — until silver and gold light spilled over both ships and everyone in them.
+It began to hum along. Then it began to glow — brighter, and warmer, and brighter — until silver and gold light spilled over everyone.
 
-"*Nobody's ever given me anything before,*" said the Star softly. "*I didn't know it would feel like this.*"
+"*Nobody ever gave me anything before,*" said the Star softly. "*It feels wonderful.*"
 
-"We'll come back," said {{brother}}. "And bring more songs."
+"We'll come back," said {{brother}}. "With more songs."
 
-The Hidden Star hummed, very happily.
+And the Hidden Star hummed, happy as could be.

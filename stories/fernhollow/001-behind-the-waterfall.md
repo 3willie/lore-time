@@ -1,49 +1,47 @@
 # Behind the Waterfall
 
-The camping trip was {{dad}}'s idea. Three days in the mountains, with a tent and a map and a bag full of trail mix.
+{{dad}} took the boys camping in the mountains. They had a tent, a map, and lots of snacks.
 
-On the second morning, {{brother}} found the footprint.
+In the morning, {{brother}} found a footprint.
 
-It was pressed into the mud beside the river, right next to the waterfall. It had three long toes. And it was bigger than {{dad}}'s whole sleeping bag.
+It was in the mud by the river. It had three long toes. And it was HUGE. Bigger than {{dad}}'s sleeping bag!
 
-"That's… probably a rock," said {{dad}}, in a voice that didn't sound sure at all.
+"That's… probably just a funny-shaped puddle," said {{dad}}.
 
-"Rocks don't have toenails," said {{hero}}.
+"Puddles don't have toenails," said {{hero}}.
 
-There were more footprints. They led straight toward the waterfall — and then disappeared, right into the crashing white water.
+There were more footprints. They went right up to the waterfall — and disappeared behind the crashing water.
 
-"There's something behind it," said {{brother}}. "A cave, maybe."
+"There's something back there," said {{brother}}.
 
-{{dad}} looked at the waterfall. He looked at the boys. He looked at the footprint again.
+{{dad}} looked at the boys. "Okay. Hold hands. Stay close."
 
-"Okay," he said. "Carefully. Hold hands. Stay with me."
-
-They edged along a narrow ledge of wet rock, and slipped behind the curtain of water. It was loud and cold and misty. And then, all at once, it opened up into a tunnel. And at the end of the tunnel was light.
+They tiptoed along a rocky ledge and slipped behind the waterfall. It was loud and splashy. *Splish! Splash!* Then they found a tunnel. And at the end of the tunnel was light.
 
 They stepped out into a valley.
 
-It was warm and green and full of enormous ferns, taller than houses. Strange flowers grew everywhere, bright as paint. A river wound through the middle. And in the river, drinking, was a dinosaur.
+It was warm and green. There were giant ferns, taller than houses. Bright flowers, like spilled paint. A sparkly river.
 
-A real one. Long neck. Long tail. Big as a building. It lifted its head, water dripping from its chin, and looked down at them with gentle, sleepy eyes.
+And in the river, having a drink, was a *dinosaur*.
 
-Nobody said anything. Nobody *could* say anything.
+A real one! With a long, long neck and a long, long tail. It lifted its head and looked down at them with big, sleepy eyes.
 
-"Well," said a voice behind them. "That's a first."
+Nobody could say a word.
 
-A woman was leaning against a tree, arms folded. She wore a wide hat, muddy boots, and a jacket with a patch on the shoulder: *FERNHOLLOW KEEPER.*
+"Well, hello," said a voice behind them.
 
-"I'm Ranger Juno," she said. "Welcome to Fernhollow. The last valley in the world where the dinosaurs never went away."
+A woman in a big hat and muddy boots was smiling at them. Her jacket had a patch that said *FERNHOLLOW KEEPER*.
 
-"How—" {{dad}} began.
+"I'm Ranger Juno," she said. "Welcome to Fernhollow. The only place in the world where dinosaurs still live."
 
-"Long story," said Juno. "The important thing is: nobody outside knows. If they did, they'd come with trucks and cages and cameras, and this place would be ruined." She looked at the three of them very seriously. "So. Can you keep a secret?"
+"Wow," whispered {{brother}}.
 
-{{hero}} looked up at the long-necked dinosaur, which had gone back to drinking. He thought about trucks and cages.
+"It has to stay a secret," said Juno. "So the dinosaurs stay safe. Can you keep a secret?"
 
-"Yes," he said.
+"Yes!" said {{hero}}.
 
-"Yes," said {{brother}}.
+"Yes!" said {{brother}}.
 
 "Yes," said {{dad}}.
 
-Juno smiled. "Good. Because I could use some help around here." She tossed {{hero}} a pair of work gloves. "Ever fed a triceratops?"
+Juno handed {{hero}} some gloves. "Good. Because I need helpers. Ever washed a triceratops?"

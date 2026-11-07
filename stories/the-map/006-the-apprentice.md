@@ -1,47 +1,41 @@
 # The Apprentice
 
-The face belonged to a girl named Tilly.
+The little face belonged to a girl named Tilly.
 
-They found her the next night, sitting on a rooftop with her knees hugged to her chest. She was a little older than {{hero}}, with a toolbelt and goggles pushed up on her head, and she looked like she hadn't slept for days.
+They found her sitting on a rooftop, hugging her knees. She wore a tool belt and goggles. She looked very sad.
 
-"You're the Clockmaker's apprentice," said {{hero}}. He'd guessed it from the toolbelt.
+"Are you the Clockmaker's helper?" asked {{hero}}.
 
-Tilly didn't answer. But her hand went to her pocket, and stayed there.
+Tilly nodded. Her hand stayed in her pocket.
 
-{{brother}} sat down next to her. He didn't say anything for a while. He'd learned that sometimes, people need you to just sit.
+{{brother}} sat down next to her. He didn't say anything. Sometimes people just need you to sit with them.
 
-Finally, Tilly opened her hand. In her palm was a tiny gear, no bigger than a fingernail.
+At last, Tilly opened her hand. In it was a teeny-tiny gear.
 
-"I wanted to see how it worked," she said in a small voice. "I took it out to look at it. Just for a minute. And then everything stopped. All the birds. All at once." Her voice cracked. "And I was so scared she'd be angry that I hid. And then the longer I hid, the worse it got."
+"I wanted to see how it worked," she said in a small voice. "So I took it out. Just for a minute. And then the clock stopped. And all the birds stopped." She sniffed. "I was scared she'd be mad. So I hid."
 
-{{hero}} knew exactly that feeling. He remembered a cracked lens, turned to face the wall, and a lamp that wouldn't light.
+{{hero}} knew that feeling. He remembered the green lamp, and the cracked glass he'd tried to hide.
 
-"I did something like that once," he said. "I broke something and hid it. And it felt worse every minute. Until I told."
+"I did something like that once," he said. "I hid it, and my tummy felt wobbly all day. Then I told the truth. And I felt better right away."
 
-"What happened when you told?"
+"What if she sends me away?" whispered Tilly.
 
-"It got better. Right away. Like putting down a really heavy bag."
+"Then we'll stay with you," said {{brother}}. "But I don't think she will."
 
-Tilly looked at the gear. "What if she sends me away?"
+So they all walked to the clock tower together. Tilly in the middle. A brother on each side.
 
-"Then we'll come with you," said {{brother}} firmly. "But I don't think she will."
+Tilly held out the gear. Her hand was shaking.
 
-So the three of them walked to the clock tower together. Tilly in the middle. A brother on each side.
+"It was me," she said. "I'm sorry. I wanted to learn how it worked."
 
-The Clockmaker was sitting on the steps, exactly where they'd left her, holding her stopped sparrow.
+The Clockmaker looked at the gear. Then she smiled.
 
-Tilly held out the gear with a shaking hand. "It was me," she said. "I'm so sorry. I wanted to learn how it worked."
+"Wanting to learn how things work," she said, "is what makes a great clockmaker. Next time, just come and tell me."
 
-The Clockmaker looked at the gear for a long moment. Then she looked at Tilly.
+She gave Tilly a hug. Then they climbed the tower together and put the gear back.
 
-"Wanting to know how things work," she said, "is the very best reason to be a clockmaker. Hiding when it goes wrong is the only part we need to fix."
+*Click. Whirr. Tick… tock.*
 
-She stood up, took Tilly's hand, and the two of them climbed the tower together.
+And all over the city — *whirr, whirr, whirr* — the birds woke up! Thousands of golden wings flew into the sky, singing.
 
-A click. A whir. A deep, slow *tick*.
-
-*Tock.*
-
-And all over the city, like popcorn going off, the birds woke up. Thousands of clockwork wings whirred into the sky at once — gold and copper and silver, wheeling and singing above the rooftops.
-
-Tilly leaned out of the clock tower window, laughing.
+Tilly laughed and waved from the clock tower window.

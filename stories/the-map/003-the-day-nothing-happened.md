@@ -1,41 +1,51 @@
 # The Day Nothing Happened
 
-"Okay," said {{brother}} at breakfast. "Today we do the *most* kind things. Then the map will draw something *huge*."
+"Today," said {{brother}}, "we'll do *lots* of kind things. Then the map will draw something HUGE!"
 
-{{hero}} thought this was an excellent plan.
+"Great idea!" said {{hero}}.
 
-So they got to work. They held the door for {{mom}} three times, even when she wasn't going anywhere. They made their beds, very loudly, so everyone could hear. {{brother}} shared his crackers with the dog and then told everybody about it. They said "please" and "thank you" so many times that {{dad}} asked if they were feeling okay.
+They held the door for {{mom}}. Three times. Even when she wasn't going anywhere.
 
-That night, they ran up to the map.
+They made their beds. Very loudly, so everyone could hear.
 
-Nothing. Not a line. Not a dot. The path from the library just stopped, pointing into the blank.
+{{brother}} gave the dog a cracker. Then he told everyone about it. Twice.
 
-"That's not *fair*," {{brother}} said. "We did so many kind things!"
+That night, they ran to the map.
 
-{{hero}} stared at the map for a long time. Something felt wrong, and he didn't like it.
+Nothing.
 
-"I don't think we did them to be kind," he said slowly. "I think we did them to get stuff."
+Not one new line. Not one tiny dot.
 
-{{brother}} opened his mouth to argue. Then he closed it again.
+"That's not fair!" said {{brother}}. "We were SO kind!"
 
-The next day, they forgot all about the map.
+{{hero}} looked at the map for a long time.
 
-It was raining, and {{mom}} was tired. She'd been up in the night with a headache, and she sat at the kitchen table with her eyes closed, holding a mug she wasn't drinking.
+"I think," he said slowly, "we were being kind just to get a prize. Not because we cared."
 
-{{hero}} noticed. He didn't say anything. He just got the soft blanket from the couch and put it around her shoulders. {{brother}} brought her the pillow with the moon on it, the one everyone fought over. Then they played quietly in the corner, so the house would stay calm, without anybody telling them to.
+{{brother}} wanted to say no. But he didn't. Because it was true.
 
-{{mom}} opened her eyes and smiled — a slow, real smile.
+The next day, it was rainy. {{mom}} wasn't feeling well. She sat at the kitchen table with her eyes closed.
 
-"Thank you, my loves," she said. "That's exactly what I needed."
+{{hero}} saw. He didn't say anything. He just got the soft blanket from the couch and tucked it around her.
 
-Neither of them thought about the map at all.
+{{brother}} brought her the moon pillow. The best pillow. The one everybody wants.
 
-That night, the scratching woke them both.
+Then they played quietly, so the house would be calm.
 
-They tiptoed to the desk, and watched the brown ink move. The path from the library stretched on, through a field, over a stream, and into a forest. Tiny trees, drawn one by one. And hanging from every branch, a little bell.
+Nobody told them to. They just did it.
+
+{{mom}} opened her eyes and smiled a big, warm smile.
+
+"Thank you, my loves," she said. "That's just what I needed."
+
+They didn't think about the map at all.
+
+But that night… *scritch, scratch.*
+
+The map was drawing! A path. A stream. A forest of tiny trees. And on every branch, a little bell.
 
 *The Forest of Wind Chimes.*
 
-{{brother}} let out a breath. "We didn't even try that time."
+"We didn't even try that time," whispered {{brother}}.
 
-"I think," said {{hero}}, "that's the point."
+"I think," said {{hero}}, "that's the secret."

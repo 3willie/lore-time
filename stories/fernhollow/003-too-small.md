@@ -1,49 +1,49 @@
 # Too Small
 
-Toot grew fast.
+Toot grew and grew. Soon he was as big as a dog!
 
-In a month, he was as big as a dog. He followed the boys everywhere, tooting with his crest — short toots for happy, long toots for hungry, and a very sad *toooo* whenever they had to go home through the waterfall.
+He followed the boys everywhere. *Toot, toot!* That meant happy. *Tooooot!* That meant hungry.
 
-But {{brother}} had a problem.
+But {{brother}} was grumpy.
 
-"I'm too small for everything," he said gloomily, sitting on Juno's porch.
+"I'm too small for everything," he said.
 
-It was true, a bit. {{hero}} was tall enough to reach the top of the triceratops' frills with a brush. {{hero}} could carry two buckets of feed. When Tallulah the long-neck lowered her head to give rides, {{hero}} got to climb up and sit on her neck while she walked by the river. {{brother}} was too short to climb on.
+{{hero}} could reach the top of the triceratops to brush it. {{hero}} could carry two buckets. {{hero}} got to ride on Tallulah's long neck. {{brother}} was too little to climb up.
 
-"You're only small *now*," said {{hero}}, trying to help.
+"You won't be small forever," said {{hero}}.
 
 That didn't help.
 
-That afternoon, Toot was playing near the rocks by the river, chasing a Zipper. The little lizard darted into a crack in the stones, and Toot pushed his head in after it.
+That afternoon, Toot was playing by the river. He was chasing a little Zipper lizard. *Zip!* The lizard ran into a gap between two big rocks. Toot pushed his head in after it.
 
-Then he tried to pull it out again.
+Then he tried to pull his head out.
 
-He couldn't. His crest was stuck.
+He couldn't! His curly crest was stuck!
 
-*TOOOOOOT!* The sound was so loud and frightened that birds burst out of the trees.
+*TOOOOOOT!*
 
-They all came running. Juno knelt beside the rocks and tried to wiggle Toot loose. The crack was too narrow. She tried to move the rocks. They were too heavy. {{hero}} tried. {{dad}} tried.
+Everybody came running. Juno tried to wiggle Toot free. The gap was too narrow. {{dad}} tried to move the rocks. They were too heavy. {{hero}} tried too.
 
-"The gap's too tight," Juno said, worried. "Someone needs to get in there and tilt his crest the right way, from the other side. But it's tiny in there."
+"Someone needs to squeeze in there and turn his crest the right way," said Juno. "But it's a very small space."
 
-Everyone went quiet.
+Everybody looked at {{brother}}.
 
-And slowly, everybody looked at {{brother}}.
+{{brother}} looked at the dark little gap. He gulped.
 
-{{brother}} looked at the crack. It was dark and narrow, and there might be spiders. He swallowed.
+Then Toot made a sad little *toot*. And {{brother}} forgot all about being scared.
 
-Then Toot let out another frightened *toot*, and {{brother}} stopped thinking about spiders.
+He lay down on his tummy. He wiggled into the gap. Wiggle, wiggle, squeeze.
 
-He lay down on his tummy and wriggled into the gap. Sideways, then forward, squeezing past the rocks. It was dark and damp. He could feel Toot's warm, scared breath.
+"It's me, Toot," he whispered. "Hold still."
 
-"It's me," he whispered. "It's okay. Hold still."
+He found the curly crest with his fingers. And very gently, he turned it.
 
-He found the edge of the crest with his fingers. Gently — very gently — he tipped it to one side.
+*POP!*
 
-There was a *pop*. Toot stumbled backward out of the rocks and fell over on the grass, tooting happily. {{brother}} wriggled out after him, covered in mud.
+Toot was free! He fell over backward on the grass, tooting happily. {{brother}} wiggled out after him, all muddy.
 
-Toot leapt on him and licked his whole face.
+Toot licked his whole face. *Slurp!*
 
-"Turns out," said Juno, helping him up, "small was exactly the right size."
+"Look at that," said Juno. "Small was *exactly* the right size."
 
-{{brother}} grinned a big muddy grin. He didn't say anything about being too small for the rest of the day.
+{{brother}} grinned a big, muddy grin.

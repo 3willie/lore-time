@@ -1,49 +1,45 @@
 # The Silver Lamp
 
-The silver lamp was the smallest lamp in the tower. It sat on the middle landing like a coin someone had left behind.
+The little silver lamp helps lost things find their way home.
 
-"It guides lost things," Old Wick reminded them. "And it lights for remembering."
+"It turns on," said Old Wick, "when you *remember*."
 
-"Remembering what?" {{brother}} asked.
+"Remember what?" asked {{brother}}.
 
 "That's up to you."
 
-{{hero}} put his hand on the glass and thought hard. He remembered his birthday. He remembered the beach. He remembered the time he scored a goal. The lamp stayed dark.
+{{hero}} put his hand on the lamp. He remembered his birthday cake. Nothing happened.
 
-{{brother}} tried. He remembered ice cream, and the zoo, and a dog he'd once met called Biscuit. Nothing.
+{{brother}} tried. He remembered ice cream. Nothing happened.
 
-Then {{brother}} said, "Remember when I got lost at the market?"
+Then {{brother}} said, "Remember when I got lost at the store?"
 
-{{hero}} remembered. He'd been six. {{brother}} had been three, and had let go of {{mom}}'s hand to look at a balloon, and then he was just *gone*. {{hero}} had been the one who spotted him, a tiny shape under a fruit stall, crying. He'd crawled under and held his hand until {{mom}} came.
+{{hero}} remembered. {{brother}} had been very small. He'd let go of {{mom}}'s hand to look at a balloon. And then he was gone!
+
+{{hero}} had found him, hiding under a fruit stand, crying. {{hero}} crawled in and held his hand until {{mom}} came.
 
 "You found me," said {{brother}}.
 
-The silver lamp flickered.
+The silver lamp went *flicker*.
 
-"Remember," said {{hero}} slowly, "when I was scared of the swimming lesson, and you said you'd go in first, even though you were littler?"
+"Remember," said {{hero}}, "when I was scared of swimming, and you jumped in first to show me it was okay?"
 
-"And then I swallowed a ton of water," said {{brother}}, grinning.
+"And I got water up my nose!" giggled {{brother}}.
 
-"And then I came in to get you."
+The silver lamp glowed, soft and bright, like the moon.
 
-The silver lamp glowed. Soft and bright, like moonlight on a coin.
+Its light shone out the window, down to the beach — and landed on something shiny in the rocks.
 
-And then it did something none of the other lamps had done. Its beam tipped down, out of the window, across the rocks — and landed on something wedged in a crack by the shore.
+The boys ran down to look. It was an old glass bottle with a note inside!
 
-They scrambled down to look. It was an old glass bottle, green and scratched, with a curl of paper inside.
+Old Wick read it out loud.
 
-Old Wick's hands shook a little as he pulled out the note. He read it aloud.
+*"To light the Great Lamp, remember all the times you helped each other. — Nell."*
 
-*Dear whoever finds this. The Great Lamp is lit by two who trust each other. But trust isn't something you have. It's something you remember. Every time someone caught you. Every time you caught them. Keep remembering, and the lamp will know. — Nell*
+"Nell was one of the sisters," said Old Wick softly.
 
-Old Wick folded the note very carefully and put it in his biggest pocket.
+That night, in their bunk beds, the brothers whispered and remembered. Every time one of them had helped the other.
 
-"She wrote that before she left," he said. "The sea's been holding it all this time."
+There were lots and lots.
 
-That night, out on the horizon, the black clouds had grown taller. Lightning flickered inside them.
-
-{{hero}} and {{brother}} lay in their bunks, whispering. Not making plans. Just remembering. Every time one of them had caught the other.
-
-There were more than they'd thought.
-
-One day until the storm.
+Far out at sea, dark clouds were gathering. A storm was coming.

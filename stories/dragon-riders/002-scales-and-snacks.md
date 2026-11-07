@@ -1,45 +1,45 @@
 # Scales and Snacks
 
-"Nobody flies today," said Master Oona. "Nobody flies this week."
+"No flying today," said Master Oona.
 
-A groan went around the training yard.
+"Awww!" said everybody.
 
-"Before you ride a dragon, you learn to *care* for a dragon. Brushes. Buckets. Snacks. Go."
+"First, you learn to take care of your dragon," she said. "Brushes. Buckets. Snacks. Go!"
 
-{{brother}} got along with Cinder right away. Cinder loved being brushed. He rolled onto his back like a puppy and made happy rumbling noises. He ate his whole bucket of fish in about four seconds and then hiccupped smoke rings. {{brother}} laughed so hard he fell over.
+{{brother}} and Cinder got along right away.
 
-{{hero}} did not get along with Skye.
+Cinder *loved* being brushed. He rolled on his back like a puppy, with his feet in the air. He gobbled his whole bucket of fish in four seconds. Then he hiccupped a smoke ring. *Hic!* {{brother}} laughed so hard he fell over.
 
-Every time he walked toward her with the brush, she stepped away. Every time he held out a fish, she turned her head. When he tried to touch her wing, she flicked it so hard he sat down in the straw.
+But {{hero}} and Skye did *not* get along.
 
-"She *chose* me," {{hero}} said, frustrated. "Why won't she let me near her?"
+When {{hero}} walked toward her with the brush, she stepped away.
 
-Master Oona leaned on the fence. "Choosing is the start, not the end. Skye is proud. She's fast, and she's strong, and she's had people grab at her before. Wanting to be her rider isn't enough. She needs to know you'll be gentle."
+When he held out a fish, she turned her head.
 
-"How do I show her?"
+When he tried to touch her wing — *flap!* — she knocked him down into the hay.
 
-"Stop chasing," said Master Oona. "Let her come."
+"She chose me!" said {{hero}}. "Why won't she let me near her?"
 
-So {{hero}} tried something new. He put the brush down. He put the bucket of fish down. And he sat on an upturned crate in the corner of the stall and just… stayed there.
+Master Oona leaned on the fence. "Skye is proud. And people have grabbed at her before," she said. "She needs to know you'll be gentle. So stop chasing. Let her come to you."
 
-He didn't reach. He didn't talk much. He hummed a little, the way {{mom}} hummed when she was folding laundry.
+So {{hero}} tried something new.
 
-For a long time, Skye watched him from the far side of the stall.
+He put down the brush. He put down the fish. He sat very still on a box in the corner. He hummed a little song, the way {{mom}} hums when she folds the laundry.
+
+Skye watched him.
 
 Then she took one step closer.
 
-{{hero}} kept still. His heart was pounding. He didn't move.
+{{hero}} stayed still.
 
-Another step. And another. Until her great silver-blue head was right beside him, and he could feel her warm breath ruffling his hair.
+Another step. And another. Until Skye's big silver-blue head was right next to him. Her warm breath tickled his hair.
 
-Very slowly, he held up one hand, palm open. Not grabbing. Just offering.
+Slowly, {{hero}} held out his hand. Not grabbing. Just offering.
 
-Skye sniffed it. Then she lowered her head and pressed her cheek into his palm. Her scales were smooth and cool, like river stones.
+Skye sniffed it. Then she pressed her cheek into his hand. Her scales felt cool and smooth, like river stones.
 
-"Hi," {{hero}} whispered. "I'm going to be gentle. I promise."
+"Hi, Skye," whispered {{hero}}. "I'll be gentle. I promise."
 
-Skye made a low sound, deep in her chest. It wasn't a growl. It sounded almost like a purr.
+Skye made a happy rumble. It sounded a lot like a purr.
 
-On the other side of the yard, {{brother}} gave a thumbs-up. Cinder, on his back with all four legs in the air, hiccupped a smoke ring that drifted over the fence.
-
-Master Oona smiled, just a little. "Day one," she said. "Good."
+Over the fence, Cinder hiccupped a smoke ring. *Hic!*

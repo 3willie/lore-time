@@ -1,57 +1,53 @@
 # Into the Nebula
 
-The Nebula looked like a giant cloud of colored smoke — pink and purple and deep green, swirling slowly across the stars.
+To reach the Hidden Star, the *Pebble* had to fly through a giant space cloud. It was called the Nebula. It was pink and purple and green, like swirly paint.
 
-"The map says the Hidden Star is on the other side," said {{hero}}. "We just have to fly through."
+In they went. *Swoosh!*
 
-"*Be careful, Rangers,*" said {{mom}} over the speaker. "*Nebulas can do funny things to—*"
+Then — *fizzle, pop* — all the screens went blank.
 
-Then her voice crackled, and fizzed, and was gone.
+"*Rangers, can you—*" said {{mom}}'s voice. Then nothing.
 
-The *Pebble* had slipped into the cloud. All around the windows, colors drifted past like paint in water. And every screen on the dashboard went blank.
+"Bolt, which way do we go?" asked {{hero}}.
 
-"Bolt?" said {{hero}}. "Where are we?"
+Bolt's eyes spun around. "I don't know! I can't see any stars! I can't count anything!"
 
-Bolt's eyes spun. "I don't know! My counters don't work! I can't count the stars, I can't see the stars, I can't count *anything*!" He grabbed his own head. "I'm the counting one! If I can't count, what am I for?"
+Everything outside looked the same. Pink, purple, green. Pink, purple, green.
 
-The *Pebble* drifted. Nobody knew which way to go.
+Then {{brother}} said, "Shhh!"
 
-{{hero}} tried steering left. Then right. Everything looked exactly the same — pink, purple, green.
-
-Then {{brother}} said, "Shh."
-
-"What?"
+"What is it?"
 
 "Listen."
 
-They listened. And under the hum of the engine, very faintly, they heard it. A sound like someone humming a song. High and sweet and far away.
+They listened.
 
-"It's coming from that way," {{brother}} said, pointing.
+And very, very softly, they heard humming. *Hmm-hmm-hmmm.* Like someone singing a lullaby, far away.
 
-"That could be anything," said {{hero}}. "It could be a trick."
+"It's coming from that way," said {{brother}}, pointing.
 
-"Remember the Quiet Planet?" said {{brother}}. "We found them by being quiet. Maybe this is the same."
+{{hero}} was the captain. But he remembered the Quiet Planet. Sometimes {{brother}} noticed things he didn't.
 
-{{hero}} looked at his little brother. A while ago, he might have said, *I'm the captain, I'll decide.* But he'd been learning.
+"Okay," said {{hero}}. "You listen. I'll steer. Bolt, can you keep the ship level?"
 
-"Okay," he said. "You listen. I'll steer. Bolt — can you feel which way the ship is tilting, even if you can't see?"
+"I can do that!" said Bolt. "That's not counting. That's just balancing!"
 
-Bolt blinked. "Well — yes. I can always feel that. That's not counting. That's just… balancing."
+So they worked together.
 
-"Then you keep us level."
+"Left a bit," said {{brother}}, eyes closed.
 
-So they worked together. {{brother}} closed his eyes and called out the song: *left a bit… now straight… up, up.* {{hero}} turned the wheel. Bolt held the ship steady, whispering, "Level. Level. A little wobbly. Level."
+{{hero}} turned the wheel.
 
-The humming grew louder. Sweeter. The colors outside began to thin.
+"Level… level… a tiny bit wobbly… level," said Bolt.
 
-And then — *whoosh* — the *Pebble* burst out of the Nebula into clear black space, sparkling with stars.
+The humming got louder. The clouds got thinner.
 
-{{mom}}'s voice crackled back. "*Rangers? Are you there? Are you all right?*"
+And then — *WHOOSH!* — the *Pebble* popped out into clear, sparkly space!
 
-"We're through!" yelled {{brother}}.
+"*Rangers!*" crackled {{mom}}'s voice. "*Are you okay?*"
 
-Bolt sat down heavily on the floor. "I didn't count a single thing," he said. "And I still helped."
+"We made it!" cheered {{brother}}.
 
-"You're not just the counting one," said {{hero}}. "You're one of *us*."
+Far ahead, something was glowing silver and gold.
 
-Far ahead, something silver and gold was glowing. And still humming.
+And it was still humming.

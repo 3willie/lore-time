@@ -2,56 +2,48 @@
 
 "Ready?" said {{hero}}.
 
-"Ready," said {{brother}}.
+"Ready!" said {{brother}}.
 
-They stood on either side of the Great Lamp, the dark one at the very top of the tower, and pressed their hands flat against the cold glass at exactly the same moment.
+They put their hands on the Great Lamp at the same time.
 
 Nothing happened.
 
-"Maybe we have to press harder," said {{hero}}.
+"Your hand's in the wrong place," said {{hero}}. "Do it like me."
 
-They pressed harder. Ember the fox sat beside them, his golden tail flicking.
+"*You're* doing it wrong," said {{brother}}. "You're being bossy!"
 
-Still nothing.
+"I'm not bossy, I'm *helping*!"
 
-"You're doing it wrong," said {{hero}}. "Your hand's too low."
+The lamp stayed dark. It even looked a little darker.
 
-"*You're* doing it wrong," said {{brother}}. "You're bossing."
+Old Wick chuckled. "The lamp can tell when you're fussing," he said. "{{hero}}, who always goes first?"
 
-"I'm not bossing, I'm *helping*."
+{{hero}} thought. "Me," he said. "I'm the big brother."
 
-"That's what bossing sounds like!"
+"And does {{brother}} ever get to lead?"
 
-The glass stayed dark. If anything, it looked a little darker.
+{{hero}} didn't say anything. Because the answer was no.
 
-Old Wick, who had been polishing the brass rail, cleared his throat. "Two hands on the glass isn't the same as two people trusting each other," he said mildly. "The lamp can tell."
+"Trusting someone means letting *them* lead sometimes," said Old Wick. "Why don't you practice?"
 
-"But I *do* trust him," said {{hero}}.
+So all day long, {{brother}} was the leader.
 
-"Do you?" said Old Wick. "Then why does he always go second?"
+{{brother}} picked lunch. *Pancakes!*
 
-{{hero}} opened his mouth. Then he shut it again.
+{{brother}} picked the path down to the beach.
 
-It was true. {{hero}} always went first. First up the stairs, first into the water, first to try the blue lamp. He was the big brother. That was how it worked.
+{{brother}} picked the game. *Crab hunt!*
 
-"I trust him to *follow*," {{hero}} said slowly. "I don't know if I trust him to *lead*."
+It was hard for {{hero}} to just follow. Twice he almost said, "That's not the best way." But he didn't.
 
-{{brother}} looked at his feet. "I don't know if I trust *me* to lead either," he said quietly.
+And guess what? {{brother}}'s path to the beach went right past a rock pool full of tiny baby crabs. {{hero}} had never seen it before.
 
-Old Wick sat down on the top step. "The last keepers were sisters. Nell and Ada. Some nights Nell led and Ada followed. Some nights the other way around. They never argued about who went first. They just knew."
+"Wow," said {{hero}}. "Good leading."
 
-"How did they learn?" {{brother}} asked.
+{{brother}} grinned from ear to ear.
 
-"Practice," said Old Wick. "Lots of small practices."
+That night, they peeked at the Great Lamp. It was still dark.
 
-So that evening, they practiced. {{brother}} chose dinner (pancakes). {{brother}} chose which path to take down to the rock pools. {{brother}} decided when it was time to go home.
+But right in the middle, if you looked very closely, there was one tiny gold sparkle.
 
-{{hero}} found it surprisingly hard to just… follow. Twice he almost said, *That's not the best way.* Twice he didn't.
-
-And it turned out {{brother}}'s path to the rock pools was a good one. It went past a nest of baby crabs that {{hero}} had never seen before.
-
-Back at the top of the tower that night, the Great Lamp was still dark.
-
-But if you looked very closely, right in the middle, there was a tiny gold spark. Waiting.
-
-Two days until the storm.
+Waiting.

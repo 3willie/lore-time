@@ -1,61 +1,49 @@
 # Old Grumbletooth
 
-There was one part of Fernhollow that Ranger Juno never let them go near.
+"Who lives over there?" asked {{hero}}, pointing to the dark trees at the end of the valley.
 
-"The north end," she said, pointing to a dark line of trees. "That's where Old Grumbletooth lives."
+"Old Grumbletooth," said Ranger Juno. "He's a T. rex. The biggest dinosaur in Fernhollow. And lately, the grumpiest."
 
-"Who's Old Grumbletooth?" asked {{hero}}.
+The very next day, Old Grumbletooth came to visit.
 
-Juno took off her hat. "A tyrannosaurus," she said. "The biggest in the valley. And lately, the grumpiest."
+*STOMP. STOMP. STOMP.*
 
-Then, one morning, Old Grumbletooth came to them.
+Toot hid behind {{brother}}'s legs. Out of the trees came a GIANT dinosaur. Big head. Big teeth. Teeny-tiny arms.
 
-The ground shook. The birds went silent. Toot hid behind {{brother}}'s legs, tooting in a tiny, terrified voice. And out of the trees came the biggest animal either boy had ever seen. Huge head. Huge teeth. Tiny arms. He stomped into the clearing and let out a ROAR that rattled the windows.
+"ROOOAR!"
 
-"Inside," said Juno quietly. "Everyone. Now."
+"Inside, everyone," said Juno calmly.
 
-They hurried into the cabin and peeked through the window. Old Grumbletooth stomped around in a circle. He roared again. Then he lay down heavily in the grass, right in the middle of the clearing, and made a long, low, rumbling sound.
+They watched from the cabin window. Old Grumbletooth stomped in a circle. Then he lay down in the grass and made a low, sad sound. *Hrrrmmmm.*
 
-{{hero}} frowned. "That doesn't sound angry," he said. "That sounds like when {{brother}} has a tummy ache."
+{{hero}} tilted his head. "That doesn't sound angry," he said. "That sounds like when {{brother}} has a tummy ache."
 
-Juno looked at him. Then she looked through her binoculars for a long time.
+Juno looked through her binoculars.
 
-"He's limping," she said slowly. "His back foot. Something's stuck in it."
+"You're right," she said. "He's hurt. There's a big thorn stuck in his foot."
 
 "Like a splinter?" said {{brother}}.
 
-"A very big splinter," said Juno. "A thorn from the spike-bushes, probably. No wonder he's grumpy. It must hurt every step."
+"A *very* big splinter. No wonder he's grumpy. It hurts every time he walks."
 
-"Someone would have to get really close," said {{hero}}.
+{{hero}}'s hands felt shaky. But he remembered something. *Being brave means being scared and doing it anyway.*
 
-"Yes," said Juno.
+"Can we help him?" he asked. "All together?"
 
-"While he's lying still. And hurting."
+So they went. Slowly. Quietly. Juno first. Then {{dad}}. Then the boys, holding hands.
 
-"Yes."
+Old Grumbletooth watched them. But he didn't get up.
 
-{{hero}}'s hands were shaking. He remembered something he'd learned: *brave is being scared and doing it anyway.*
+Juno and {{dad}} held the thorn. "One… two… three… PULL!"
 
-"Can we all go?" he asked. "Together?"
+*Pop!*
 
-So they did. Juno first, moving slowly, talking in a low calm voice. {{dad}} right beside her. The boys behind, holding hands. Toot stayed in the cabin, peeking out of the window.
+"ROAR!" went Old Grumbletooth. Everybody jumped!
 
-Old Grumbletooth watched them come. He rumbled. But he didn't get up.
+Then the big dinosaur stood up. He put his foot down. And he let out a great big sigh. *Ahhhhhh.* It was so big it blew {{brother}}'s hair straight back!
 
-The thorn was as long as {{hero}}'s arm. Juno took hold of it with both hands, and {{dad}} helped, and on the count of three — they pulled.
+Old Grumbletooth bent down and gave {{hero}} a gentle sniff. From his shoes all the way up to his hair.
 
-Old Grumbletooth ROARED. Everyone jumped back.
+Then he walked back into the trees. Not stomping. Not grumpy. Just happy.
 
-Then the giant dinosaur stood up, put his foot down, and… sighed. A huge, warm, enormous sigh of relief that blew {{brother}}'s hair straight back.
-
-He looked down at the four of them. And very slowly, he lowered his gigantic head and sniffed {{hero}}, from his shoes all the way up to the top of his head.
-
-Then he turned and walked back into the trees. Not stomping. Not limping. Just walking.
-
-"He'll remember that," said Juno, letting out a long breath. "Grumbletooth never forgets a kindness."
-
-Far away, at the other end of the valley, the old mountain gave a deep, low rumble. A thin line of smoke curled up into the sky.
-
-Juno's smile disappeared.
-
-"That," she said, "is not good."
+"He'll remember that," said Juno, smiling. "And next week is the Fernhollow Feast, when *all* the dinosaurs come together. I think he might come."

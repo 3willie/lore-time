@@ -1,39 +1,43 @@
 # The Library Under the Lake
 
-"Touch it at the same time," {{hero}} whispered. "On three. One — two —"
+"Let's touch it together," whispered {{hero}}. "One… two… three!"
 
-Their fingers touched the ink lake together.
+They touched the little blue lake on the map.
 
-The bedroom tipped sideways. There was a sound like a page turning, very big and very close — and then their feet were standing on cool sand, at the edge of a real lake under a real starry sky.
+*Swoosh!* The bedroom spun around — and suddenly they were standing on soft sand, beside a real lake, under a sky full of stars.
 
-A spiral staircase led straight down into the water. Somehow, the water parted around it, like a curtain.
+A curly staircase went down, down, down into the water. And the water moved out of the way, like a curtain!
 
-At the bottom was the biggest library they had ever seen. The shelves went up and up into the dark, and between them, instead of air, floated gentle blue water. Books drifted past like slow, lazy fish, flapping their pages.
+At the bottom was a library. A huge one! But instead of air, there was gentle blue water. And the books swam around like fish, flapping their pages. *Flap, flap, flap.*
 
-"Welcome," said a voice. An old turtle in round spectacles paddled toward them. "I'm the Librarian. We don't get many visitors who can find us."
+A turtle with round glasses swam over. "Welcome! I'm the Librarian. Can you help me?"
 
-"The map brought us," said {{brother}}.
+She pointed to a little book hiding at the bottom of a shelf. It was gray and sad, with its pages shut tight.
 
-"Ah. Then you must be kind ones." The Librarian looked a little sad. "Perhaps you can help. One of our books has been lost a very long time. It's forgotten what it's for. Books are meant to be *read*, you see, and nobody has read this one in years."
+"Nobody has read this book in a long, long time," said the Librarian. "Books are happiest when someone reads them."
 
-She pointed to a small faded book, hiding at the bottom of a shelf, its pages closed tight.
+{{brother}} picked it up gently. Then his face went pink.
 
-{{brother}} reached in and pulled it out gently. The book trembled in his hands.
+"I can't read all the words yet," he said quietly.
 
-Then he looked up, and his face went pink. "I can't read all the words yet," he said quietly. "Only some of them."
+{{hero}} sat down next to him and patted the sand.
 
-For a moment, nobody said anything.
+"Let's read it together," he said. "You read the words you know. I'll read the rest."
 
-Then {{hero}} sat down on the sandy floor and patted the spot beside him. "Then we'll read it together," he said. "You read the words you know. I'll do the rest."
+So they did.
 
-So they did. {{brother}} read *the*, and *cat*, and *sun*, and *went*. {{hero}} read the long ones. When {{brother}} got stuck, {{hero}} waited, and didn't rush him, until he figured it out himself.
+{{brother}} read *the*, and *cat*, and *sun*, and *big*.
 
-With every page, the little book grew brighter. Its colors came back. By the last page, it was glowing.
+{{hero}} read the long words.
 
-It floated up off their laps and swam happily up to the very top shelf, where it settled in, proud as anything.
+When {{brother}} got stuck, {{hero}} waited. He didn't rush. And {{brother}} figured it out all by himself.
 
-"Thank you," said the Librarian. "It remembers now."
+With every page, the little book got brighter. Pink! Yellow! Green! By the end, it was glowing.
 
-The next thing {{hero}} knew, he was back in bed, sand still stuck between his toes.
+It swam happily up to the very top shelf.
 
-On the desk, the map had drawn a tiny book beside the lake. And a brand-new path, leading off into the blank.
+"Thank you," said the Librarian. "Now it remembers what it's for."
+
+*Swoosh!* The boys were back in bed.
+
+On the map, a tiny book had appeared beside the lake.

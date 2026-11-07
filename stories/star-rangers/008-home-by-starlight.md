@@ -1,49 +1,45 @@
 # Home by Starlight
 
-They didn't need the map to get home. The Hidden Star lit the way.
+The Hidden Star made a long, sparkly path of light all the way home.
 
-Its light stretched out in a long silver ribbon through the dark, right through the middle of the Nebula, which looked much less scary when you could see where you were going. The *Pebble* and the *Grumble* flew along it side by side, and Captain Rook's crew waved through the window the whole way.
+The *Pebble* and the pirate ship flew side by side. The pirates waved out the window the whole way.
 
-"*Rangers!*" {{mom}}'s voice crackled over the speaker as Ranger Base came into view. "*Is that you? What is that light?*"
+"*Rangers!*" said {{mom}} on the radio. "*Is that you? What's that beautiful light?*"
 
-"It's a long story," said {{hero}}.
+"It's a long story!" said {{hero}}.
 
-"*I've got time,*" said {{mom}}. And they could hear she was smiling.
+"*I love long stories,*" said {{mom}}. They could hear her smiling.
 
-The whole of Hangar Nine came out to meet them. Rangers in silver suits, mechanics with greasy hands, and {{mom}} at the front, hugging both boys so hard their badges bent a bit more.
+When they landed, {{mom}} gave both boys the biggest hug ever. So big that their badges got squished.
 
-Then she saw the *Grumble*, round and shiny and spike-free, and Captain Rook peeking nervously out of the hatch.
+Then she saw the round, shiny pirate ship. And Captain Rook, peeking out shyly.
 
-"And who's this?"
+"And who is this?"
 
-"Our friends," said {{brother}}. "They used to be pirates. They're not very good at it."
+"Our new friends," said {{brother}}. "They used to be pirates. They weren't very good at it."
 
-Captain Rook turned bright purple. "We're retired," she said.
+Captain Rook turned extra purple.
 
-That evening, there was a ceremony. {{mom}} stood on a little stage in front of every Ranger on the base.
+That evening, there was a party. {{mom}} stood up in front of all the Rangers.
 
-"Today," she said, "two junior Rangers found the Hidden Star. Not by taking from it, but by giving to it. That's what Star Rangers are for."
+"Today," she said, "two Junior Rangers found the Hidden Star. They didn't take anything from it. They *gave* it something. That's what Star Rangers do."
 
-She pinned a new badge on each of the boys — a tiny silver star that glowed, very softly, with real starlight.
+She gave each boy a new badge: a tiny star that glowed with real starlight.
 
-Then she turned to the side of the stage, where Bolt was trying to hide behind a curtain.
+Then she turned to Bolt, who was trying to hide behind a curtain.
 
-"And this," said {{mom}}, "is for the bravest robot in the fleet."
+"And this one," said {{mom}}, "is for the bravest robot in the whole fleet."
 
-Bolt's eyes went enormous. She pinned a badge to his chest — right above his little red *BRAVE* button, the one he'd never pressed.
+Bolt's eyes went very big. She pinned a badge right on his chest.
 
-"I'm still scared most of the time," Bolt whispered.
+"I'm still scared a lot," whispered Bolt.
 
 "That's why it counts," said {{hero}}.
 
-Later, back in their squeaky bunks on the *Pebble*, the boys were almost asleep when the radio beeped. A message. Faint and crackly, from very far away.
+That night, in their squeaky bunk beds, the radio went *beep*.
 
-"*…Help… anyone… ice planet… we're stuck…*"
+"*Hello, Rangers! This is Snow Planet. Our baby penguins are learning to slide, and we need some helpers. Can you come?*"
 
-Then static.
+{{brother}} smiled sleepily. "Baby penguins," he whispered.
 
-{{hero}} sat up. {{brother}} sat up. Bolt's eyes clicked on in the dark.
-
-"Tomorrow," said {{hero}}.
-
-"Tomorrow," said {{brother}}, already grinning.
+"Tomorrow," yawned {{hero}}.

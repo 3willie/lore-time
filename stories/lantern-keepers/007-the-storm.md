@@ -1,47 +1,47 @@
 # The Storm
 
-The storm arrived in the afternoon, and it arrived angry.
+*Whoooosh!* went the wind.
 
-Wind screamed around the tower. Waves crashed so high that spray hit the windows of the top room. The whole of Gull Rock seemed to shiver.
+*Crash!* went the waves.
 
-Then Old Wick slipped.
+The storm had come to Gull Rock.
 
-It happened on the wet steps by the kitchen door. One moment he was carrying a bucket, the next he was sitting on the ground holding his ankle, his face gone pale.
+Old Wick hurried to the stairs — and *oops!* He slipped on a wet step and hurt his ankle.
 
-"Just a twist," he said through his teeth. "But I can't climb. Not today."
+"I'm all right," he said. "But I can't climb today."
 
-{{dad}} was there in a heartbeat, wrapping the ankle, helping him to the chair by the stove. Then the radio on the wall crackled.
+{{dad}} helped him to a cozy chair by the fire.
 
-"*Gull Rock, Gull Rock. This is the fishing boat* Marigold. *We're lost in the storm. We can't see anything. Is your light on? Over.*"
+Then the radio went *crackle, crackle*.
 
-Everyone looked at the ceiling. Up there, at the top of the tower, the Great Lamp was still dark.
+"*Hello, Gull Rock! This is the boat* Marigold*. We're lost in the storm! Can you turn on your light?*"
 
-"The green lamp," said {{dad}}. "Can that help them?"
+Everyone looked up. At the top of the tower, the Great Lamp was still dark.
 
-"Not in this," said Old Wick. "Too much storm. Only the Great Lamp reaches that far."
+"We'll go," said {{hero}}.
 
-{{hero}} looked at {{brother}}.
+"Together," said {{brother}}.
 
-"We have to go up," said {{hero}}.
+{{dad}} nodded. "Hold the rail. I'll be right behind you."
 
-{{dad}} hesitated. Then he nodded. "Stay together. Hold the rail the whole way. I'll be right behind you."
+Up the stairs they went. Past the green lamp, glowing. Past the blue lamp, where birds were snuggled up safe. Past the little silver lamp.
 
-They climbed. Past the green lamp, glowing. Past the blue lamp, where dozens of birds huddled, sheltering. Past the silver lamp. The tower creaked and swayed. Rain hammered the glass.
+At the very last stairs, {{hero}} stopped. The wind was so loud. His legs felt shaky.
 
-At the last landing, the stairs got narrow and steep, and {{hero}} stopped. He'd always gone first. But his legs were shaking, and the wind outside was howling, and for once, he didn't feel like a big brother at all.
+{{brother}} took his hand.
 
-{{brother}} squeezed past him. He held out his hand.
+"I'll go first," said {{brother}}. "You hold on to me."
 
-"I'll go first," he said. "You hold on to me."
+And {{hero}}, who *always* went first, said, "Okay."
 
-And {{hero}} — big brother {{hero}}, who always led — took his little brother's hand, and followed.
+Slowly, step by step, {{brother}} led the way. Just like the blue lamp taught him. Patient and careful.
 
-{{brother}} went one step at a time. Slow. Patient. Exactly like the blue lamp had taught him. And {{hero}} didn't say a single word about how to do it better.
+And {{hero}} followed. He didn't say "do it like me" even once.
 
-They reached the top together. The Great Lamp stood in the middle of the room, dark and enormous, with lightning flashing all around it.
+They reached the top together.
 
-Ember was already there, sitting beside it, waiting. His tail was glowing brighter than they had ever seen it.
+Ember the fox was already there, sitting by the Great Lamp. His tail was glowing brighter than ever.
 
-"Together?" said {{brother}}.
+"Ready?" said {{brother}}.
 
-"Together," said {{hero}}.
+"Ready," said {{hero}}.

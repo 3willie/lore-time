@@ -1,3 +1,8 @@
+---
+art: 🐲 🔥 🎀
+lesson: Helping matters more than winning
+ask: Would you turn back to help your friend?
+---
 # The Sky Trial
 
 Today was the Sky Trial! A race through the Needle Rocks — tall, pointy rocks poking out of the clouds.

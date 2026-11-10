@@ -3,5 +3,11 @@
   "emoji": "🌀",
   "color": "#14b8a6",
   "blurb": "Standalone Koda adventures that sit outside the main journey.",
-  "order": 5
+  "order": 5,
+  "backdrop": "forest",
+  "art": [
+    "🌀",
+    "🦁",
+    "⭐"
+  ]
 }

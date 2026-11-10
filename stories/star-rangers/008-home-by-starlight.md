@@ -1,3 +1,8 @@
+---
+art: 🏅 🤖 🐧
+lesson: Kindness is what heroes do
+ask: What kind thing did you do today?
+---
 # Home by Starlight
 
 The Hidden Star made a long, sparkly path of light all the way home.

@@ -3,5 +3,11 @@
   "emoji": "🌊",
   "color": "#6366f1",
   "blurb": "A separate adventure: Koda, Pikachu and the rival who became a Lapras.",
-  "order": 4
+  "order": 4,
+  "backdrop": "sea",
+  "art": [
+    "🌊",
+    "⚡",
+    "🦕"
+  ]
 }

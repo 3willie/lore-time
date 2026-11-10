@@ -1,3 +1,9 @@
+---
+art: 🐢 📖 🐟
+backdrop: sea
+lesson: Learning together
+ask: What is your favorite book to read together?
+---
 # The Library Under the Lake
 
 "Let's touch it together," whispered {{hero}}. "One… two… three!"

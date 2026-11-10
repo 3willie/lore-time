@@ -1,3 +1,8 @@
+---
+art: 🚀 🤖 ⭐
+lesson: Small can be brave
+ask: What would you name your spaceship?
+---
 # Ranger Badges
 
 {{mom}} pinned a shiny silver star onto {{hero}}'s shirt. Then one onto {{brother}}'s.

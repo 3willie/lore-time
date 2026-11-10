@@ -1,3 +1,8 @@
+---
+art: 🦀 🥞 🏖️
+lesson: Taking turns leading
+ask: What would you pick if you were the leader for a day?
+---
 # Two Hands on the Glass
 
 "Ready?" said {{hero}}.

@@ -1,3 +1,8 @@
+---
+art: 🏴‍☠️ 🐠 🚀
+lesson: Making friends
+ask: How could you help someone who feels lonely?
+---
 # The Lonely Pirates
 
 A big black ship zoomed up beside the *Pebble*. It was covered in spikes!

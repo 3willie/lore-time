@@ -1,3 +1,9 @@
+---
+art: 🗼 ✨ 🧸 ⛵
+backdrop: sea
+lesson: Working together
+ask: What can two people do together that one can't do alone?
+---
 # The Great Lamp
 
 {{brother}} put his hand on the Great Lamp first.

@@ -1,3 +1,9 @@
+---
+art: 🌳 🪜 ✨
+backdrop: night
+lesson: Grown-ups can be kind too
+ask: What kind thing did a grown-up do for you this week?
+---
 # Grandpa's Treehouse
 
 This time, the map drew a place for {{dad}}.

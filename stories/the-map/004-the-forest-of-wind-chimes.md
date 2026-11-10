@@ -1,3 +1,9 @@
+---
+art: 🔔 🐭 🌳
+backdrop: night
+lesson: You can be scared and brave
+ask: What is something you are a little scared of?
+---
 # The Forest of Wind Chimes
 
 *Ting-a-ling. Ting-a-ling.*

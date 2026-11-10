@@ -1,3 +1,8 @@
+---
+art: 🗺️ 📦 💌
+lesson: We are always growing
+ask: What new thing did you learn this year?
+---
 # The Edge of the Map
 
 By the end of the year, the map was almost full.

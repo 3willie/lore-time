@@ -1,17 +1,24 @@
 # Story Time 🪥
 
-Two-minute stories to read while brushing teeth. Pick a **topic**, then a **story**. That's it.
+Two-minute stories to read while brushing teeth. Pick a **story world**, then a **story**. That's it.
 
-- Big, tap-friendly buttons for a phone, tablet or wall panel, with light and dark colours.
-- Each topic is a series: stories are listed in order, the next unread one is marked **Up next**,
-  stories get a ✓ (on that device) once you've scrolled through three quarters of them, and the end of each story has a **Next** button.
-- A 🪥 two-minute brushing timer: tap it to start or pause. Once started it keeps going into the next story.
+- **Home** offers tonight's story (the one left unfinished, or the next in the series you read last) and a
+  picture card for every story world, with how far along you are.
+- **Every story has a picture**: a painted backdrop (sea, space, jungle, night…) with a few characters on it.
+  Tap a character in the big picture and it wiggles.
+- **Stories teach as well as entertain**: each can end with its *big idea* ("Patience") and a *talk about it*
+  question to chat over while rinsing.
+- **Sticker books**: finishing a story (scrolling through three quarters of it) earns its sticker for that
+  series, on that device. Stories are listed in order with the next one marked **Up next**.
+- A 🪥 two-minute brushing timer: tap it to start or pause. A bar fills as you brush, it keeps going into the
+  next story, and two minutes ends with a little celebration.
 - **A− / A+** change the text size (remembered on that device). The screen stays on while reading where the
   browser allows it (HTTPS only).
 - A ⚙️ **Settings** page: character names (saved on the NAS, shared by every device), and for this device the
-  colours (auto, light or dark), text size and clearing the ✓ marks.
-- No accounts, no database, no internet needed. Stories are plain text files in this repository's `stories`
-  folder, built into the image, so pushing a new story and updating the container is all it takes.
+  colours (auto, light or dark), text size and clearing the stickers.
+- No accounts, no database, no internet needed (the font is bundled). Stories are plain text files in this
+  repository's `stories` folder, built into the image, so pushing a new story and updating the container is
+  all it takes.
 
 ## Adding stories
 
@@ -36,13 +43,32 @@ stories/
 - **Title**: the first line, written as `# The Title`. Without one, the file name is used.
 - **Text**: leave a blank line between paragraphs. `*italic*`, `**bold**`, a line with just `---` for a scene
   break, and `## Heading` all work. `.md` and `.txt` files are both fine.
+- **Details** (optional) go in a block above the title. Everything else in the file is shown to the reader:
+
+  ```md
+  ---
+  art: 🐦 🏮 🪟
+  backdrop: night
+  lesson: Patience
+  ask: What helps you wait when waiting is hard?
+  ---
+  # The Patient Lamp
+  ```
+
+  - `art`: up to four emoji for the story's picture. The first is the main character and the story's sticker.
+    Without it, the app picks pictures from the words in the story (dragon → 🐉, storm → ⛈️…), so every story
+    gets a scene.
+  - `backdrop`: `meadow`, `sea`, `space`, `sky`, `jungle`, `night`, `forest` or `town`. Defaults to the topic's.
+  - `lesson`: the big idea, in a few words. `ask`: one question for the kids. Both appear after "The End".
 - **topic.json** (optional) sets how a topic looks; a topic without one is named after its folder:
 
   ```json
-  { "name": "Koda's Pokémon Journey", "emoji": "🌪️", "color": "#0ea5e9", "blurb": "Shown above the story list.", "order": 3 }
+  { "name": "Koda's Pokémon Journey", "emoji": "🌪️", "color": "#0ea5e9", "blurb": "Shown above the story list.",
+    "order": 3, "backdrop": "meadow", "art": ["🌪️", "🦅", "🐕"] }
   ```
 
-  `order` puts topics in a fixed order on the first page; otherwise they are alphabetical.
+  `order` puts topics in a fixed order on the first page; otherwise they are alphabetical. `backdrop` and
+  `art` make the topic's cover picture and are the defaults for its stories.
 
 The stories here are built into the image, so after a push they reach the NAS with the next image update (see
 below). To try stories without a push, you can instead mount a folder from the NAS at `/stories` (see the
@@ -105,8 +131,9 @@ File names are `NNN-<story-slug>.md` with a three-digit number for reading order
   parts at its scene breaks, and the numbers after it move up.
 - **Written for ages 3–7** (the newer series): about 220–320 words, short sentences and everyday words, sound
   words and repeated lines to join in with, one simple lesson per story, and nothing too scary before bed:
-  worries resolve quickly, and each story ends cozy or curious rather than on a cliffhanger.
-- The first line is always `# Title`; no other metadata goes in the file, since everything in it is shown to the reader.
+  worries resolve quickly, and each story ends cozy or curious rather than on a cliffhanger. Give each one
+  `art`, a `lesson` and an `ask` question (see above).
+- The file starts with the optional details block, then `# Title`; everything after that is shown to the reader.
 
 ## Running on the Synology NAS
 

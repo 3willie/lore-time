@@ -1,3 +1,9 @@
+---
+art: 🦊 🍪 🏮
+backdrop: night
+lesson: Trust
+ask: Who is someone you trust?
+---
 # The Lantern Fox
 
 Somebody was eating the cookies.

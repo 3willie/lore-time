@@ -1,3 +1,8 @@
+---
+art: 🗺️ 🍊 🏡
+lesson: Helping without being asked
+ask: Who could you help tomorrow?
+---
 # The Blank Map
 
 The attic was dusty. *Achoo!*

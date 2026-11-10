@@ -1,3 +1,8 @@
+---
+art: 🦕 👣 🌴
+lesson: Keeping a kind secret
+ask: Which dinosaur would you want to meet first?
+---
 # Behind the Waterfall
 
 {{dad}} took the boys camping in the mountains. They had a tent, a map, and lots of snacks.

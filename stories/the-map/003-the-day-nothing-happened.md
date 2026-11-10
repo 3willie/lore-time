@@ -1,3 +1,9 @@
+---
+art: 🛋️ 🌧️ 🌙
+backdrop: town
+lesson: Kindness from the heart
+ask: How can you tell when someone needs a little kindness?
+---
 # The Day Nothing Happened
 
 "Today," said {{brother}}, "we'll do *lots* of kind things. Then the map will draw something HUGE!"

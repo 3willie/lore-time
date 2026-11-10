@@ -1,3 +1,8 @@
+---
+art: 🌝 🪐 ✨
+lesson: Being yourself
+ask: What is something special about you?
+---
 # The Moon That Wouldn't Shine
 
 The map led the *Pebble* to a great big yellow planet called Goldie. Goldie was so bright, the boys had to squint.

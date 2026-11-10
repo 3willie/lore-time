@@ -1,3 +1,9 @@
+---
+art: 🗼 ⛈️ 🦊
+backdrop: night
+lesson: Helping each other be brave
+ask: Who helps you when you feel scared?
+---
 # The Storm
 
 *Whoooosh!* went the wind.

@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { after, before, describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { cleanNames, createApp, fillNames, parseStory, readLibrary, storyId } from './server.mjs'
+import { autoArt, cleanNames, createApp, fillNames, parseStory, readLibrary, storyId } from './server.mjs'
 import { inline, plain, renderStory } from './public/story-format.js'
 
 const here = new URL('.', import.meta.url).pathname
@@ -19,6 +19,23 @@ describe('story files', () => {
     assert.equal(s.title, 'The Spark')
     assert.equal(s.text, 'Max was first.\n\nLeo was second.')
     assert.equal(s.words, 6)
+  })
+
+  it('reads the details block: pictures, backdrop, big idea and question', () => {
+    const s = parseStory('02-lamp.md', '---\nart: 🐦 🏮 🪟\nbackdrop: Night\nlesson: Patience\nask: What helps you wait?\n---\n# The Patient Lamp\n\nSit still.')
+    assert.equal(s.title, 'The Patient Lamp')
+    assert.equal(s.text, 'Sit still.')
+    assert.deepEqual(s.art, ['🐦', '🏮', '🪟'])
+    assert.equal(s.backdrop, 'night')
+    assert.equal(s.lesson, 'Patience')
+    assert.equal(s.ask, 'What helps you wait?')
+  })
+
+  it('picks pictures from the words when a story has none, and keeps --- scene breaks as text', () => {
+    const s = parseStory('a.md', '# The Storm\n\nThe dragon flew over the river. The dragon roared.\n\n---\n\nRain fell.')
+    assert.deepEqual(s.art, ['⛈️', '🐉', '🏞️'])
+    assert.match(s.text, /---/)
+    assert.equal(s.lesson, '')
   })
 
   it('falls back to the file name when there is no heading', () => {
@@ -99,6 +116,9 @@ describe('library', () => {
     assert.equal(topics[0].emoji, '⚡')
     assert.equal(topics[1].name, 'Unicorns')
     assert.equal(topics[1].stories[0].title, 'Pip')
+    // A story with nothing to draw borrows the topic's emoji and backdrop.
+    assert.deepEqual(topics[1].stories[0].art, ['📖'])
+    assert.equal(topics[1].stories[0].backdrop, 'meadow')
   })
 
   it('reads the bundled stories', async () => {
@@ -137,6 +157,9 @@ describe('server', () => {
     assert.ok(topics[0].stories[0].text.length > 100)
     // The bundled stories never show an unfilled {{placeholder}}: every one has a default.
     assert.doesNotMatch(JSON.stringify(topics), /\{\{/)
+    // Every bundled story has a picture.
+    for (const t of topics) for (const st of t.stories) assert.ok(st.art.length > 0, `${t.id}/${st.id}`)
+    assert.ok(autoArt('', 'A quiet walk.').length === 0)
   })
 
   it('saves character names from Settings and uses them in the stories', async () => {

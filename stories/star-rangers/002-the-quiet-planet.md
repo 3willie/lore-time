@@ -1,3 +1,8 @@
+---
+art: 🌼 🚀 💡
+lesson: Listening
+ask: What can you hear when you are very, very quiet?
+---
 # The Quiet Planet
 
 "Rangers," said {{mom}} on the radio. "Please visit the planet Hush. They haven't called us in a while. Make sure they're okay."

@@ -1,7 +1,7 @@
 // Story Time reader. No build step: plain modules served as-is.
 //
 // Pages (hash routes, so Home Assistant can link straight to one):
-//   #/                    pick a topic
+//   #/                    home: tonight's story and the story worlds
 //   #/<topic>             pick a story in that topic
 //   #/<topic>/<story>     read it
 
@@ -11,7 +11,7 @@ const app = document.getElementById('app')
 
 const STORE_KEY = 'storytime.v1'
 const BRUSH_SECONDS = 120
-const READ_ALOUD_WPM = 150
+const READ_ALOUD_WPM = 120 // a slow, read-to-little-kids pace
 const SIZE_MIN = 18
 const SIZE_MAX = 44
 
@@ -23,9 +23,13 @@ const PALETTE = ['#4f46e5', '#0891b2', '#16a34a', '#ea580c', '#db2777', '#7c3aed
 function loadPrefs() {
   try {
     const p = JSON.parse(localStorage.getItem(STORE_KEY) || '{}')
-    return { read: p.read && typeof p.read === 'object' ? p.read : {}, size: Number(p.size) || 0 }
+    return {
+      read: p.read && typeof p.read === 'object' ? p.read : {},
+      size: Number(p.size) || 0,
+      last: p.last && typeof p.last === 'object' ? p.last : null,
+    }
   } catch {
-    return { read: {}, size: 0 }
+    return { read: {}, size: 0, last: null }
   }
 }
 const prefs = loadPrefs()
@@ -38,10 +42,41 @@ function savePrefs() {
 }
 const readKey = (topic, story) => `${topic.id}/${story.id}`
 const isRead = (topic, story) => Boolean(prefs.read[readKey(topic, story)])
+/** Finishing a story earns its sticker (its first picture) for the series' sticker book. */
 function markRead(topic, story) {
   if (isRead(topic, story)) return
   prefs.read[readKey(topic, story)] = Date.now()
   savePrefs()
+  toast(story.art[0], 'New sticker!')
+}
+
+// ---------- little celebrations ----------
+
+const calm = () => matchMedia('(prefers-reduced-motion: reduce)').matches
+
+function toast(big, text) {
+  document.querySelector('.toast')?.remove()
+  const el = document.createElement('div')
+  el.className = 'toast'
+  el.setAttribute('role', 'status')
+  el.innerHTML = `<span class="big" aria-hidden="true">${esc(big)}</span><span>${esc(text)}</span>`
+  document.body.append(el)
+  setTimeout(() => el.remove(), 3700)
+}
+
+function confetti(pieces) {
+  if (calm()) return
+  for (let i = 0; i < 18; i++) {
+    const el = document.createElement('span')
+    el.className = 'confetti'
+    el.setAttribute('aria-hidden', 'true')
+    el.textContent = pieces[i % pieces.length]
+    el.style.left = `${4 + ((i * 53) % 92)}vw`
+    el.style.animationDuration = `${1.8 + (i % 5) * 0.35}s`
+    el.style.animationDelay = `${(i % 6) * 0.12}s`
+    document.body.append(el)
+    setTimeout(() => el.remove(), 4200)
+  }
 }
 
 function defaultSize() {
@@ -73,6 +108,28 @@ async function loadLibrary() {
 const topicColor = (topic, i) => topic.color || PALETTE[i % PALETTE.length]
 const upNext = (topic) => topic.stories.find((s) => !isRead(topic, s))
 const minutes = (story) => Math.max(1, Math.round(story.words / READ_ALOUD_WPM))
+const readCount = (topic) => topic.stories.filter((s) => isRead(topic, s)).length
+
+/** A picture: a painted backdrop with up to four characters on it. */
+function scene(backdrop, art, size) {
+  const actors = art.map((a, i) => `<span class="actor a${i + 1}">${esc(a)}</span>`).join('')
+  return `<span class="scene scene-${esc(backdrop)} scene-${size}" aria-hidden="true"><span class="far"></span><span class="near"></span>${actors}</span>`
+}
+
+/** The story to offer first: the one left unfinished, else the next in the series last read, else a fresh one. */
+function tonight() {
+  const lastTopic = library.topics.find((t) => t.id === prefs.last?.t)
+  const lastStory = lastTopic?.stories.find((s) => s.id === prefs.last?.s)
+  if (lastStory && !isRead(lastTopic, lastStory)) return { topic: lastTopic, story: lastStory, label: 'Keep reading' }
+  if (lastTopic && upNext(lastTopic)) return { topic: lastTopic, story: upNext(lastTopic), label: 'Up next' }
+  const fresh = library.topics.find((t) => upNext(t))
+  return fresh ? { topic: fresh, story: upNext(fresh), label: readCount(fresh) ? 'Up next' : 'Start a new adventure' } : null
+}
+
+function greeting() {
+  const h = new Date().getHours()
+  return h < 12 ? 'Good morning! Time to brush.' : h < 17 ? 'Hello! Pick a story.' : 'Good evening! Time to brush.'
+}
 
 // ---------- tiny helpers ----------
 
@@ -93,6 +150,9 @@ function paintTimer() {
   if (!el) return
   el.textContent = timerLabel()
   el.classList.toggle('done', timer.left <= 0)
+  el.classList.toggle('running', timer.running)
+  const bar = document.getElementById('brushbar')
+  if (bar) bar.style.width = `${(100 * (BRUSH_SECONDS - timer.left)) / BRUSH_SECONDS}%`
   el.classList.toggle('paused', !timer.running && timer.left > 0 && timer.left < BRUSH_SECONDS)
   el.setAttribute(
     'aria-label',
@@ -105,7 +165,11 @@ function startTimer() {
   timer.running = true
   timer.id = setInterval(() => {
     timer.left -= 1
-    if (timer.left <= 0) stopTimer()
+    if (timer.left <= 0) {
+      stopTimer()
+      toast('🦷', 'Two minutes! Sparkly teeth!')
+      confetti(['✨', '🦷', '⭐', '🪥'])
+    }
     paintTimer()
   }, 1000)
   paintTimer()
@@ -189,7 +253,7 @@ function renderSettings(settings) {
     `<button class="seg" data-action="theme-set" data-value="${value}" aria-pressed="${theme === value}">${label}</button>`
   return `<div class="settings">
     <div class="bar">
-      <a class="btn" href="#/" aria-label="All topics">← <span class="label">Topics</span></a>
+      <a class="btn" href="#/" aria-label="Home">← <span class="label">Home</span></a>
       <h1>Settings</h1>
     </div>
     <section class="panel">
@@ -213,7 +277,7 @@ function renderSettings(settings) {
       </div>
       <div class="setting">
         <span class="setting-label">Reading progress</span>
-        <button class="link" data-action="reset-all">Clear every ✓ mark on this device</button>
+        <button class="link" data-action="reset-all">Clear every sticker and ✓ on this device</button>
       </div>
     </section>
     <p class="hint version">App version ${esc(version || 'unknown')}. After an update, this should match the newest
@@ -231,7 +295,7 @@ async function showSettings() {
     if (parseRoute().topicId === 'settings') app.innerHTML = renderSettings(body)
   } catch (e) {
     app.innerHTML = `<div class="message"><h1>Can't open settings</h1><p>${esc(e.message || e)}</p>
-      <p><button class="btn primary" data-action="retry">Try again</button> <a class="btn" href="#/">Topics</a></p></div>`
+      <p><button class="btn primary" data-action="retry">Try again</button> <a class="btn" href="#/">Home</a></p></div>`
   }
 }
 
@@ -262,52 +326,95 @@ async function saveNames(form) {
 
 function renderHome() {
   const topics = library.topics
+  const brand = `<header class="brand">
+      <span class="logo" aria-hidden="true">🪥</span>
+      <div class="words"><h1>Story Time</h1><p>${greeting()}</p></div>
+      ${settingsButton}
+    </header>`
   if (!topics.length) {
-    return `<div class="bar"><span class="spacer"></span>${settingsButton}</div><div class="message"><h1>No stories yet</h1><p>Add a folder for each topic, with a story file or two inside, to the stories folder. The README explains how.</p></div>`
+    return `${brand}<div class="message"><h1>No stories yet</h1><p>Add a folder for each topic, with a story file or two inside, to the stories folder. The README explains how.</p></div>`
   }
+  const pick = tonight()
+  const hero = pick
+    ? `<a class="tonight" href="${href(pick.topic.id, pick.story.id)}" style="--c:${esc(topicColor(pick.topic, topics.indexOf(pick.topic)))}">
+        ${scene(pick.story.backdrop, pick.story.art, 'hero')}
+        <span class="text">
+          <span class="eyebrow">${pick.label}</span>
+          <span class="title">${inline(pick.story.title)}</span>
+          <span class="where">${esc(pick.topic.name)} · ${minutes(pick.story)} min</span>
+          <span class="btn go">▶ Read</span>
+        </span>
+      </a>`
+    : ''
   const cards = topics
     .map((t, i) => {
-      const next = upNext(t)
-      const done = t.stories.filter((s) => isRead(t, s)).length
+      const done = readCount(t)
+      const total = t.stories.length
       return `<a class="topic" href="${href(t.id)}" style="--c:${esc(topicColor(t, i))}">
-        <span class="emoji" aria-hidden="true">${esc(t.emoji)}</span>
-        <span class="name">${esc(t.name)}</span>
-        <span class="meta">${t.stories.length} ${t.stories.length === 1 ? 'story' : 'stories'}${done ? ` · ${done} read` : ''}</span>
-        <span class="next">${next ? `Up next: ${inline(next.title)}` : 'All read! 🎉'}</span>
+        ${scene(t.backdrop, t.art, 'card')}
+        <span class="body">
+          <span class="name">${esc(t.name)}</span>
+          <span class="meta"><span>${total} ${total === 1 ? 'story' : 'stories'}</span><span>${done === total ? 'All read! 🎉' : done ? `⭐ ${done} of ${total}` : ''}</span></span>
+          <span class="progress" aria-hidden="true"><i style="width:${(100 * done) / total}%"></i></span>
+        </span>
       </a>`
     })
     .join('')
-  return `<div class="bar"><h1>Story Time 🪥</h1>${settingsButton}</div><nav class="topics" aria-label="Topics">${cards}</nav>`
+  return `${brand}${hero}<h2 class="section-title">Story worlds</h2><nav class="topics" aria-label="Story worlds">${cards}</nav>`
 }
 
 function renderTopic(topic, index) {
   const next = upNext(topic)
+  const done = readCount(topic)
+  const total = topic.stories.length
   const items = topic.stories
     .map((s, i) => {
       const read = isRead(topic, s)
       const isNext = s === next
       return `<li><a class="story${read ? ' read' : ''}${isNext ? ' upnext' : ''}" href="${href(topic.id, s.id)}">
-        <span class="num" aria-hidden="true">${read ? '✓' : i + 1}</span>
-        <span class="title">${inline(s.title)}${isNext ? '<span class="badge">Up next</span>' : ''}${read ? '<span class="sr-only"> (read)</span>' : ''}</span>
-        <span class="mins">${minutes(s)} min</span>
+        ${scene(s.backdrop, s.art, 'thumb')}
+        <span class="info">
+          <span class="title">${inline(s.title)}${read ? '<span class="sr-only"> (read)</span>' : ''}</span>
+          <span class="sub">${isNext ? '<span class="chip">Up next</span>' : ''}${s.lesson ? `<span class="chip">${esc(s.lesson)}</span>` : ''}<span>${minutes(s)} min</span></span>
+        </span>
+        <span class="state" aria-hidden="true">${read ? '✓' : isNext ? '▶' : i + 1}</span>
       </a></li>`
     })
     .join('')
-  const anyRead = topic.stories.some((s) => isRead(topic, s))
+  const shelf = topic.stories
+    .map((s) => (isRead(topic, s) ? `<span class="sticker">${esc(s.art[0])}</span>` : '<span class="sticker empty">?</span>'))
+    .join('')
   return `<div style="--c:${esc(topicColor(topic, index))}">
     <div class="bar">
-      <a class="btn" href="#/" aria-label="All topics">← <span class="label">Topics</span></a>
-      <h1>${esc(topic.emoji)} ${esc(topic.name)}</h1>
+      <a class="btn" href="#/" aria-label="All story worlds">← <span class="label">Home</span></a>
+      <span class="spacer"></span>
+      ${settingsButton}
     </div>
-    ${topic.blurb ? `<p class="blurb">${esc(topic.blurb)}</p>` : ''}
+    <div class="banner">${scene(topic.backdrop, topic.art, 'hero')}</div>
+    <div class="series-head">
+      <h1>${esc(topic.name)}</h1>
+      ${topic.blurb ? `<p class="blurb">${esc(topic.blurb)}</p>` : ''}
+    </div>
+    <section class="stickers" aria-label="Sticker book">
+      <div class="row"><span>⭐ Sticker book</span><span class="count">${done} of ${total} collected</span></div>
+      <div class="progress" aria-hidden="true"><i style="width:${(100 * done) / total}%"></i></div>
+      <div class="shelf" aria-hidden="true">${shelf}</div>
+    </section>
     <ol class="stories">${items}</ol>
-    ${anyRead ? '<div class="footer-actions"><button class="link" data-action="reset">Clear the ✓ marks to start this series over</button></div>' : ''}
+    ${done ? '<div class="footer-actions"><button class="link" data-action="reset">Give back the stickers and start this series over</button></div>' : ''}
   </div>`
 }
 
 function renderReader(topic, index, story) {
   const i = topic.stories.indexOf(story)
   const next = topic.stories[i + 1]
+  const after =
+    story.lesson || story.ask
+      ? `<div class="after">
+          ${story.lesson ? `<div class="idea"><span class="icon" aria-hidden="true">💡</span><div><span class="label">The big idea</span><span class="value">${esc(story.lesson)}</span></div></div>` : ''}
+          ${story.ask ? `<div class="idea"><span class="icon" aria-hidden="true">💬</span><div><span class="label">Talk about it</span><span class="value">${inline(story.ask)}</span></div></div>` : ''}
+        </div>`
+      : ''
   return `<div class="reader" style="--c:${esc(topicColor(topic, index))}">
     <div class="bar">
       <a class="btn" href="${href(topic.id)}" aria-label="Back to ${esc(topic.name)}">← <span class="label">${esc(topic.name)}</span></a>
@@ -315,15 +422,27 @@ function renderReader(topic, index, story) {
       <button class="btn timer" id="timer" data-action="timer"></button>
       <button class="btn icon" data-action="smaller" aria-label="Smaller text">A−</button>
       <button class="btn icon" data-action="bigger" aria-label="Bigger text">A+</button>
+      <span class="brushbar" id="brushbar" aria-hidden="true"></span>
     </div>
     <article>
-      <header><div class="emoji" aria-hidden="true">${esc(topic.emoji)}</div><h2>${inline(story.title)}</h2></header>
-      <div class="story-text">${renderStory(story.text)}</div>
-      <p class="the-end" id="the-end">The End</p>
+      ${scene(story.backdrop, story.art, 'hero')}
+      <h2>${inline(story.title)}</h2>
+      <p class="byline">${esc(topic.name)} · ${minutes(story)} min</p>
+      <div class="story-text${/^[A-Za-z]/.test(story.text) ? ' dropcap' : ''}">${renderStory(story.text)}</div>
+      <p class="the-end" id="the-end">⭐ The End ⭐</p>
+      ${after}
+      ${
+        next
+          ? `<a class="next-card" href="${href(topic.id, next.id)}" data-action="next">
+              ${scene(next.backdrop, next.art, 'thumb')}
+              <span class="info"><span class="label">Next story</span><span class="value">${inline(next.title)}</span></span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>`
+          : ''
+      }
       <div class="end-actions">
-        ${next ? `<a class="btn primary" href="${href(topic.id, next.id)}" data-action="next">Next: ${inline(next.title)} →</a>` : ''}
         <a class="btn" href="${href(topic.id)}">All ${esc(topic.name)} stories</a>
-        <a class="btn" href="#/">Topics</a>
+        <a class="btn" href="#/">Home</a>
       </div>
     </article>
   </div>`
@@ -393,6 +512,8 @@ async function route() {
 
   if (topic && story) {
     current = { topic, story }
+    prefs.last = { t: topic.id, s: story.id }
+    savePrefs()
     app.innerHTML = renderReader(topic, index, story)
     document.title = `${plain(story.title)} · Story Time`
     // The timer starts only when tapped; one already running carries on into the next story.
@@ -416,6 +537,14 @@ async function route() {
 }
 
 app.addEventListener('click', (e) => {
+  // Tapping a character in the big picture makes it wiggle.
+  const actor = e.target.closest('.scene-hero .actor')
+  if (actor && !actor.closest('a')) {
+    actor.classList.remove('wiggle')
+    void actor.offsetWidth
+    actor.classList.add('wiggle')
+    return
+  }
   const el = e.target.closest('[data-action]')
   if (!el) return
   const action = el.dataset.action
@@ -446,7 +575,7 @@ app.addEventListener('click', (e) => {
     // Two taps rather than confirm(), which some Home Assistant webviews block.
     if (!el.dataset.armed) {
       el.dataset.armed = '1'
-      el.textContent = 'Tap again to clear the ✓ marks'
+      el.textContent = 'Tap again to give them back'
       return
     }
     const { topicId } = parseRoute()

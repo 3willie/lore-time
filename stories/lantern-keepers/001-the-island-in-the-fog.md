@@ -1,3 +1,8 @@
+---
+art: 🗼 ⛵ 🐦
+lesson: New places can be exciting
+ask: What would you want to see first on Gull Rock?
+---
 # The Island in the Fog
 
 The little boat went *putt-putt-putt* across the sea.

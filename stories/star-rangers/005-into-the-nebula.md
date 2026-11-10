@@ -1,3 +1,8 @@
+---
+art: 🚀 🎵 🌈
+lesson: Teamwork
+ask: What job would you do on the ship?
+---
 # Into the Nebula
 
 To reach the Hidden Star, the *Pebble* had to fly through a giant space cloud. It was called the Nebula. It was pink and purple and green, like swirly paint.

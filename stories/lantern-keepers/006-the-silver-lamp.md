@@ -1,3 +1,9 @@
+---
+art: 🍾 🌙 💌
+backdrop: night
+lesson: Remembering kind things
+ask: Can you remember a time someone helped you?
+---
 # The Silver Lamp
 
 The little silver lamp helps lost things find their way home.

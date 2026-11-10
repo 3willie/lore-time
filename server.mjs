@@ -38,6 +38,7 @@ const MIME = {
   '.png': 'image/png',
   '.ico': 'image/x-icon',
   '.webmanifest': 'application/manifest+json',
+  '.woff2': 'font/woff2',
 }
 const COMPRESSIBLE = new Set(['.html', '.js', '.css', '.json', '.svg', '.webmanifest'])
 const STORY_EXT = new Set(['.md', '.txt'])
@@ -65,15 +66,115 @@ function titleCase(id) {
   return id.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
-/** Pulls the "# Title" line off the top of a story; falls back to the file name. */
+export const BACKDROPS = ['meadow', 'sea', 'space', 'sky', 'jungle', 'night', 'forest', 'town']
+
+/**
+ * Words that suggest a picture, most specific first. Used to illustrate a story that has no `art:` line,
+ * so every story gets a scene. Matching ignores case and allows plural endings.
+ */
+const ART_WORDS = [
+  ['🦅', 'pidgeot|pidgeotto|eagle|hawk|falcon'],
+  ['🐕', 'arcanine|growlithe|dog|puppy'],
+  ['🥄', 'kadabra|alakazam|abra|spoon'],
+  ['🐉', 'dratini|dragonair|dragonite|dragon'],
+  ['⚡', 'pikachu|raichu|lightning|thunder|zapdos|spark'],
+  ['🦕', 'lapras|long-neck|brachiosaurus'],
+  ['🦊', 'eevee|vulpix|fox'],
+  ['🐢', 'squirtle|blastoise|turtle'],
+  ['🌱', 'bulbasaur|vileplume|oddish|seedling|sprout'],
+  ['🐀', 'rattata|raticate|mouse|rat'],
+  ['🦁', 'entei|lion'],
+  ['🐦', 'articuno|moltres|bird|sparrow|gull'],
+  ['🫧', 'ditto|bubble'],
+  ['🪨', 'geodude|onix|boulder|rock'],
+  ['🦖', 't\\. rex|tyrannosaurus|dinosaur'],
+  ['🤖', 'robot'],
+  ['🚀', 'rocket|spaceship|spacecraft'],
+  ['🏅', 'badge|medal|trophy'],
+  ['🏟️', 'gym|arena|stadium'],
+  ['🚢', 'ship|ferry|harbor|harbour|dock'],
+  ['⛈️', 'storm|thunderstorm|downpour'],
+  ['🔥', 'fire|flame|blaze|ember'],
+  ['🌊', 'sea|ocean|wave|surf|tide'],
+  ['🏞️', 'river|stream|waterfall|lake'],
+  ['🌧️', 'rain|drizzle'],
+  ['❄️', 'snow|ice|frost|blizzard'],
+  ['🏕️', 'camp|campfire|tent'],
+  ['⛰️', 'mountain|cliff|peak|ridge'],
+  ['🌉', 'bridge'],
+  ['🕳️', 'cave|tunnel|cavern'],
+  ['🏙️', 'city|tower|skyscraper'],
+  ['🏡', 'village|farm|farmer|cottage|house'],
+  ['🌲', 'forest|woods|woodland|tree'],
+  ['🌾', 'field|meadow|grass|farmland'],
+  ['🥒', 'pickle|cucumber'],
+  ['♨️', 'hot spring|spring'],
+  ['🎢', 'park|ride|monorail'],
+  ['🥚', 'egg'],
+  ['🗺️', 'map'],
+  ['📖', 'book|library|journal'],
+  ['🔔', 'bell|chime'],
+  ['🕰️', 'clock|gear'],
+  ['🏮', 'lantern|lamp|lighthouse'],
+  ['🌙', 'moon|midnight|night'],
+  ['⭐', 'star'],
+  ['🌈', 'rainbow'],
+  ['🌬️', 'wind|breeze|gust'],
+  ['☀️', 'sun|sunrise|morning|dawn'],
+].map(([emoji, words]) => [emoji, new RegExp(`\\b(?:${words})(?:s|es)?\\b`, 'gi')])
+
+/** Up to three pictures for a story, from the words it uses most. */
+export function autoArt(title, text) {
+  const scored = []
+  for (const [emoji, pattern] of ART_WORDS) {
+    const count = (text.match(pattern) ?? []).length + 3 * (title.match(pattern) ?? []).length
+    if (count) scored.push([emoji, count])
+  }
+  scored.sort((a, b) => b[1] - a[1])
+  return scored.slice(0, 3).map(([emoji]) => emoji)
+}
+
+/** Splits "🏮 🐦 🌙" into pictures, at most four. */
+function artList(value) {
+  return value.split(/[\s,]+/).filter(Boolean).slice(0, 4)
+}
+
+/**
+ * A story file: optional details between --- lines, the "# Title", then the text.
+ *
+ *   ---
+ *   art: 🏮 🐦 🌙            the pictures for its scene (the first one is its sticker)
+ *   backdrop: night          meadow, sea, space, sky, jungle, night, forest or town (default: the topic's)
+ *   lesson: Patience         the big idea, shown at the end
+ *   ask: What helps you wait when waiting is hard?     a question to talk about, shown at the end
+ *   ---
+ */
 export function parseStory(file, raw) {
-  const text = raw.replace(/^﻿/, '').replace(/\r\n?/g, '\n').trim()
+  let text = raw.replace(/^﻿/, '').replace(/\r\n?/g, '\n').trim()
+  const meta = {}
+  const front = /^---\n([\s\S]*?)\n---(?:\n|$)/.exec(text)
+  if (front) {
+    for (const line of front[1].split('\n')) {
+      const m = /^\s*([A-Za-z]+)\s*:\s*(.+?)\s*$/.exec(line)
+      if (m) meta[m[1].toLowerCase()] = m[2]
+    }
+    text = text.slice(front[0].length).trim()
+  }
   const id = storyId(file) || 'story'
   const match = /^#[ \t]+(.+)\n?/.exec(text)
   const title = match ? match[1].trim() : titleCase(id)
   const body = (match ? text.slice(match[0].length) : text).trim()
   const words = body.split(/\s+/).filter((w) => /\w/.test(w)).length
-  return { id, title, words, text: body }
+  return {
+    id,
+    title,
+    words,
+    text: body,
+    art: meta.art ? artList(meta.art) : autoArt(title, body),
+    backdrop: BACKDROPS.includes(meta.backdrop?.toLowerCase()) ? meta.backdrop.toLowerCase() : '',
+    lesson: meta.lesson ?? '',
+    ask: meta.ask ?? '',
+  }
 }
 
 /** "Little_Brother" -> "little-brother": how placeholders are matched, whatever their case or spacing. */
@@ -135,11 +236,19 @@ async function readTopic(dir, folder, names) {
     seen.add(id)
     stories.push({ ...story, id })
   }
+  const emoji = typeof meta.emoji === 'string' ? meta.emoji : '📖'
+  const backdrop = BACKDROPS.includes(meta.backdrop) ? meta.backdrop : 'meadow'
+  for (const story of stories) {
+    if (!story.art.length) story.art = [emoji]
+    if (!story.backdrop) story.backdrop = backdrop
+  }
   const id = slug(folder) || folder
   return {
     id,
     name: typeof meta.name === 'string' && meta.name.trim() ? fillNames(meta.name.trim(), cast) : titleCase(id),
-    emoji: typeof meta.emoji === 'string' ? meta.emoji : '📖',
+    emoji,
+    backdrop,
+    art: Array.isArray(meta.art) ? meta.art.filter((a) => typeof a === 'string').slice(0, 4) : [emoji],
     color: typeof meta.color === 'string' && /^#[0-9a-f]{3,8}$/i.test(meta.color) ? meta.color : '',
     blurb: typeof meta.blurb === 'string' ? fillNames(meta.blurb, cast) : '',
     order: Number.isFinite(meta.order) ? meta.order : null,

@@ -1,3 +1,9 @@
+---
+art: 🐦 ⚙️ 👧
+backdrop: town
+lesson: Saying sorry
+ask: Why did Tilly feel better after she told the truth?
+---
 # The Apprentice
 
 The little face belonged to a girl named Tilly.

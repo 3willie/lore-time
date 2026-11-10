@@ -1,3 +1,8 @@
+---
+art: 🤖 🪨 🔴
+lesson: Brave means scared but trying
+ask: When did you do something even though you were scared?
+---
 # Bolt's Brave Button
 
 The last piece of the map was inside a ring of floating space rocks.

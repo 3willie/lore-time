@@ -1,3 +1,9 @@
+---
+art: ⛵ 🏮 🌫️
+backdrop: night
+lesson: Telling the truth
+ask: How did {{hero}} feel after he told the truth?
+---
 # The Honest Lamp
 
 {{hero}} only wanted to look.

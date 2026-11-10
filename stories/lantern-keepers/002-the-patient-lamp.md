@@ -1,3 +1,9 @@
+---
+art: 🐦 🏮 🪟
+backdrop: night
+lesson: Patience
+ask: What helps you wait when waiting is hard?
+---
 # The Patient Lamp
 
 "Today," said Old Wick, "you'll meet the blue lamp."

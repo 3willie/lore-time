@@ -1,3 +1,8 @@
+---
+art: 🐉 🐲 🏰
+lesson: Being happy for others
+ask: How do you feel when your friend gets something good?
+---
 # The Dragon Chooses
 
 Highcrag was a castle on top of a mountain. It was so high up that clouds floated right through the courtyard.

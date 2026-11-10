@@ -1,3 +1,8 @@
+---
+art: 🐉 🐟 🧹
+lesson: Being gentle
+ask: How do you show an animal you are gentle?
+---
 # Scales and Snacks
 
 "No flying today," said Master Oona.

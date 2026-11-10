@@ -1,3 +1,8 @@
+---
+art: 🐉 💦 ☁️
+lesson: Asking nicely
+ask: Do you like being bossed? What feels better?
+---
 # First Flight
 
 Today was the first flight!

@@ -1,3 +1,8 @@
+---
+art: 🌟 🎶 🤖
+lesson: Giving, not taking
+ask: What song would you sing to the Hidden Star?
+---
 # The Hidden Star
 
 There it was. The Hidden Star!

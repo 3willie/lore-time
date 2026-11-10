@@ -1,3 +1,8 @@
+---
+art: 🦎 🪨 🌿
+lesson: Small is just right
+ask: What can you do because you are small?
+---
 # Too Small
 
 Toot grew and grew. Soon he was as big as a dog!

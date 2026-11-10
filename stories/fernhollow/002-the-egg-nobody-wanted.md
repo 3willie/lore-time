@@ -1,3 +1,8 @@
+---
+art: 🥚 🧣 🐣
+lesson: Caring for little ones
+ask: How would you take care of a baby dinosaur?
+---
 # The Egg Nobody Wanted
 
 Every weekend, {{dad}} took the boys back through the waterfall to help Ranger Juno.

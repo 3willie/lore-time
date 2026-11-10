@@ -1,3 +1,8 @@
+---
+art: 🦖 🌵 💚
+lesson: Grumpy sometimes means hurting
+ask: What helps you when you feel grumpy?
+---
 # Old Grumbletooth
 
 "Who lives over there?" asked {{hero}}, pointing to the dark trees at the end of the valley.

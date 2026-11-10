@@ -1,3 +1,9 @@
+---
+art: 🕰️ 🐦 ⚙️
+backdrop: town
+lesson: Small eyes notice small things
+ask: What tiny thing did you notice today?
+---
 # The City of Clockwork Birds
 
 The map drew something new: a city with a big clock in the middle.

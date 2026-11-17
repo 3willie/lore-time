@@ -1152,3 +1152,8 @@ article h2 {
   text-align: center;
   margin: 8px 0 24px;
 }
+
+/* A short opening line must not leave the next paragraph wrapped around the big first letter. */
+.story-text.dropcap > p:nth-child(2) {
+  clear: left;
+}

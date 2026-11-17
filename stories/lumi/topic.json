@@ -1,0 +1,10 @@
+{
+  "name": "Lumi the Helper",
+  "emoji": "💡",
+  "color": "#db2777",
+  "blurb": "{{mom}} brings home Lumi, a little glowing helper. {{hero}} and {{brother}} find out what a thinking helper can do, what it can't, and what stays their job.",
+  "order": 11,
+  "backdrop": "town",
+  "art": ["💡", "🏡", "✨"],
+  "characters": { "hero": "Sam", "brother": "Leo", "dad": "Dad", "mom": "Mom" }
+}

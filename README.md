@@ -117,6 +117,7 @@ series use `{{hero}}`, `{{brother}}`, `{{dad}}` and `{{mom}}` placeholders, name
 | `stories/the-map/` | The Map That Draws Itself: Grandpa's map adds a place after each truly kind or brave day |
 | `stories/dragon-riders/` | Dragon Riders of Highcrag: the brothers are chosen by Skye and Cinder, and learn to train and ride them |
 | `stories/fernhollow/` | Fernhollow: a hidden valley of dinosaurs behind a waterfall, Ranger Juno, and Toot the baby duckbill |
+| `stories/lumi/` | Lumi the Helper: a first look at AI for little kids. What a thinking helper is, how it learns, that it can be wrong, what stays a people job, and how it might help when they grow up |
 
 File names are `NNN-<story-slug>.md` with a three-digit number for reading order:
 

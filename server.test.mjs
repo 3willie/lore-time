@@ -125,7 +125,7 @@ describe('library', () => {
     const { topics } = await readLibrary(join(here, 'stories'))
     assert.deepEqual(
       topics.map((t) => t.id),
-      ['koda-pokemon', 'koda-rion', 'koda-side-stories', 'lantern-keepers', 'star-rangers', 'the-map', 'dragon-riders', 'fernhollow'],
+      ['koda-pokemon', 'koda-rion', 'koda-side-stories', 'lantern-keepers', 'star-rangers', 'the-map', 'dragon-riders', 'fernhollow', 'lumi'],
     )
   })
 })
@@ -153,7 +153,7 @@ describe('server', () => {
     const res = await fetch(base + 'api/library')
     assert.equal(res.status, 200)
     const { topics } = await res.json()
-    assert.equal(topics.length, 8)
+    assert.equal(topics.length, 9)
     assert.ok(topics[0].stories[0].text.length > 100)
     // The bundled stories never show an unfilled {{placeholder}}: every one has a default.
     assert.doesNotMatch(JSON.stringify(topics), /\{\{/)

@@ -18,7 +18,7 @@ const SIZE_MAX = 44
 /** Fallback colours for topics without one in topic.json. */
 const PALETTE = ['#4f46e5', '#0891b2', '#16a34a', '#ea580c', '#db2777', '#7c3aed', '#0d9488']
 
-// ---------- per-device memory (which stories are read, text size) ----------
+// ---------- memory: which stories are read (shared through the NAS), text size (this device) ----------
 
 function loadPrefs() {
   try {
@@ -27,9 +27,10 @@ function loadPrefs() {
       read: p.read && typeof p.read === 'object' ? p.read : {},
       size: Number(p.size) || 0,
       last: p.last && typeof p.last === 'object' ? p.last : null,
+      synced: Boolean(p.synced),
     }
   } catch {
-    return { read: {}, size: 0, last: null }
+    return { read: {}, size: 0, last: null, synced: false }
   }
 }
 const prefs = loadPrefs()
@@ -42,11 +43,52 @@ function savePrefs() {
 }
 const readKey = (topic, story) => `${topic.id}/${story.id}`
 const isRead = (topic, story) => Boolean(prefs.read[readKey(topic, story)])
+/**
+ * Reading progress lives on the NAS so every device (the bathroom tablet, a phone, the HA dashboard) agrees
+ * on what has been read. This device keeps a copy, so it still works offline; changes it couldn't send are
+ * merged in the next time it reaches the server.
+ */
+async function sendProgress(change) {
+  try {
+    const res = await fetch('api/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(change),
+    })
+    if (!res.ok) throw new Error(String(res.status))
+    const p = await res.json()
+    prefs.read = p.read
+    if (p.last) prefs.last = p.last
+    prefs.synced = true
+  } catch {
+    prefs.synced = false // offline: keep the local copy and merge it next time
+  }
+  savePrefs()
+}
+
+async function loadProgress() {
+  try {
+    const res = await fetch('api/progress', { cache: 'no-store' })
+    if (!res.ok) throw new Error(String(res.status))
+    const p = await res.json()
+    // Stories read here that the server hasn't heard about (offline, or before progress was shared) go up first.
+    const missing = Object.fromEntries(Object.entries(prefs.read).filter(([k]) => !(k in p.read)))
+    if (Object.keys(missing).length && !prefs.synced) return sendProgress({ merge: missing })
+    prefs.read = p.read
+    if (p.last) prefs.last = p.last
+    prefs.synced = true
+    savePrefs()
+  } catch {
+    /* offline: use this device's copy */
+  }
+}
+
 /** Finishing a story earns its sticker (its first picture) for the series' sticker book. */
 function markRead(topic, story) {
   if (isRead(topic, story)) return
   prefs.read[readKey(topic, story)] = Date.now()
   savePrefs()
+  sendProgress({ mark: readKey(topic, story) })
   toast(story.art[0], 'New sticker!')
 }
 
@@ -93,6 +135,7 @@ let library = null
 let loadError = ''
 
 async function loadLibrary() {
+  const progress = loadProgress()
   try {
     const res = await fetch('api/library', { cache: 'no-store' })
     const body = await res.json().catch(() => ({}))
@@ -103,6 +146,7 @@ async function loadLibrary() {
     // Keep showing what we already have if a refresh fails.
     if (!library) loadError = e.message || String(e)
   }
+  await progress
 }
 
 const topicColor = (topic, i) => topic.color || PALETTE[i % PALETTE.length]
@@ -277,7 +321,7 @@ function renderSettings(settings) {
       </div>
       <div class="setting">
         <span class="setting-label">Reading progress</span>
-        <button class="link" data-action="reset-all">Clear every sticker and ✓ on this device</button>
+        <button class="link" data-action="reset-all">Clear every sticker and ✓ (on every device)</button>
       </div>
     </section>
     <p class="hint version">App version ${esc(version || 'unknown')}. After an update, this should match the newest
@@ -371,7 +415,9 @@ function renderTopic(topic, index) {
     .map((s, i) => {
       const read = isRead(topic, s)
       const isNext = s === next
-      return `<li><a class="story${read ? ' read' : ''}${isNext ? ' upnext' : ''}" href="${href(topic.id, s.id)}">
+      // Picking a story that's already read, or one further on than "Up next", offers "Up next" first.
+      const suggest = next && !isNext && (read || i > topic.stories.indexOf(next))
+      return `<li><a class="story${read ? ' read' : ''}${isNext ? ' upnext' : ''}" href="${href(topic.id, s.id)}"${suggest ? ` data-suggest="${esc(s.id)}"` : ''}>
         ${scene(s.backdrop, s.art, 'thumb')}
         <span class="info">
           <span class="title">${inline(s.title)}${read ? '<span class="sr-only"> (read)</span>' : ''}</span>
@@ -395,6 +441,15 @@ function renderTopic(topic, index) {
       <h1>${esc(topic.name)}</h1>
       ${topic.blurb ? `<p class="blurb">${esc(topic.blurb)}</p>` : ''}
     </div>
+    ${
+      next
+        ? `<a class="next-card continue" href="${href(topic.id, next.id)}">
+            ${scene(next.backdrop, next.art, 'thumb')}
+            <span class="info"><span class="label">${done ? 'Keep going · story ' + (topic.stories.indexOf(next) + 1) : 'Start here'}</span><span class="value">${inline(next.title)}</span></span>
+            <span class="arrow" aria-hidden="true">▶</span>
+          </a>`
+        : '<p class="all-done">🎉 You\'ve read every story here! Pick any one to read again.</p>'
+    }
     <section class="stickers" aria-label="Sticker book">
       <div class="row"><span>⭐ Sticker book</span><span class="count">${done} of ${total} collected</span></div>
       <div class="progress" aria-hidden="true"><i style="width:${(100 * done) / total}%"></i></div>
@@ -404,6 +459,55 @@ function renderTopic(topic, index) {
     ${done ? '<div class="footer-actions"><button class="link" data-action="reset">Give back the stickers and start this series over</button></div>' : ''}
   </div>`
 }
+
+/** A small note at the top of a story that's already read, or that skips ahead, pointing to "Up next". */
+function readerHint(topic, story) {
+  const next = upNext(topic)
+  if (!next || next === story) return ''
+  const ahead = topic.stories.indexOf(story) > topic.stories.indexOf(next)
+  if (!isRead(topic, story) && !ahead) return ''
+  return `<a class="hint-bar" href="${href(topic.id, next.id)}">
+      <span>${isRead(topic, story) ? '✓ Read before' : '⏩ Skipping ahead'} · Up next is <b>${inline(next.title)}</b></span>
+      <span aria-hidden="true">→</span>
+    </a>`
+}
+
+// ---------- "Up next?" sheet ----------
+
+function closeSheet() {
+  document.querySelector('.sheet-backdrop')?.remove()
+}
+
+/** Offered when a story is picked that's already read or further on: read "Up next", or the one picked anyway. */
+function suggestSheet(topic, story) {
+  closeSheet()
+  const next = upNext(topic)
+  const read = isRead(topic, story)
+  const index = library.topics.indexOf(topic)
+  const el = document.createElement('div')
+  el.className = 'sheet-backdrop'
+  el.style.setProperty('--c', topicColor(topic, index))
+  el.innerHTML = `<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      ${scene(next.backdrop, next.art, 'hero')}
+      <p class="eyebrow">${read ? 'You read this one already' : 'This one comes later'}</p>
+      <h2 id="sheet-title">Up next: ${inline(next.title)}</h2>
+      <p class="hint">${read ? `“${inline(story.title)}” has its sticker. The next new story is story ${topic.stories.indexOf(next) + 1}.` : `“${inline(story.title)}” is story ${topic.stories.indexOf(story) + 1}. Reading in order keeps the story making sense.`}</p>
+      <div class="sheet-actions">
+        <a class="btn primary" href="${href(topic.id, next.id)}">▶ Read “${inline(next.title)}”</a>
+        <a class="btn" href="${href(topic.id, story.id)}">${read ? 'Read it again' : 'Read it anyway'}</a>
+        <button class="link" data-close>Not now</button>
+      </div>
+    </div>`
+  el.addEventListener('click', (e) => {
+    if (e.target === el || e.target.closest('[data-close]')) closeSheet()
+    else if (e.target.closest('a')) closeSheet()
+  })
+  document.body.append(el)
+  el.querySelector('.btn.primary').focus()
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeSheet()
+})
 
 function renderReader(topic, index, story) {
   const i = topic.stories.indexOf(story)
@@ -424,6 +528,7 @@ function renderReader(topic, index, story) {
       <button class="btn icon" data-action="bigger" aria-label="Bigger text">A+</button>
       <span class="brushbar" id="brushbar" aria-hidden="true"></span>
     </div>
+    ${readerHint(topic, story)}
     <article>
       ${scene(story.backdrop, story.art, 'hero')}
       <h2>${inline(story.title)}</h2>
@@ -488,6 +593,7 @@ function parseRoute() {
 }
 
 async function route() {
+  closeSheet()
   const { topicId, storyId } = parseRoute()
   stopReadWatch?.()
   stopReadWatch = null
@@ -514,6 +620,7 @@ async function route() {
     current = { topic, story }
     prefs.last = { t: topic.id, s: story.id }
     savePrefs()
+    sendProgress({ last: prefs.last })
     app.innerHTML = renderReader(topic, index, story)
     document.title = `${plain(story.title)} · Story Time`
     // The timer starts only when tapped; one already running carries on into the next story.
@@ -536,7 +643,16 @@ async function route() {
   window.scrollTo(0, 0)
 }
 
-app.addEventListener('click', (e) => {
+app.addEventListener('click', async (e) => {
+  const pick = e.target.closest('a.story[data-suggest]')
+  if (pick && library) {
+    const topic = library.topics.find((t) => t.id === parseRoute().topicId)
+    const story = topic?.stories.find((s) => s.id === pick.dataset.suggest)
+    if (topic && story && upNext(topic)) {
+      e.preventDefault()
+      return suggestSheet(topic, story)
+    }
+  }
   // Tapping a character in the big picture makes it wiggle.
   const actor = e.target.closest('.scene-hero .actor')
   if (actor && !actor.closest('a')) {
@@ -568,7 +684,9 @@ app.addEventListener('click', (e) => {
       return
     }
     prefs.read = {}
+    prefs.last = null
     savePrefs()
+    sendProgress({ clear: '*' })
     el.textContent = 'Cleared ✓'
     el.disabled = true
   } else if (action === 'reset') {
@@ -581,6 +699,7 @@ app.addEventListener('click', (e) => {
     const { topicId } = parseRoute()
     for (const key of Object.keys(prefs.read)) if (key.startsWith(`${topicId}/`)) delete prefs.read[key]
     savePrefs()
+    await sendProgress({ clear: topicId })
     route()
   } else if (action === 'retry') {
     route()

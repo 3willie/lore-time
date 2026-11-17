@@ -12,6 +12,8 @@
 //   GET /api/library   -> { topics: [{ id, name, emoji, color, blurb, stories: [{ id, title, words, text }] }], characters }
 //   GET /api/settings  -> { names, characters: [{ key, label, default, topics }], canSave, version }
 //   PUT /api/settings  <- { names: { hero: 'Koda' } } -> { names }
+//   GET /api/progress  -> { read: { 'topic/story': time }, last: { t, s } | null }
+//   POST /api/progress <- { mark?: 'topic/story', last?: { t, s }, merge?: { key: time }, clear?: 'topic' | '*' } -> progress
 //   anything else      -> the reader app in public/ (hash routing, so every page is index.html)
 //
 // Character names can be placeholders: a story says {{hero}}, the topic's topic.json gives it a made-up
@@ -19,7 +21,8 @@
 // are saved only in DATA_DIR/settings.json on the NAS, never in the repository or the image.
 //
 // The stories folder is read on every request, so changes show up on the next page load without a restart.
-// The only file the server writes is settings.json.
+// The server writes two files, both in DATA_DIR: settings.json and progress.json (which stories have been
+// read, shared by every device).
 
 import { createReadStream } from 'node:fs'
 import { constants } from 'node:fs'
@@ -45,7 +48,7 @@ const STORY_EXT = new Set(['.md', '.txt'])
 const MAX_STORY_BYTES = 256 * 1024
 /** The commit the image was built from (set by the GitHub workflow), shortened like GitHub shows it. */
 const VERSION = (process.env.APP_VERSION || 'dev').slice(0, 7)
-const MAX_BODY = 16 * 1024
+const MAX_BODY = 256 * 1024
 const MAX_NAME_LENGTH = 40
 const MAX_NAMES = 100
 
@@ -288,6 +291,43 @@ export async function readSettings(dataDir) {
   }
 }
 
+const PROGRESS_KEY = /^[a-z0-9-]{1,80}\/[a-z0-9-]{1,120}$/
+const MAX_PROGRESS = 5000
+
+/** Which stories have been read ({} until something is). */
+export async function readProgress(dataDir) {
+  try {
+    const saved = JSON.parse(await readFile(join(dataDir, 'progress.json'), 'utf8'))
+    return applyProgress({ read: {}, last: null }, { merge: saved.read, last: saved.last })
+  } catch (e) {
+    if (e.code !== 'ENOENT') console.warn(`Ignoring ${join(dataDir, 'progress.json')}: ${e.message}`)
+    return { read: {}, last: null }
+  }
+}
+
+const slugPair = (v) => v && typeof v === 'object' && typeof v.t === 'string' && typeof v.s === 'string' && PROGRESS_KEY.test(`${v.t}/${v.s}`)
+
+/** Applies one change to the progress: mark a story read, merge a device's marks, set the last story, or clear. */
+export function applyProgress(progress, change) {
+  const read = { ...progress.read }
+  let last = progress.last
+  if (change.clear === '*') {
+    for (const key of Object.keys(read)) delete read[key]
+    last = null
+  } else if (typeof change.clear === 'string') {
+    for (const key of Object.keys(read)) if (key.startsWith(`${change.clear}/`)) delete read[key]
+  }
+  const add = (key, time) => {
+    if (typeof key !== 'string' || !PROGRESS_KEY.test(key) || Object.keys(read).length >= MAX_PROGRESS) return
+    const t = Number.isFinite(time) && time > 0 ? time : Date.now()
+    read[key] = read[key] ? Math.min(read[key], t) : t // keep the first time it was read
+  }
+  if (change.merge && typeof change.merge === 'object') for (const [key, time] of Object.entries(change.merge)) add(key, time)
+  if (change.mark) add(change.mark, Date.now())
+  if (slugPair(change.last)) last = { t: change.last.t, s: change.last.s }
+  return { read, last }
+}
+
 /** Keeps sensible names only: known-shaped keys, trimmed text, nothing empty or very long. Null if not an object. */
 export function cleanNames(names) {
   if (!names || typeof names !== 'object' || Array.isArray(names)) return null
@@ -323,6 +363,16 @@ export function createApp({ staticDir, storiesDirs, dataDir }) {
     const tmp = `${settingsFile}.${process.pid}.tmp`
     await writeFile(tmp, JSON.stringify({ names, updatedAt: new Date().toISOString() }, null, 2))
     await rename(tmp, settingsFile)
+  }
+
+  const progressFile = join(dataDir, 'progress.json')
+  async function changeProgress(change) {
+    const next = applyProgress(await readProgress(dataDir), change)
+    await mkdir(dataDir, { recursive: true })
+    const tmp = `${progressFile}.${process.pid}.tmp`
+    await writeFile(tmp, JSON.stringify(next))
+    await rename(tmp, progressFile)
+    return next
   }
 
   async function canSave() {
@@ -399,7 +449,23 @@ export function createApp({ staticDir, storiesDirs, dataDir }) {
         }
         return send(res, 200, { names })
       }
+      if (path === '/api/progress' && req.method === 'POST') {
+        let change
+        try {
+          change = JSON.parse(await readBody(req))
+        } catch (e) {
+          return send(res, e.status ?? 400, { error: e.status ? 'Too much to save' : 'Expected JSON' })
+        }
+        if (!change || typeof change !== 'object' || Array.isArray(change)) return send(res, 400, { error: 'Expected an object' })
+        try {
+          return send(res, 200, await (saving = saving.then(() => changeProgress(change), () => changeProgress(change))))
+        } catch (e) {
+          console.error(`Cannot save ${progressFile}:`, e.message)
+          return send(res, 500, { error: `The NAS wouldn't let the app save progress (${e.code ?? e.message}).` })
+        }
+      }
       if (req.method !== 'GET' && req.method !== 'HEAD') return send(res, 405, { error: 'Method not allowed' })
+      if (path === '/api/progress') return send(res, 200, await readProgress(dataDir))
       if (path === '/api/health') return send(res, 200, { ok: true, version: VERSION })
       if (path === '/api/library' || path === '/api/settings') {
         const dir = await pickStoriesDir(storiesDirs)

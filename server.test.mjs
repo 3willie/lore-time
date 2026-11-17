@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { after, before, describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { autoArt, cleanNames, createApp, fillNames, parseStory, readLibrary, storyId } from './server.mjs'
+import { applyProgress, autoArt, cleanNames, createApp, fillNames, parseStory, readLibrary, storyId } from './server.mjs'
 import { inline, plain, renderStory } from './public/story-format.js'
 
 const here = new URL('.', import.meta.url).pathname
@@ -83,6 +83,14 @@ describe('character names', () => {
     } finally {
       await rm(dir, { recursive: true, force: true })
     }
+  })
+})
+
+describe('progress', () => {
+  it('ignores a clear for one series when marking in another', () => {
+    const p = applyProgress({ read: { 'a/x': 1, 'b/y': 2 }, last: { t: 'a', s: 'x' } }, { clear: 'a', mark: 'b/z' })
+    assert.deepEqual(Object.keys(p.read).sort(), ['b/y', 'b/z'])
+    assert.deepEqual(p.last, { t: 'a', s: 'x' })
   })
 })
 
@@ -183,6 +191,25 @@ describe('server', () => {
     const { topics } = await (await fetch(base + 'api/library')).json()
     assert.equal(topics[0].stories[0].text, 'Koda flew.')
     await rm(join(dir, 'mounted', 'sky'), { recursive: true })
+  })
+
+  it('keeps reading progress on the server, shared by every device', async () => {
+    const post = (body) => fetch(base + 'api/progress', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+    assert.deepEqual(await (await fetch(base + 'api/progress')).json(), { read: {}, last: null })
+    let p = await (await post({ mark: 'lumi/the-drawing', last: { t: 'lumi', s: 'the-drawing' } })).json()
+    assert.ok(p.read['lumi/the-drawing'] > 0)
+    assert.deepEqual(p.last, { t: 'lumi', s: 'the-drawing' })
+    // A device sends the marks it already had; bad keys are dropped and the earliest time wins.
+    p = await (await post({ merge: { 'fernhollow/too-small': 5, 'lumi/the-drawing': 7, '../etc': 1, 'no-slash': 1 } })).json()
+    assert.deepEqual(Object.keys(p.read).sort(), ['fernhollow/too-small', 'lumi/the-drawing'])
+    assert.equal(p.read['lumi/the-drawing'], 7)
+    p = await (await fetch(base + 'api/progress')).json()
+    assert.equal(p.read['fernhollow/too-small'], 5)
+    p = await (await post({ clear: 'lumi' })).json()
+    assert.deepEqual(Object.keys(p.read), ['fernhollow/too-small'])
+    p = await (await post({ clear: '*' })).json()
+    assert.deepEqual(p, { read: {}, last: null })
+    assert.equal((await post([1])).status, 400)
   })
 
   it('picks up stories added to the mounted folder without a restart', async () => {

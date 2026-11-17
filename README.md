@@ -8,14 +8,19 @@ Two-minute stories to read while brushing teeth. Pick a **story world**, then a 
   Tap a character in the big picture and it wiggles.
 - **Stories teach as well as entertain**: each can end with its *big idea* ("Patience") and a *talk about it*
   question to chat over while rinsing.
-- **Sticker books**: finishing a story (scrolling through three quarters of it) earns its sticker for that
-  series, on that device. Stories are listed in order with the next one marked **Up next**.
+- **Reading progress, shared by every device**: finishing a story (scrolling through three quarters of it, or
+  tapping Next) marks it read and earns its sticker. Progress is saved on the NAS (`data/progress.json`), so the
+  bathroom tablet, a phone and the Home Assistant dashboard all agree. A device that was offline catches up
+  next time it connects.
+- **Up next, everywhere**: home offers the story to read now; each series opens with a "Keep going" card;
+  picking a story that's already read, or one further on, offers "Up next" first (with "Read it again" or
+  "Read it anyway" a tap away); and a re-read story shows a small "Up next is…" link at the top.
 - A 🪥 two-minute brushing timer: tap it to start or pause. A bar fills as you brush, it keeps going into the
   next story, and two minutes ends with a little celebration.
 - **A− / A+** change the text size (remembered on that device). The screen stays on while reading where the
   browser allows it (HTTPS only).
 - A ⚙️ **Settings** page: character names (saved on the NAS, shared by every device), and for this device the
-  colours (auto, light or dark), text size and clearing the stickers.
+  colours (auto, light or dark) and text size, and clearing all stickers and ✓ marks.
 - No accounts, no database, no internet needed (the font is bundled). Stories are plain text files in this
   repository's `stories` folder, built into the image, so pushing a new story and updating the container is
   all it takes.
